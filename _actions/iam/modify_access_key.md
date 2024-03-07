@@ -1,0 +1,61 @@
+---
+title: Modify Access Keys
+parent: Identity and Access Management (IAM)
+layout: default
+---
+
+# Modify Access Keys
+
+Enable or disable an IAM access key.<br/>
+
+<p align="center">
+   <a href="/avtomat_aws/iam/modify_access_key.py">Source code</a> •
+   <a href="/permissions/iam/modify_access_key">Permissions</a>
+</p>
+
+## Usage
+
+### Input
+
+Parameters are used for both programmatic input and command-line arguments.<br/>
+
+- The `Applicable` column indicates whether the parameter is accepted in Programmatic (P), Command-Line (C), or Both (
+  B).<br/>
+- For Command-Line execution, type `list` parameters are passed as space-separated strings.
+
+| Parameter       | Description                       | Type     | Applicable | Required         | Default value   |
+|-----------------|-----------------------------------|----------|------------|------------------|-----------------|
+| `access_key_id` | Access Key ID to delete           | `string` | B          | Yes              | None            |
+| `username`      | User that owns the key            | `string` | B          | Yes              | None            |
+| `enable`        | Enable access keys                | `bool`   | B          | If not `disable` | False           |
+| `disable`       | Disable access keys               | `bool`   | B          | If not `enable`  | False           |
+| `role_arn`      | AWS Role ARN for session creation | `string` | B          | No               | None            |
+| `region`        | Region for operation              | `string` | B          | No               | Session default |
+| `debug`         | Log verbosity                     | `bool`   | B          | No               | None            |
+| `session`       | Established session               | `object` | P          | No               | None            |
+
+### Output
+
+Returns a `bool` indicating success or failure:
+
+```python
+True | False
+```
+
+## Examples
+
+Disable an access key for user:
+
+```bash
+aws_iam_modify_access_key --access_key_id AKIA12ZAWVSH44WXASKY --username acme-user --disable
+```
+
+Programmatic usage:
+
+```python
+from avtomat_aws import iam
+
+response = iam.modify_access_key(access_key_id='AKIA12ZAWVSH44WXASKY',
+                                 username='acme-user',
+                                 disable=True)
+```
