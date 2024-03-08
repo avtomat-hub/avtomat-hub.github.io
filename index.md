@@ -1,35 +1,64 @@
 ---
 title: Home
 layout: home
+nav_order: 1
 ---
 
-This is a *bare-minimum* template to create a Jekyll site that uses the [Just the Docs] theme. You can easily set the created site to be published on [GitHub Pages] – the [README] file explains how to do that, along with other details.
+<h1 align="center">
+  <br>
+  Amazon Web Services Collection
+  <br>
+  <br>
+</h1>
 
-If [Jekyll] is installed on your computer, you can also build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^1] And you will be able to deploy your local build to a different platform than GitHub Pages.
+<h4 align="center">Collection of actions on top of <a href="https://boto3.amazonaws.com/v1/documentation/api/latest/index.html" target="_blank">Boto3</a> designed to automate various cloud operations. Use individually or combine to create complex workflows.</h4>
 
-More specifically, the created site:
+<p align="center">
+  <a href="#features">Features</a> •
+  <a href="#requirements">Requirements</a> •
+  <a href="#how-to-use">How to use</a>
+</p>
 
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
 
-Other than that, you're free to customize sites that you create with this template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
+## Features
 
-[Browse our documentation][Just the Docs] to learn more about how to use this theme.
+- ✅ **Flexible** 
+  - Actions can be used individually (CLI) or chained together to form workflows (programmatic)
+- ✅ **Standardised** 
+  - Each action receives input, processes it, and returns an output 
+- ✅ **Interlinkable** 
+  - Output from one action can be used as input to another action
+- ✅ **Pre-configured**
+  - Built in retry and error handling 
+  - Embedded logging for each action
+  - Automatic pagination when dealing with many resources
+- ✅ **Least-privilege** 
+  - Permissions are defined for each action and can be used to swiftly create secure IAM policies
 
-To get started with creating a site, simply:
 
-1. click "[use this template]" to create a GitHub repository
-2. go to Settings > Pages > Build and deployment > Source, and select GitHub Actions
+## Requirements
 
-If you want to maintain your docs in the `docs` directory of an existing project repo, see [Hosting your docs from an existing project repo](https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md#hosting-your-docs-from-an-existing-project-repo) in the template README.
+- <a href="https://www.python.org/downloads/" target="_blank">Python 3.x</a>
+- <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html" target="_blank">AWS CLI</a>
 
-----
 
-[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
+## How to use
 
-[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
-[GitHub Pages]: https://docs.github.com/en/pages
-[README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
-[Jekyll]: https://jekyllrb.com
-[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
-[use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
+Install `avtomat-aws` in a virtual environment:
+
+```bash
+python -m venv venv
+source venv/bin/activate
+pip install git+ssh://git@github.com/avtomat-hub/avtomat-aws.git
+```
+
+Once installed, you can either use actions directly through the command line or import them in your code.
+
+Each action is documented in [actions](actions) and has least-privilege permissions defined in [permissions](permissions).
+
+Simple chaining ideas can be found in [examples](examples).
+
+---
+
+[avtomat.io](https://www.avtomat.io) &nbsp;•&nbsp;
+Email: [dimitar.atanasov@avtomat.io](mailto:dimitar.atanasov@avtomat.io)

@@ -1,32 +1,8 @@
-title: avtomat
+title: Avtomat Docs
 description: A simple, yet powerful, automation tool for AWS engineers.
 theme: just-the-docs
 
 url: https://avtomat-hub.github.io
-
-collections:
-  actions:
-    output: true
-    permalink: /:collection/:path/
-  permissions:
-    output: true
-    permalink: /:collection/:path/
-  examples:
-    output: true
-    permalink: /:collection/:path/
-
-just_the_docs:
-  collections:
-    actions:
-      name: Actions
-      nav_fold: true
-    permissions:
-      name: Permissions
-      nav_fold: true
-    examples:
-      name: Examples
-      nav_fold: true
-
 
 callouts_level: quiet # or loud
 callouts:
