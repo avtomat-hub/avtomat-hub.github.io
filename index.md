@@ -1,18 +1,16 @@
 ---
-title: Home
+title: Overview
 layout: home
 nav_order: 1
 ---
 
 <h1 align="center">
-  <br>
-  Amazon Web Services Collection
-  <br>
+  Amazon Web Services Actions
   <br>
 </h1>
 
 <h4 align="center">Collection of actions on top of <a href="https://boto3.amazonaws.com/v1/documentation/api/latest/index.html" target="_blank">Boto3</a> designed to automate various cloud operations. Use individually or combine to create complex workflows.</h4>
-
+<p></p>
 <p align="center">
   <a href="#features">Features</a> •
   <a href="#requirements">Requirements</a> •

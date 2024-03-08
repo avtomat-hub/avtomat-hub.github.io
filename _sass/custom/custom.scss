@@ -1,0 +1,22 @@
+.side-bar {
+  @include mq(lg) {
+    width: 20.5rem;
+    min-width: 20.5rem;
+  }
+}
+
+.site-nav, .site-header, .site-footer {
+  width: 100%;
+}
+
+.site-logo {
+  width: 80%
+}
+
+.main {
+  @include mq(lg) {
+    margin-left: calc(298px + 30px);
+    margin-right: auto;
+    max-width: 1920px;
+  }
+}

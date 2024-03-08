@@ -3,6 +3,11 @@ description: A simple, yet powerful, automation tool for AWS engineers.
 theme: just-the-docs
 
 url: https://avtomat-hub.github.io
+logo: /assets/images/logo.png
+
+aux_links:
+  "avtomat.io":
+    - "//avtomat.io"
 
 callouts_level: quiet # or loud
 callouts:
