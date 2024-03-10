@@ -1,5 +1,5 @@
 title: Avtomat Docs
-description: A simple, yet powerful, automation tool for AWS engineers.
+description: A simple, yet powerful, automation tool for cloud engineers.
 theme: just-the-docs
 
 url: https://avtomat-hub.github.io
@@ -21,3 +21,13 @@ callouts:
   danger:
     title: Danger
     color: red
+
+collections:
+  aws:
+    permalink: "/:collection/:path/"
+    output: true
+
+just_the_docs:
+  collections:
+    aws:
+      name: Amazon Web Services

@@ -4,10 +4,10 @@ layout: home
 nav_order: 1
 ---
 
-# Automate your AWS cloud operations
+# Automate your cloud operations
 {: .fs-8 }
 
-Collection of actions on top of <a href="https://boto3.amazonaws.com/v1/documentation/api/latest/index.html" target="_blank">Boto3</a> designed to automate various cloud operations. Use individually or combine to create complex workflows.
+Collection of actions designed to automate various cloud operations. Use individually or combine to create complex workflows.
 {: .fs-5 .fw-300 }
 
 [Request access](https://avtomat.io){: .btn .btn-primary .fs-4 .mb-4 .mb-md-0 .mr-2 }
@@ -16,38 +16,29 @@ Collection of actions on top of <a href="https://boto3.amazonaws.com/v1/document
 ---
 
 ## Features
-- ✅ **Flexible** 
-  - Actions can be used individually (CLI) or chained together to form workflows (programmatic)
-- ✅ **Standardised** 
-  - Each action receives input, processes it, and returns an output 
-- ✅ **Interlinkable** 
-  - Output from one action can be used as input to another action
-- ✅ **Pre-configured**
+
+### Flexible
+- Actions can be used individually (CLI) or chained together to form workflows (programmatic)
+
+### Standardised
+- Each action receives input, processes it, and returns an output
+
+### Interlinkable
+- Output from one action can be used as input to another action
+
+### Pre-configured
   - Built in retry and error handling 
   - Embedded logging for each action
   - Automatic pagination when dealing with many resources
-- ✅ **Least-privilege** 
-  - Permissions are defined for each action and can be used to swiftly create secure IAM policies
+
+### Least-privilege
+- Permissions are defined for each action and can be used to swiftly create secure IAM policies
 
 
-## Requirements
+## Usage
 
-- <a href="https://www.python.org/downloads/" target="_blank">Python 3.x</a>
-- <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html" target="_blank">AWS CLI</a>
+Refer to the **Get started** section of each collection to find out more about installation and usage specifics.
 
+## Collection index
+- [Amazon Web Services](/aws/get_started)
 
-## How to use
-
-Install `avtomat-aws` in a virtual environment:
-
-```bash
-python -m venv venv
-source venv/bin/activate
-pip install git+ssh://git@github.com/avtomat-hub/avtomat-aws.git
-```
-
-Once installed, you can either use actions directly through the command line or import them in your code.
-
-Each action is documented in [actions](actions) and has least-privilege permissions defined in [permissions](permissions).
-
-Simple chaining ideas can be found in [examples](examples).
