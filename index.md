@@ -4,22 +4,18 @@ layout: home
 nav_order: 1
 ---
 
-<h1 align="center">
-  Amazon Web Services Actions
-  <br>
-</h1>
+# Automate your AWS cloud operations
+{: .fs-8 }
 
-<h4 align="center">Collection of actions on top of <a href="https://boto3.amazonaws.com/v1/documentation/api/latest/index.html" target="_blank">Boto3</a> designed to automate various cloud operations. Use individually or combine to create complex workflows.</h4>
-<p></p>
-<p align="center">
-  <a href="#features">Features</a> •
-  <a href="#requirements">Requirements</a> •
-  <a href="#how-to-use">How to use</a>
-</p>
+Collection of actions on top of <a href="https://boto3.amazonaws.com/v1/documentation/api/latest/index.html" target="_blank">Boto3</a> designed to automate various cloud operations. Use individually or combine to create complex workflows.
+{: .fs-5 .fw-300 }
 
+[Request access](https://avtomat.io){: .btn .btn-primary .fs-4 .mb-4 .mb-md-0 .mr-2 }
+[Get started](#how-to-use){: .btn .fs-4 .mb-4 .mb-md-0 }
+
+---
 
 ## Features
-
 - ✅ **Flexible** 
   - Actions can be used individually (CLI) or chained together to form workflows (programmatic)
 - ✅ **Standardised** 
@@ -55,8 +51,3 @@ Once installed, you can either use actions directly through the command line or 
 Each action is documented in [actions](actions) and has least-privilege permissions defined in [permissions](permissions).
 
 Simple chaining ideas can be found in [examples](examples).
-
----
-
-[avtomat.io](https://www.avtomat.io) &nbsp;•&nbsp;
-Email: [dimitar.atanasov@avtomat.io](mailto:dimitar.atanasov@avtomat.io)
