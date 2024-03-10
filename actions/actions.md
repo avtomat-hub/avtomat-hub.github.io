@@ -5,4 +5,4 @@ layout: default
 permalink: /actions
 ---
 
-# A collection of EC2 actions
+# A collection of AWS actions

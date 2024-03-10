@@ -5,4 +5,4 @@ layout: default
 permalink: /permissions
 ---
 
-# EC2 Action Permissions
+# Action permissions

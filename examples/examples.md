@@ -5,4 +5,4 @@ layout: default
 permalink: /examples
 ---
 
-# Programmatic Examples
+# Programmatic examples
