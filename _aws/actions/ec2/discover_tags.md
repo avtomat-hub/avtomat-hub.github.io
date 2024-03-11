@@ -49,7 +49,6 @@ Parameters are used for both programmatic input and command-line arguments.<br/>
 | `value`          | Tag value to search for                               | `string`       | B          | No                | None            |
 | `existing`       | Search for resources that have the tag                | `bool`         | B          | If not `missing`  | None            |
 | `missing`        | Search for resources that don't have the tag          | `bool`         | B          | If not `existing` | None            |
-| `role_arn`       | AWS Role ARN for session creation                     | `string`       | B          | No                | None            |
 | `region`         | Region for operation. Leave blank for session default | `string`       | B          | No                | Session Default |
 | `debug`          | Increase log verbosity                                | `bool`         | B          | No                | False           |
 | `session`        | Established session                                   | `object`       | P          | No                | None            |

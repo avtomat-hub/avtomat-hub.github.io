@@ -34,7 +34,6 @@ Parameters are used for both programmatic input and command-line arguments.<br/>
 | Parameter        | Description                                                  | Type     | Applicable | Required | Default value   |
 |------------------|--------------------------------------------------------------|----------|------------|----------|-----------------|
 | `threshold_days` | Get users with last console sign-in over this number of days | `int`    | B          | Yes      | None            |
-| `role_arn`       | AWS Role ARN for session creation                            | `string` | B          | No       | None            |
 | `region`         | Region for operation                                         | `string` | B          | No       | Session default |
 | `debug`          | Log verbosity                                                | `bool`   | B          | No       | None            |
 | `session`        | Established session                                          | `object` | P          | No       | None            |

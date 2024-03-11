@@ -26,7 +26,6 @@ Parameters are used for both programmatic input and command-line arguments.
 
 | Parameter  | Description                                           | Type     | Applicable | Required | Default value   |
 |------------|-------------------------------------------------------|----------|------------|----------|-----------------|
-| `role_arn` | AWS Role ARN for session creation                     | `string` | B          | No       | None            |
 | `region`   | Region for operation. Leave blank for session default | `string` | B          | No       | Session Default |
 | `debug`    | Log verbosity                                         | `bool`   | B          | No       | None            |
 | `session`  | Established session                                   | `object` | P          | No       | None            |

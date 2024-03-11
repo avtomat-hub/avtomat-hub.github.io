@@ -6,12 +6,11 @@ permalink: /aws/examples/iam
 ---
 
 ```python
-from avtomat_aws import helpers
-from avtomat_aws import iam
+from avtomat_aws import sts, iam
 
 if __name__ == '__main__':
 
-    session = helpers.create_session()
+    session = sts.create_session()
 
     # Discover access keys older than 90 days and disable them
     access_keys = iam.discover_old_access_keys(threshold_days=90, session=session)

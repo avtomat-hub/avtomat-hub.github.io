@@ -17,11 +17,6 @@ permalink: /aws/permissions/iam/discover_old_password_users
                 "iam:GetLoginProfile"
             ],
             "Resource": "*"
-        },
-        {
-            "Effect": "Allow",
-            "Action": "sts:AssumeRole",
-            "Resource": "arn:aws:iam::123456789012:role/ExampleRole"
         }
     ]
 }

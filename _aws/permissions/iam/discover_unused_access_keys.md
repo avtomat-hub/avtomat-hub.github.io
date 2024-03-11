@@ -18,11 +18,6 @@ permalink: /aws/permissions/iam/discover_unused_access_keys
                 "iam:GetAccessKeyLastUsed"
             ],
             "Resource": "*"
-        },
-        {
-            "Effect": "Allow",
-            "Action": "sts:AssumeRole",
-            "Resource": "arn:aws:iam::123456789012:role/ExampleRole"
         }
     ]
 }

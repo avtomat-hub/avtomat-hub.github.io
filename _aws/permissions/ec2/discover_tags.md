@@ -26,11 +26,6 @@ permalink: /aws/permissions/ec2/discover_tags
                 "ec2:DescribeVpcs"
             ],
             "Resource": "*"
-        },
-        {
-            "Effect": "Allow",
-            "Action": "sts:AssumeRole",
-            "Resource": "arn:aws:iam::123456789012:role/ExampleRole"
         }
     ]
 }

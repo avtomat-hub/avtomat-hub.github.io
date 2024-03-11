@@ -16,11 +16,6 @@ permalink: /aws/permissions/ec2/delete_security_groups
                 "ec2:DeleteSecurityGroup"
             ],
             "Resource": "*"
-        },
-        {
-            "Effect": "Allow",
-            "Action": "sts:AssumeRole",
-            "Resource": "arn:aws:iam::123456789012:role/ExampleRole"
         }
     ]
 }

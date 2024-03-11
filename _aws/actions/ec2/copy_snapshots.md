@@ -40,7 +40,6 @@ Parameters are used for both programmatic input and command-line arguments.<br/>
 | `pending_limit` | Limit for concurrent snapshot copy operations         | `int`          | B          | No           | None            |
 | `encrypt`       | Encrypt the new snapshots                             | `bool`         | B          | No           | False           |
 | `kms_key_id`    | KMS Key ID to use for snapshot encryption             | `string`       | B          | If `encrypt` | None            |
-| `role_arn`      | AWS Role ARN for session creation                     | `string`       | B          | No           | None            |
 | `region`        | Region for operation. Leave blank for session default | `string`       | B          | No           | Session Default |
 | `debug`         | Increase log verbosity                                | `bool`         | B          | No           | False           |
 | `session`       | Established session                                   | `object`       | P          | No           | None            |                           |

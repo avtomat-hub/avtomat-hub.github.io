@@ -14,6 +14,13 @@ This collection is built on top of <a href="https://boto3.amazonaws.com/v1/docum
 {: .warning}
 Under active development. Email [dimitar@avtomat.io](mailto:dimitar@avtomat.io) if you encounter any issues.
 
+<p>
+   <a href="#requirements">Requirements</a> •
+   <a href="#installation">Installation</a> •
+   <a href="#authentication">Authentication</a> •
+   <a href="#deployment">Deployment</a>
+</p>
+
 ---
 
 ## Requirements
@@ -22,10 +29,7 @@ Under active development. Email [dimitar@avtomat.io](mailto:dimitar@avtomat.io) 
 - <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html" target="_blank">AWS CLI</a>
 
 
-## How to use
-
-
-### Installation
+## Installation
 
 Install `avtomat-aws` in a virtual environment:
 
@@ -40,57 +44,74 @@ Review the list of [actions](/aws/actions) available and their minimum IAM [perm
 [Examples](/aws/examples) are a great place to explore programmatic usage and chaining ideas.
 
 
-### Authentication
-This collection will look for credentials in the following sequence:
+## Authentication
+This collection supports the following authentication methods:
+- Profile
+- Credentials
+- Assume role
+- Fallback to Boto3 [authentication flow](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/credentials.html)
 
-1. Environment variables: **Credentials**
+### Quick start
+- CLI:
 ```bash
-export AWS_ACCESS_KEY_ID=foo
-export AWS_SECRET_ACCESS_KEY=bar
+aws_sts_whoami
 ```
-2. Environment variables: **Profile** (must be present in `~/.aws/credentials` or `~/.aws/config`)
-```bash
-export AWS_PROFILE=foo
-```
-3. Credentials file (`~/.aws/credentials`): **default** profile
-```bash
-[default]
-aws_access_key_id = foo
-aws_secret_access_key = bar
-[dev]
-aws_access_key_id = foo2
-aws_secret_access_key = bar2
-```
-4. Config file (`~/.aws/config`): **default** profile
-```bash
-[default]
-aws_access_key_id = foo
-aws_secret_access_key = bar
-[profile dev]
-aws_access_key_id = foo2
-aws_secret_access_key = bar2
+- Programmatic:
+```python
+from avtomat_aws import sts
+response = sts.whoami()
+print(response)
 ```
 
-### Region setting
-This collection will look for region in the following sequence:
-1. Action argument
-```bash
-ec2.discover_instances(region="us-east-1")
+### Overview
+
+All actions work in 3 authentication modes:
+
+- Supplied session (programmatic)
+```python
+from avtomat_aws import sts
+session = sts.create_session(profile="example")
+response = sts.whoami(session)
+print(response)
 ```
-2. Environment variables: **default** region
+- Environment variables (CLI)
 ```bash
-export AWS_DEFAULT_REGION=us-east-1
+eval $(aws_sts_create_session --role_arn <ARN_HERE>)
+aws_sts_whoami
 ```
-3. Config file (`~/.aws/config`): **default** region for selected profile
+- Fallback to Boto3 authentication flow (CLI or Programmatic)
 ```bash
-[profile dev]
-region = us-east-1
+aws_sts_whoami
 ```
-4. Region of already established session
+or
+```python
+response = sts.whoami()
+print(response)
+```
+
+### Scenarios
+
+- CLI: Assume role with MFA
 ```bash
-ec2.discover_instances(session=session)
+eval $(aws_sts_create_session --role_arn <ARN_HERE> --mfa_serial <ARN_HERE> --mfa_token <CODE_HERE>)
+aws_sts_whoami
 ```
-5. Region not supplied anywhere, default to `us-east-1`
+
+- CLI: Authenticate credentials
+```bash
+eval $(aws_sts_create_session --access_key <KEY> --secret_key <KEY>)
+aws_sts_whoami
+```
+
+- Programmatic: Authenticate credentials
+```python
+from avtomat_aws import sts
+session = sts.create_session(access_key="KEY", 
+                             secret_key="KEY")
+response = sts.whoami(session)       
+print(response)                      
+```
+
 
 ## Deployment
 

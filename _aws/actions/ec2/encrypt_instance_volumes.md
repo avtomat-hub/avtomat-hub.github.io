@@ -50,7 +50,6 @@ Parameters are used for both programmatic input and command-line arguments.<br/>
 | `instance_id` | Instance ID for volume encryption                     | `string` | B          | Yes      | None            |
 | `kms_key_id`  | KMS Key ID to use for encryption                      | `string` | B          | Yes      | None            |
 | `re_encrypt`  | Re-encrypt already encrypted volumes                  | `bool`   | B          | No       | False           |
-| `role_arn`    | AWS Role ARN for session creation                     | `string` | B          | No       | None            |
 | `region`      | Region for operation. Leave blank for session default | `string` | B          | No       | Session Default |
 | `debug`       | Increase log verbosity                                | `bool`   | B          | No       | False           |
 | `session`     | Established session                                   | `object` | P          | No       | None            |                           |

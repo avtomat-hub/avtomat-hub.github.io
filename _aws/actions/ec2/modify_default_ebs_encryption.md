@@ -31,7 +31,6 @@ Parameters are used for both programmatic input and command-line arguments.
 | `change_kms_key` | Change the KMS Key used for encryption                   | `bool`   | B          | No                  | None            |
 | `kms_key_id`     | KMS Key ID to use for encryption                         | `string` | B          | If `change_kms_key` | None            |
 | `reset_kms_key`  | Reset the KMS Key used for encryption to AWS EBS default | `bool`   | B          | No                  | None            |
-| `role_arn`       | AWS Role ARN for session creation                        | `string` | B          | No                  | None            |
 | `region`         | Region for operation. Leave blank for session default    | `string` | B          | No                  | Session Default |
 | `debug`          | Log verbosity                                            | `bool`   | B          | No                  | None            |
 | `session`        | Established session                                      | `object` | P          | No                  | None            |

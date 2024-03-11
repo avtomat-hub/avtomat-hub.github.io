@@ -32,11 +32,6 @@ permalink: /aws/permissions/ec2/discover_unused_security_groups
                 "kafka:ListClusters"
             ],
             "Resource": "*"
-        },
-        {
-            "Effect": "Allow",
-            "Action": "sts:AssumeRole",
-            "Resource": "arn:aws:iam::123456789012:role/ExampleRole"
         }
     ]
 }

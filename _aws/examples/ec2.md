@@ -6,12 +6,11 @@ permalink: /aws/examples/ec2
 ---
 
 ```python
-from avtomat_aws import helpers
-from avtomat_aws import ec2
+from avtomat_aws import sts, ec2
 
 if __name__ == '__main__':
 
-    session = helpers.create_session()
+    session = sts.create_session()
 
     regions = ec2.discover_active_regions(session=session)
 

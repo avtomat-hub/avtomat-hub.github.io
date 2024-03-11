@@ -20,11 +20,6 @@ permalink: /aws/permissions/iam/quarantine_user
                 "iam:AttachUserPolicy"
             ],
             "Resource": "*"
-        },
-        {
-            "Effect": "Allow",
-            "Action": "sts:AssumeRole",
-            "Resource": "arn:aws:iam::123456789012:role/ExampleRole"
         }
     ]
 }

@@ -42,7 +42,6 @@ Parameters are used for both programmatic input and command-line arguments.<br/>
 | `size`       | New size (GB) for volumes                             | `int`          | B          | No       | None            |
 | `type`       | New type for volumes                                  | `string`       | B          | No       | None            |
 | `iops`       | New IOPS for volumes                                  | `int`          | B          | No       | None            |
-| `role_arn`   | AWS Role ARN for session creation                     | `string`       | B          | No       | None            |
 | `region`     | Region for operation. Leave blank for session default | `string`       | B          | No       | Session Default |
 | `debug`      | Increase log verbosity                                | `bool`         | B          | No       | False           |
 | `session`    | Established session                                   | `object`       | P          | No       | None            |                           |

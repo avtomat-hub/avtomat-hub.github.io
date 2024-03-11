@@ -31,7 +31,6 @@ Parameters are used for both programmatic input and command-line arguments.<br/>
 | `username`      | User that owns the key            | `string` | B          | Yes              | None            |
 | `enable`        | Enable access keys                | `bool`   | B          | If not `disable` | False           |
 | `disable`       | Disable access keys               | `bool`   | B          | If not `enable`  | False           |
-| `role_arn`      | AWS Role ARN for session creation | `string` | B          | No               | None            |
 | `region`        | Region for operation              | `string` | B          | No               | Session default |
 | `debug`         | Log verbosity                     | `bool`   | B          | No               | None            |
 | `session`       | Established session               | `object` | P          | No               | None            |

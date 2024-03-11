@@ -40,7 +40,6 @@ Parameters are used for both programmatic input and command-line arguments.<br/>
 | `tags`         | Tags to create or delete (Key=Value)                  | `list(string)` | B          | Yes             | None            |
 | `create`       | Create tags                                           | `bool`         | B          | If not `delete` | False           |
 | `delete`       | Delete tags                                           | `bool`         | B          | If not `create` | False           |
-| `role_arn`     | AWS Role ARN for session creation                     | `string`       | B          | No              | None            |
 | `region`       | Region for operation. Leave blank for session default | `string`       | B          | No              | Session Default |
 | `debug`        | Increase log verbosity                                | `bool`         | B          | No              | False           |
 | `session`      | Established session                                   | `object`       | P          | No              | None            |                           |

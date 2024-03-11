@@ -26,7 +26,6 @@ Parameters are used for both programmatic input and command-line arguments.
 
 | Parameter  | Description                       | Type     | Applicable | Required | Default value |
 |------------|-----------------------------------|----------|------------|----------|---------------|
-| `role_arn` | AWS Role ARN for session creation | `string` | B          | No       | None          |
 | `debug`    | Log verbosity                     | `bool`   | B          | No       | None          |
 | `session`  | Established session               | `object` | P          | No       | None          |
 
@@ -40,16 +39,10 @@ Returns a `list` of discovered regions:
 
 ## Examples
 
-Discover active regions without specifying a role ARN:
+Discover active regions:
 
 ```bash
 aws_ec2_discover_active_regions
-```
-
-Discover active regions using a specific role ARN:
-
-```bash
-aws_ec2_discover_active_regions --role_arn "arn:aws:iam::123456789012:role/YourRoleName"
 ```
 
 Programmatic usage:
@@ -57,5 +50,5 @@ Programmatic usage:
 ```python
 from avtomat_aws import ec2
 
-response = ec2.discover_active_regions(role_arn="arn:aws:iam::123456789012:role/YourRoleName")
+response = ec2.discover_active_regions()
 ```

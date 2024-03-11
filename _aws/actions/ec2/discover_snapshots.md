@@ -33,8 +33,7 @@ Parameters are used for both programmatic input and command-line arguments.<br/>
 | `unencrypted`        | Get only unencrypted snapshots                        | `bool`         | B          | No       | False           |
 | `exclude_aws_backup` | Exclude snapshots managed by AWS Backup               | `bool`         | B          | No       | False           |
 | `created_before`     | Get snapshots created before date(YYYY/MM//DD)        | `string`       | B          | No       | None            |
-| `created_after`      | Get snapshots created after date(YYYY/MM//DD)           | `string`       | B          | No       | None            |
-| `role_arn`           | AWS Role ARN for session creation                     | `string`       | B          | No       | None            |
+| `created_after`      | Get snapshots created after date(YYYY/MM//DD)         | `string`       | B          | No       | None            |
 | `region`             | Region for operation. Leave blank for session default | `string`       | B          | No       | Session Default |
 | `debug`              | Increase log verbosity                                | `bool`         | B          | No       | False           |
 | `session`            | Established session                                   | `object`       | P          | No       | None            |

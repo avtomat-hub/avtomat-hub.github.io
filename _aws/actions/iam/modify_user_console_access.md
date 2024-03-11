@@ -35,7 +35,6 @@ Parameters are used for both programmatic input and command-line arguments.<br/>
 | `enable`   | Enable console access                 | `bool`   | B          | If not `disable` | False           |
 | `disable`  | Disable console access                | `bool`   | B          | If not `enable`  | False           |
 | `password` | New password for the user             | `string` | B          | If `enable`      | None            |
-| `role_arn` | AWS Role ARN for session creation     | `string` | B          | No               | None            |
 | `region`   | Region for operation                  | `string` | B          | No               | Session default |
 | `debug`    | Log verbosity                         | `bool`   | B          | No               | None            |
 | `session`  | Established session                   | `object` | P          | No               | None            |

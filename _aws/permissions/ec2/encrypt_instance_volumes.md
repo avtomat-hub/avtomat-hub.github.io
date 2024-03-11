@@ -31,11 +31,6 @@ permalink: /aws/permissions/ec2/encrypt_instance_volumes
                 "kms:DescribeKey"
             ],
             "Resource": "*"
-        },
-        {
-            "Effect": "Allow",
-            "Action": "sts:AssumeRole",
-            "Resource": "arn:aws:iam::123456789012:role/ExampleRole"
         }
     ]
 }

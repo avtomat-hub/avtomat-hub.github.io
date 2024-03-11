@@ -18,11 +18,6 @@ permalink: /aws/permissions/ec2/copy_snapshots
                 "ec2:DescribeSnapshots"
             ],
             "Resource": "*"
-        },
-        {
-            "Effect": "Allow",
-            "Action": "sts:AssumeRole",
-            "Resource": "arn:aws:iam::123456789012:role/ExampleRole"
         }
     ]
 }

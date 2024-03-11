@@ -31,7 +31,6 @@ Parameters are used for both programmatic input and command-line arguments.<br/>
 | `states`   | Instance states                   | `list(string)` | B          | No                 | ['running','stopped','pending','stopping'] |
 | `tags`     | Tags (Key=Value)                  | `list(string)` | B          | If `mode` is `tag` | None                                       |
 | `public`   | Get only public instances         | `bool`         | B          | No                 | False                                      |
-| `role_arn` | AWS Role ARN for session creation | `string`       | B          | No                 | None                                       |
 | `region`   | Region for operation              | `string`       | B          | No                 | Session default                            |
 | `debug`    | Log verbosity                     | `bool`         | B          | No                 | None                                       |
 | `session`  | Established session               | `object`       | P          | No                 | None                                       |

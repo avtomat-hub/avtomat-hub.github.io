@@ -35,7 +35,6 @@ Parameters are used for both programmatic input and command-line arguments.<br/>
 |--------------|-------------------------------------------------------|----------------|------------|----------|-----------------|
 | `volume_ids` | List of Volume IDs to delete                          | `list(string)` | B          | Yes      | None            |
 | `snapshot`   | Create snapshots before deletion                      | `bool`         | B          | No       | False           |
-| `role_arn`   | AWS Role ARN for session creation                     | `string`       | B          | No       | None            |
 | `region`     | Region for operation. Leave blank for session default | `string`       | B          | No       | Session Default |
 | `debug`      | Increase log verbosity                                | `bool`         | B          | No       | False           |
 | `session`    | Established session                                   | `object`       | P          | No       | None            |                           |

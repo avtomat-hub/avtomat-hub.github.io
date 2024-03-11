@@ -17,11 +17,6 @@ permalink: /aws/permissions/iam/discover_old_access_keys
                 "iam:ListAccessKeys"
             ],
             "Resource": "*"
-        },
-        {
-            "Effect": "Allow",
-            "Action": "sts:AssumeRole",
-            "Resource": "arn:aws:iam::123456789012:role/ExampleRole"
         }
     ]
 }

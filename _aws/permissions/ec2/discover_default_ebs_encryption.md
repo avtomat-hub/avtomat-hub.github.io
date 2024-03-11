@@ -17,11 +17,6 @@ permalink: /aws/permissions/ec2/discover_default_ebs_encryption
                 "ec2:GetEbsDefaultKmsKeyId"
             ],
             "Resource": "*"
-        },
-        {
-            "Effect": "Allow",
-            "Action": "sts:AssumeRole",
-            "Resource": "arn:aws:iam::123456789012:role/ExampleRole"
         }
     ]
 }

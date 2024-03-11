@@ -19,11 +19,6 @@ permalink: /aws/permissions/iam/discover_inactive_users
                 "iam:GetAccessKeyLastUsed"
             ],
             "Resource": "*"
-        },
-        {
-            "Effect": "Allow",
-            "Action": "sts:AssumeRole",
-            "Resource": "arn:aws:iam::123456789012:role/ExampleRole"
         }
     ]
 }

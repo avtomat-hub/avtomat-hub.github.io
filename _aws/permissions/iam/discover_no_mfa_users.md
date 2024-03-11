@@ -17,11 +17,6 @@ permalink: /aws/permissions/iam/discover_no_mfa_users
                 "iam:ListMFADevices"
             ],
             "Resource": "*"
-        },
-        {
-            "Effect": "Allow",
-            "Action": "sts:AssumeRole",
-            "Resource": "arn:aws:iam::123456789012:role/ExampleRole"
         }
     ]
 }

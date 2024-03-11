@@ -11,7 +11,7 @@ Collection of actions designed to automate various cloud operations. Use individ
 {: .fs-5 .fw-300 }
 
 [Request access](https://avtomat.io){: .btn .btn-primary .fs-4 .mb-4 .mb-md-0 .mr-2 }
-[Get started](#how-to-use){: .btn .fs-4 .mb-4 .mb-md-0 }
+[Get started](/aws/get_started){: .btn .fs-4 .mb-4 .mb-md-0 }
 
 ---
 

@@ -32,7 +32,6 @@ Parameters are used for both programmatic input and command-line arguments.<br/>
 | `unencrypted`  | Get only unencrypted volumes                          | `bool`         | B          | No       | False           |
 | `detached`     | Get only detached volumes                             | `bool`         | B          | No       | False           |
 | `types`        | Get only specific type volumes                        | `list(string)` | B          | No       | None            |
-| `role_arn`     | AWS Role ARN for session creation                     | `string`       | B          | No       | None            |
 | `region`       | Region for operation. Leave blank for session default | `string`       | B          | No       | Session Default |
 | `debug`        | Increase log verbosity                                | `bool`         | B          | No       | False           |
 | `session`      | Established session                                   | `object`       | P          | No       | None            |

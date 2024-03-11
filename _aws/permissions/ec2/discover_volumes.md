@@ -16,11 +16,6 @@ permalink: /aws/permissions/ec2/discover_volumes
                 "ec2:DescribeVolumes"
             ],
             "Resource": "*"
-        },
-        {
-            "Effect": "Allow",
-            "Action": "sts:AssumeRole",
-            "Resource": "arn:aws:iam::123456789012:role/ExampleRole"
         }
     ]
 }
