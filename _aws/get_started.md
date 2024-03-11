@@ -25,6 +25,21 @@ Under active development. Email [dimitar@avtomat.io](mailto:dimitar@avtomat.io) 
 ## How to use
 
 
+### Installation
+
+Install `avtomat-aws` in a virtual environment:
+
+```bash
+python -m venv avtomat-aws
+source avtomat-aws/bin/activate
+pip install git+ssh://git@github.com/avtomat-hub/avtomat-aws.git
+```
+Once installed, you can either use actions directly through the command line or import them in your code.
+
+Review the list of [actions](/aws/actions) available and their minimum IAM [permissions](/aws/permissions) required.<br/>
+[Examples](/aws/examples) are a great place to explore programmatic usage and chaining ideas.
+
+
 ### Authentication
 This collection will look for credentials in the following sequence:
 
@@ -40,36 +55,42 @@ export AWS_PROFILE=foo
 3. Credentials file (`~/.aws/credentials`): **default** profile
 ```bash
 [default]
-aws_access_key_id=foo
-aws_secret_access_key=bar
+aws_access_key_id = foo
+aws_secret_access_key = bar
 [dev]
-aws_access_key_id=foo2
-aws_secret_access_key=bar2
+aws_access_key_id = foo2
+aws_secret_access_key = bar2
 ```
 4. Config file (`~/.aws/config`): **default** profile
 ```bash
 [default]
-aws_access_key_id=foo
-aws_secret_access_key=bar
+aws_access_key_id = foo
+aws_secret_access_key = bar
 [profile dev]
-aws_access_key_id=foo2
-aws_secret_access_key=bar2
+aws_access_key_id = foo2
+aws_secret_access_key = bar2
 ```
 
-### Installation
-
-Install `avtomat-aws` in a virtual environment:
-
+### Region setting
+This collection will look for region in the following sequence:
+1. Action argument
 ```bash
-python -m venv avtomat-aws
-source avtomat-aws/bin/activate
-pip install git+ssh://git@github.com/avtomat-hub/avtomat-aws.git
+ec2.discover_instances(region="us-east-1")
 ```
-
-Once installed, you can either use actions directly through the command line or import them in your code.
-
-Review the list of [actions](/aws/actions) available and their minimum IAM [permissions](/aws/permissions) required.<br/>
-[Examples](/aws/examples) are a great place to explore programmatic usage and chaining ideas.
+2. Environment variables: **default** region
+```bash
+export AWS_DEFAULT_REGION=us-east-1
+```
+3. Config file (`~/.aws/config`): **default** region for selected profile
+```bash
+[profile dev]
+region = us-east-1
+```
+4. Region of already established session
+```bash
+ec2.discover_instances(session=session)
+```
+5. Region not supplied anywhere, default to `us-east-1`
 
 ## Deployment
 
