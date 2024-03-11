@@ -106,8 +106,7 @@ aws_sts_whoami
 - Programmatic: Authenticate credentials
 ```python
 from avtomat_aws import sts
-session = sts.create_session(access_key="KEY", 
-                             secret_key="KEY")
+session = sts.create_session(access_key="KEY", secret_key="KEY")
 response = sts.whoami(session)       
 print(response)                      
 ```

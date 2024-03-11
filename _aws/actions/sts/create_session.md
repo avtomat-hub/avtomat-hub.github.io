@@ -59,6 +59,6 @@ Programmatic usage:
 from avtomat_aws import sts
 
 session = sts.create_session(role_arn="arn:aws:iam::123456789012:role/ExampleRole",
-                              mfa_serial="arn:aws:iam::111111111111:mfa/Example",
-                              mfa_token="123456")
+                             mfa_serial="arn:aws:iam::111111111111:mfa/Example",
+                             mfa_token="123456")
 ```
