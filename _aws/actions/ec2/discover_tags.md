@@ -66,13 +66,13 @@ Returns a `list` of EC2 resource IDs:
 Find security groups missing the 'Name' tag:
 
 ```bash
-aws_ec2_discover_tags --resource_types security_group --key Name --missing
+aaws ec2 discover_tags --resource_types security_group --key Name --missing
 ```
 
 Find instances and volumes with the 'Owner:Acme' tag:
 
 ```bash
-aws_ec2_discover_tags --resource_types instance volume --key Owner --value Acme --existing
+aaws ec2 discover_tags --resource_types instance volume --key Owner --value Acme --existing
 ```
 
 Programmatic usage:

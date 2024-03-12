@@ -57,7 +57,7 @@ Returns a `list` of resources that failed the modification:
 Create tags for resources:
 
 ```bash
-aws_ec2_modify_tags --resource_ids vol-1234567890abcdef0 i-abcdef1234567890 --tags Name=example Owner=acme --create
+aaws ec2 modify_tags --resource_ids vol-1234567890abcdef0 i-abcdef1234567890 --tags Name=example Owner=acme --create
 ```
 
 Programmatic usage:

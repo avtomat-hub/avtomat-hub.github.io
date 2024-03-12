@@ -51,7 +51,7 @@ Returns a `list` of discovered users:
 Discover users who haven't used the console for more than 30 days:
 
 ```bash
-aws_iam_discover_inactive_console_users --threshold_days 30
+aaws iam discover_inactive_console_users --threshold_days 30
 ```
 
 Programmatic usage:

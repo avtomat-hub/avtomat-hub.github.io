@@ -44,7 +44,7 @@ This function has no output.
 Enable the default EBS encryption setting for eu-west-2:
 
 ```bash
-aws_ec2_modify_default_ebs_encryption --enable --region eu-west-2
+aaws ec2 modify_default_ebs_encryption --enable --region eu-west-2
 ```
 
 Programmatic usage:

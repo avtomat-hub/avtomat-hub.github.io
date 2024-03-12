@@ -67,13 +67,13 @@ Returns a `string` of the encrypted instance ID:
 Encrypt all instance volumes with a KMS key (already encrypted volumes are skipped):
 
 ```bash
-aws_ec2_encrypt_instance_volumes --instance_id i-1234567890abcdef0 --kms_key_id abcd1234-a123-456a-a12b-a123b4cd56ef
+aaws ec2 encrypt_instance_volumes --instance_id i-1234567890abcdef0 --kms_key_id abcd1234-a123-456a-a12b-a123b4cd56ef
 ```
 
 Encrypt all instance volumes with a KMS key (already encrypted volumes are re-encrypted):
 
 ```bash
-aws_ec2_encrypt_instance_volumes --re_encrypt --instance_id i-1234567890abcdef0 --kms_key_id abcd1234-a123-456a-a12b-a123b4cd56ef
+aaws ec2 encrypt_instance_volumes --re_encrypt --instance_id i-1234567890abcdef0 --kms_key_id abcd1234-a123-456a-a12b-a123b4cd56ef
 ```
 
 Programmatic usage:

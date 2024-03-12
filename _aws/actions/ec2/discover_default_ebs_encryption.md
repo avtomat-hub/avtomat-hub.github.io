@@ -46,7 +46,7 @@ Returns a `dictionary` with keys:
 Discover default EBS encryption setting for eu-west-2:
 
 ```bash
-aws_ec2_discover_default_ebs_encryption --region eu-west-2
+aaws ec2 discover_default_ebs_encryption --region eu-west-2
 ```
 
 Programmatic usage:

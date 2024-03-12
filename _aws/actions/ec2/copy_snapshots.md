@@ -57,13 +57,13 @@ Returns a `list` of snapshots moved:
 Create encrypted copies of snapshots in eu-west-2:
 
 ```bash
-aws_ec2_copy_snapshots --snapshot_ids snap-1234567890abcdef0 snap-abcdef1234567890 --region eu-west-2 --target_region eu-west-2 --encrypt
+aaws ec2 copy_snapshots --snapshot_ids snap-1234567890abcdef0 snap-abcdef1234567890 --region eu-west-2 --target_region eu-west-2 --encrypt
 ```
 
 Copy snapshots from eu-west-2 to us-east-1 and encrypt them with custom KMS key:
 
 ```bash
-aws_ec2_copy_snapshots --snapshot_ids snap-1234567890abcdef0 snap-abcdef1234567890 --region eu-west-2 --target_region us-east-1 --encrypt --kms_key_id 1234abcd-12ab-34cd-56ef-1234567890ab
+aaws ec2 copy_snapshots --snapshot_ids snap-1234567890abcdef0 snap-abcdef1234567890 --region eu-west-2 --target_region us-east-1 --encrypt --kms_key_id 1234abcd-12ab-34cd-56ef-1234567890ab
 ```
 
 Programmatic usage:

@@ -49,13 +49,13 @@ Returns a `list` of discovered volume IDs:
 Fetch all volumes for specified instances:
 
 ```bash
-aws_ec2_discover_volumes --instance_ids i-1234567890abcdef0 i-0987654321fedcba0
+aaws ec2 discover_volumes --instance_ids i-1234567890abcdef0 i-0987654321fedcba0
 ```
 
 Fetch all detached and unencrypted volumes of type gp2 or gp3:
 
 ```bash
-aws_ec2_discover_volumes --unencrypted --detached --types gp2 gp3
+aaws ec2 discover_volumes --unencrypted --detached --types gp2 gp3
 ```
 
 Programmatic usage:

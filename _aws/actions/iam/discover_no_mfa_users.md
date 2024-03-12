@@ -44,7 +44,7 @@ Returns a `list` of discovered users:
 Discover users without MFA enabled:
 
 ```bash
-aws_iam_discover_no_mfa_users
+aaws iam discover_no_mfa_users
 ```
 
 Programmatic usage:

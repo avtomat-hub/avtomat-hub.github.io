@@ -50,7 +50,7 @@ Returns a `list of dictionaries` containing discovered access keys:
 Discover access keys not used for more than 60 days:
 
 ```bash
-aws_iam_discover_unused_access_keys --threshold_days 60
+aaws iam discover_unused_access_keys --threshold_days 60
 ```
 
 Programmatic usage:

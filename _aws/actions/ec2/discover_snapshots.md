@@ -51,13 +51,13 @@ Returns a `list` of discovered snapshot IDs:
 Fetch all snapshots in eu-west-2:
 
 ```bash
-aws_ec2_discover_snapshots --region eu-west-2
+aaws ec2 discover_snapshots --region eu-west-2
 ```
 
 Fetch snapshots created before 2024/01/01 and not managed by AWS Backup:
 
 ```bash
-aws_ec2_discover_snapshots --exclude__aws_backup --created_before 2024/01/01
+aaws ec2 discover_snapshots --exclude__aws_backup --created_before 2024/01/01
 ```
 
 Programmatic usage:

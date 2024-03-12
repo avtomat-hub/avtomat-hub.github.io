@@ -54,7 +54,7 @@ This collection supports the following authentication methods:
 ### Quick start
 - CLI:
 ```bash
-aws_sts_whoami
+aaws sts whoami
 ```
 - Programmatic:
 ```python
@@ -76,12 +76,12 @@ print(response)
 ```
 - Environment variables (CLI)
 ```bash
-eval $(aws_sts_create_session --role_arn <ARN_HERE>)
-aws_sts_whoami
+eval $(aaws sts create_session --role_arn <ARN_HERE>)
+aaws sts whoami
 ```
 - Fallback to Boto3 authentication flow (CLI or Programmatic)
 ```bash
-aws_sts_whoami
+aaws sts whoami
 ```
 or
 ```python
@@ -93,14 +93,14 @@ print(response)
 
 - CLI: Assume role with MFA
 ```bash
-eval $(aws_sts_create_session --role_arn <ARN_HERE> --mfa_serial <ARN_HERE> --mfa_token <CODE_HERE>)
-aws_sts_whoami
+eval $(aaws sts create_session --role_arn <ARN_HERE> --mfa_serial <ARN_HERE> --mfa_token <CODE_HERE>)
+aaws sts whoami
 ```
 
 - CLI: Authenticate credentials
 ```bash
-eval $(aws_sts_create_session --access_key <KEY> --secret_key <KEY>)
-aws_sts_whoami
+eval $(aaws sts create_session --access_key <KEY> --secret_key <KEY>)
+aaws sts whoami
 ```
 
 - Programmatic: Authenticate credentials

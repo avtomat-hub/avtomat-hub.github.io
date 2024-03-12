@@ -54,7 +54,7 @@ Returns a `list` of successfully shared snapshots:
 Share snapshots with account 123456789012:
 
 ```bash
-aws_ec2_share_snapshots --snapshot_ids snap-1234567890abcdef0 snap-abcdef1234567890 --target_account 123456789012 --region eu-west-2
+aaws ec2 share_snapshots --snapshot_ids snap-1234567890abcdef0 snap-abcdef1234567890 --target_account 123456789012 --region eu-west-2
 ```
 
 Programmatic usage:

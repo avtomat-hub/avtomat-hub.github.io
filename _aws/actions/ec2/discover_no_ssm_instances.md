@@ -44,7 +44,7 @@ Returns a `list` of discovered instance IDs:
 Discover instances without SSM enabled in eu-west-2:
 
 ```bash
-aws_ec2_discover_no_ssm_instances --region eu-west-2
+aaws ec2 discover_no_ssm_instances --region eu-west-2
 ```
 
 Programmatic usage:

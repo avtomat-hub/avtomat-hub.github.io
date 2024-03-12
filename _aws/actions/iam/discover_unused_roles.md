@@ -45,7 +45,7 @@ Returns a `list` of discovered roles:
 Discover roles not used for more than 100 days:
 
 ```bash
-aws_iam_discover_unused_roles --threshold_days 100
+aaws iam discover_unused_roles --threshold_days 100
 ```
 
 Programmatic usage:

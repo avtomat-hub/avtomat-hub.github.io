@@ -48,7 +48,7 @@ True | False
 Disable an access key for user:
 
 ```bash
-aws_iam_modify_access_key --access_key_id AKIA12ZAWVSH44WXASKY --username acme-user --disable
+aaws iam modify_access_key --access_key_id AKIA12ZAWVSH44WXASKY --username acme-user --disable
 ```
 
 Programmatic usage:

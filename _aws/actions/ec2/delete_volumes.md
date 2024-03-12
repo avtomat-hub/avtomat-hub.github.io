@@ -52,7 +52,7 @@ Returns a `list` of deleted volume IDs:
 Delete volumes with pre-deletion snapshots:
 
 ```bash
-aws_ec2_delete_volumes --volume_ids vol-1234567890abcdef0 vol-abcdef1234567890 --snapshot
+aaws ec2 delete_volumes --volume_ids vol-1234567890abcdef0 vol-abcdef1234567890 --snapshot
 ```
 
 Programmatic usage:

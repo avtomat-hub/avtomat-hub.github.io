@@ -50,7 +50,7 @@ Returns a Boto3 Session `object`.
 Assume a role with MFA:
 
 ```bash
-aws_sts_create_session --role_arn arn:aws:iam::123456789012:role/ExampleRole --mfa_serial arn:aws:iam::111111111111:mfa/Example --mfa_token 123456
+aaws sts create_session --role_arn arn:aws:iam::123456789012:role/ExampleRole --mfa_serial arn:aws:iam::111111111111:mfa/Example --mfa_token 123456
 ```
 
 Programmatic usage:

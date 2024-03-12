@@ -50,7 +50,7 @@ Returns a `list of dictionaries` containing discovered access keys:
 Discover access keys older than 90 days:
 
 ```bash
-aws_iam_discover_old_access_keys --threshold_days 90
+aaws iam discover_old_access_keys --threshold_days 90
 ```
 
 Programmatic usage:

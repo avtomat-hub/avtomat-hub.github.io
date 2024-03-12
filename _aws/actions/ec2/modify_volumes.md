@@ -59,7 +59,7 @@ Returns a `list` of modified volume IDs:
 Change the size, type and iops of volumes with pre-modification snapshots:
 
 ```bash
-aws_ec2_modify_volumes --volume_ids vol-1234567890abcdef0 vol-abcdef1234567890 --size 100 --type gp3 --iops 3000
+aaws ec2 modify_volumes --volume_ids vol-1234567890abcdef0 vol-abcdef1234567890 --size 100 --type gp3 --iops 3000
 ```
 
 Programmatic usage:

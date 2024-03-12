@@ -52,7 +52,7 @@ True | False
 Enable console access for a user:
 
 ```bash
-aws_iam_modify_console_access --user acme-user --enable --password 'P@ssw0rd'
+aaws iam modify_console_access --user acme-user --enable --password 'P@ssw0rd'
 ```
 
 Programmatic usage:

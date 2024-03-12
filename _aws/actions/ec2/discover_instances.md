@@ -48,13 +48,13 @@ Returns a `list` of discovered instance IDs:
 Discover tagged instances:
 
 ```bash
-aws_ec2_discover_instances --mode tag --tags Name=example Owner=acme
+aaws ec2 discover_instances --mode tag --tags Name=example Owner=acme
 ```
 
 Discover public instances in running or stopped state:
 
 ```bash
-aws_ec2_discover_instances --mode all --states running stopped --public
+aaws ec2 discover_instances --mode all --states running stopped --public
 ```
 
 Programmatic usage:

@@ -41,7 +41,7 @@ Returns a `string` indicating current entity.
 Find current credentials:
 
 ```bash
-aws_sts_whoami
+aaws sts whoami
 ```
 
 Programmatic usage:

@@ -45,7 +45,7 @@ Returns a `list` of discovered users:
 Discover users with no activity over 30 days:
 
 ```bash
-aws_iam_discover_inactive_users --threshold_days 30
+aaws iam discover_inactive_users --threshold_days 30
 ```
 
 Programmatic usage:

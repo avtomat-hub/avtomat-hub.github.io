@@ -57,7 +57,7 @@ Returns a `list` of discovered security group IDs:
 Discover unused security groups:
 
 ```bash
-aws_ec2_discover_unused_security_groups --region us-east-1
+aaws ec2 discover_unused_security_groups --region us-east-1
 ```
 
 Programmatic usage:

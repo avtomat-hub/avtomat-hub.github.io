@@ -45,7 +45,7 @@ Returns a `list` of deleted snapshot IDs:
 Delete snapshots in eu-west-2:
 
 ```bash
-aws_ec2_delete_snapshots --snapshot_ids snap-1234567890abcdef0 snap-abcdef1234567890 --region eu-west-2
+aaws ec2 delete_snapshots --snapshot_ids snap-1234567890abcdef0 snap-abcdef1234567890 --region eu-west-2
 ```
 
 Programmatic usage:

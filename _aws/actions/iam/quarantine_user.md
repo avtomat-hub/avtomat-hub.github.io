@@ -51,7 +51,7 @@ True | False
 Quarantine a user:
 
 ```bash
-aws_iam_quarantine_user --user acme-user
+aaws iam quarantine_user --user acme-user
 ```
 
 Programmatic usage:

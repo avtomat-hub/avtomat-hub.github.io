@@ -45,7 +45,7 @@ Returns a `list` of deleted security group IDs:
 Delete security groups in eu-west-2:
 
 ```bash
-aws_ec2_delete_security_groups --security_group_ids sg-1234567890abcdef0 sg-abcdef1234567890 --region eu-west-2
+aaws ec2 delete_security_groups --security_group_ids sg-1234567890abcdef0 sg-abcdef1234567890 --region eu-west-2
 ```
 
 Programmatic usage:

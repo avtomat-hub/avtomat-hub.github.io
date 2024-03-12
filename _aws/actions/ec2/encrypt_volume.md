@@ -71,13 +71,13 @@ Returns a `string` of the new, encrypted volume ID:
 Encrypt a volume with a KMS key: (skipped if already encrypted)
 
 ```bash
-aws_ec2_encrypt_volume --volume_id vol-1234567890abcdef0 --kms_key_id abcd1234-a123-456a-a12b-a123b4cd56ef
+aaws ec2 encrypt_volume --volume_id vol-1234567890abcdef0 --kms_key_id abcd1234-a123-456a-a12b-a123b4cd56ef
 ```
 
 Encrypt a volume with a KMS key: (re-encrypted if already encrypted)
 
 ```bash
-aws_ec2_encrypt_volume --re_encrypt --volume_id vol-1234567890abcdef0 --kms_key_id abcd1234-a123-456a-a12b-a123b4cd56ef
+aaws ec2 encrypt_volume --re_encrypt --volume_id vol-1234567890abcdef0 --kms_key_id abcd1234-a123-456a-a12b-a123b4cd56ef
 ```
 
 Programmatic usage:

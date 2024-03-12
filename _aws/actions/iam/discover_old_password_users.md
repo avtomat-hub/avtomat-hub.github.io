@@ -45,7 +45,7 @@ Returns a `list` of discovered users:
 Discover users with passwords older than 60 days:
 
 ```bash
-aws_iam_discover_old_password_users --threshold_days 60
+aaws iam discover_old_password_users --threshold_days 60
 ```
 
 Programmatic usage:

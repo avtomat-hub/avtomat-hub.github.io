@@ -42,7 +42,7 @@ Returns a `list` of discovered regions:
 Discover active regions:
 
 ```bash
-aws_ec2_discover_active_regions
+aaws ec2 discover_active_regions
 ```
 
 Programmatic usage:
