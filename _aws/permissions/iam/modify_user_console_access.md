@@ -8,17 +8,17 @@ permalink: /aws/permissions/iam/modify_user_console_access
 
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "iam:CreateLoginProfile",
-                "iam:DeleteLoginProfile",
-                "iam:AttachUserPolicy"
-            ],
-            "Resource": "*"
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:CreateLoginProfile",
+        "iam:DeleteLoginProfile",
+        "iam:AttachUserPolicy"
+      ],
+      "Resource": "*"
+    }
+  ]
 }
 ```

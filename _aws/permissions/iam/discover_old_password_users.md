@@ -8,16 +8,16 @@ permalink: /aws/permissions/iam/discover_old_password_users
 
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "iam:ListUsers",
-                "iam:GetLoginProfile"
-            ],
-            "Resource": "*"
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:ListUsers",
+        "iam:GetLoginProfile"
+      ],
+      "Resource": "*"
+    }
+  ]
 }
 ```

@@ -8,13 +8,13 @@ permalink: /aws/permissions/iam/modify_access_key
 
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": "iam:UpdateAccessKey",
-            "Resource": "*"
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "iam:UpdateAccessKey",
+      "Resource": "*"
+    }
+  ]
 }
 ```

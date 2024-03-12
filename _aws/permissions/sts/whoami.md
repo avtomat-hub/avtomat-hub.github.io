@@ -1,9 +1,9 @@
 ---
-title: Share Snapshots
-parent: ec2
+title: Who Am I
+parent: sts
 grand_parent: Permissions
 layout: default
-permalink: /aws/permissions/ec2/share_snapshots
+permalink: /aws/permissions/sts/whoami
 ---
 
 ```json
@@ -12,9 +12,7 @@ permalink: /aws/permissions/ec2/share_snapshots
   "Statement": [
     {
       "Effect": "Allow",
-      "Action": [
-        "ec2:ModifySnapshotAttribute"
-      ],
+      "Action": "sts:GetCallerIdentity",
       "Resource": "*"
     }
   ]

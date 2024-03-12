@@ -8,16 +8,16 @@ permalink: /aws/permissions/ec2/discover_default_ebs_encryption
 
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "ec2:GetEbsEncryptionByDefault",
-                "ec2:GetEbsDefaultKmsKeyId"
-            ],
-            "Resource": "*"
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ec2:GetEbsEncryptionByDefault",
+        "ec2:GetEbsDefaultKmsKeyId"
+      ],
+      "Resource": "*"
+    }
+  ]
 }
 ```

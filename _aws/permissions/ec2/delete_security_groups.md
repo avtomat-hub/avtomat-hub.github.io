@@ -8,15 +8,15 @@ permalink: /aws/permissions/ec2/delete_security_groups
 
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "ec2:DeleteSecurityGroup"
-            ],
-            "Resource": "*"
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ec2:DeleteSecurityGroup"
+      ],
+      "Resource": "*"
+    }
+  ]
 }
 ```

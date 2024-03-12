@@ -8,17 +8,17 @@ permalink: /aws/permissions/iam/discover_unused_access_keys
 
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "iam:ListUsers",
-                "iam:ListAccessKeys",
-                "iam:GetAccessKeyLastUsed"
-            ],
-            "Resource": "*"
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:ListUsers",
+        "iam:ListAccessKeys",
+        "iam:GetAccessKeyLastUsed"
+      ],
+      "Resource": "*"
+    }
+  ]
 }
 ```

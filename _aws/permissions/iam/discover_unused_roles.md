@@ -8,16 +8,16 @@ permalink: /aws/permissions/iam/discover_unused_roles
 
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "iam:ListRoles",
-                "iam:GetRole"
-            ],
-            "Resource": "*"
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:ListRoles",
+        "iam:GetRole"
+      ],
+      "Resource": "*"
+    }
+  ]
 }
 ```
