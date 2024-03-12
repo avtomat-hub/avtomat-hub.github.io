@@ -25,15 +25,16 @@ Parameters are used for both programmatic input and command-line arguments.<br/>
   B).<br/>
 - For Command-Line execution, type `list` parameters are passed as space-separated strings.
 
-| Parameter  | Description                       | Type           | Applicable | Required           | Default value                              |
-|------------|-----------------------------------|----------------|------------|--------------------|--------------------------------------------|
-| `mode`     | Discovery mode (all, tag)         | `string`       | B          | Yes                | all                                        |
-| `states`   | Instance states                   | `list(string)` | B          | No                 | ['running','stopped','pending','stopping'] |
-| `tags`     | Tags (Key=Value)                  | `list(string)` | B          | If `mode` is `tag` | None                                       |
-| `public`   | Get only public instances         | `bool`         | B          | No                 | False                                      |
-| `region`   | Region for operation              | `string`       | B          | No                 | Session default                            |
-| `debug`    | Log verbosity                     | `bool`         | B          | No                 | None                                       |
-| `session`  | Established session               | `object`       | P          | No                 | None                                       |
+| Parameter      | Description                                                                       | Type           | Applicable | Required | Default value                              |
+|----------------|-----------------------------------------------------------------------------------|----------------|------------|----------|--------------------------------------------|
+| `states`       | Instance states                                                                   | `list(string)` | B          | No       | ['running','stopped','pending','stopping'] |
+| `tags`         | Tags (Key=Value)                                                                  | `list(string)` | B          | No       | None                                       |
+| `instance_ids` | Instance IDs to focus on                                                          | `list(string)` | B          | No       | None                                       |
+| `public`       | Get only public instances                                                         | `bool`         | B          | No       | False                                      |
+| `invert`       | If `instance_ids` is supplied, return the ones that didn't conform to the filters | `bool`         | B          | No       | None                                       |
+| `region`       | Region for operation                                                              | `string`       | B          | No       | Session default                            |
+| `debug`        | Log verbosity                                                                     | `bool`         | B          | No       | None                                       |
+| `session`      | Established session                                                               | `object`       | P          | No       | None                                       |
 
 ### Output
 
@@ -45,16 +46,16 @@ Returns a `list` of discovered instance IDs:
 
 ## Examples
 
-Discover tagged instances:
-
-```bash
-aaws ec2 discover_instances --mode tag --tags Name=example Owner=acme
-```
-
 Discover public instances in running or stopped state:
 
 ```bash
-aaws ec2 discover_instances --mode all --states running stopped --public
+aaws ec2 discover_instances --states running stopped --public
+```
+
+Discover if specific instances are missing specific tags:
+
+```bash
+aaws ec2 discover_instances --tags Owner Name=example --instance_ids i-1234567890abcdef0 i-abcdef1234567890 --invert
 ```
 
 Programmatic usage:
@@ -62,7 +63,7 @@ Programmatic usage:
 ```python
 from avtomat_aws import ec2
 
-response = ec2.discover_instances(mode='all',
-                                  public=True,
-                                  states=['running', 'stopped'])
+response = ec2.discover_instances(tags=["Owner", "Name=example"],
+                                  instance_ids=["i-1234567890abcdef0", "i-abcdef1234567890"],
+                                  invert=True)
 ```

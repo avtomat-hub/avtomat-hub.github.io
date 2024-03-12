@@ -13,11 +13,8 @@ Create or delete tags for EC2 resources.<br/>
 {: .note}
 <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources" target="_blank">Supported EC2 resources</a>
 
-{: .note}
-If you supply more than 200 resource IDs, they will be split into groups of 200.
-
 {: .warning}
-If a tag key already exists, the value is replaced with the new value.
+If a tag key already exists, the tag value is replaced with the new value.
 
 <p align="center">
    <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/ec2/modify_tags.py">Source code</a> •
@@ -57,7 +54,13 @@ Returns a `list` of resources that failed the modification:
 Create tags for resources:
 
 ```bash
-aaws ec2 modify_tags --resource_ids vol-1234567890abcdef0 i-abcdef1234567890 --tags Name=example Owner=acme --create
+aaws ec2 modify_tags --resource_ids vol-1234567890abcdef0 i-abcdef1234567890 --tags Name=example "Owner=Foo + Bar" --create
+```
+
+Delete tags for resources:
+
+```bash
+aaws ec2 modify_tags --resource_ids vol-1234567890abcdef0 i-abcdef1234567890 --tags Name Owner --delete
 ```
 
 Programmatic usage:
