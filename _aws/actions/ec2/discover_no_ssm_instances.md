@@ -25,11 +25,12 @@ Parameters are used for both programmatic input and command-line arguments.<br/>
   B).<br/>
 - For Command-Line execution, type `list` parameters are passed as space-separated strings.
 
-| Parameter  | Description                       | Type     | Applicable | Required | Default value   |
-|------------|-----------------------------------|----------|------------|----------|-----------------|
-| `region`   | Region for operation              | `string` | B          | No       | Session default |
-| `debug`    | Log verbosity                     | `bool`   | B          | No       | None            |
-| `session`  | Established session               | `object` | P          | No       | None            |
+| Parameter      | Description              | Type           | Applicable | Required | Default value   |
+|----------------|--------------------------|----------------|------------|----------|-----------------|
+| `instance_ids` | Instance IDs to focus on | `list(string)` | B          | No       | None            |
+| `region`       | Region for operation     | `string`       | B          | No       | Session default |
+| `debug`        | Log verbosity            | `bool`         | B          | No       | None            |
+| `session`      | Established session      | `object`       | P          | No       | None            |
 
 ### Output
 
@@ -47,10 +48,15 @@ Discover instances without SSM enabled in eu-west-2:
 aaws ec2 discover_no_ssm_instances --region eu-west-2
 ```
 
+Discover if specific instances don't have SSM enabled:
+```bash
+aaws ec2 discover_no_ssm_instances --instance_ids i-1234567890abcdef0 i-abcdef1234567890
+```
+
 Programmatic usage:
 
 ```python
 from avtomat_aws import ec2
 
-response = ec2.discover_no_ssm_instances(region='eu-west-2')
+response = ec2.discover_no_ssm_instances(instance_ids=['i-1234567890abcdef0', 'i-abcdef1234567890'])
 ```
