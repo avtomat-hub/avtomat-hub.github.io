@@ -7,7 +7,7 @@ nav_order: 1
 # Automate your cloud operations
 {: .fs-8 }
 
-Collection of actions designed to automate various cloud operations. Use individually or combine to create complex workflows.
+Collections of actions designed to automate various cloud operations. Use individually or combine to create complex workflows.
 {: .fs-5 .fw-300 }
 
 [Request access](https://avtomat.io){: .btn .btn-primary .fs-4 .mb-4 .mb-md-0 .mr-2 }

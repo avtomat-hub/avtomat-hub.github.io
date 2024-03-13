@@ -47,10 +47,13 @@ Returns a Boto3 Session `object`.
 
 ## Examples
 
-Assume a role with MFA:
+Assume a role with MFA:<br/>
+
+{: .note}
+This will export temporary credentials to the environment: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_SESSION_TOKEN`
 
 ```bash
-aaws sts create_session --role_arn arn:aws:iam::123456789012:role/ExampleRole --mfa_serial arn:aws:iam::111111111111:mfa/Example --mfa_token 123456
+eval $(aaws sts create_session --role_arn arn:aws:iam::123456789012:role/ExampleRole --mfa_serial arn:aws:iam::111111111111:mfa/Example --mfa_token 123456)
 ```
 
 Programmatic usage:
