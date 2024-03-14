@@ -25,19 +25,13 @@ Snapshots can be created before deletion if <b>snapshot</b> is supplied.
 
 ### Input
 
-Parameters are used for both programmatic input and command-line arguments.<br/>
-
-- The `Applicable` column indicates whether the parameter is accepted in Programmatic (P), Command-Line (C), or Both (
-  B).<br/>
-- For Command-Line execution, type `list` parameters are passed as space-separated strings.
-
-| Parameter    | Description                                           | Type           | Applicable | Required | Default Value   |
-|--------------|-------------------------------------------------------|----------------|------------|----------|-----------------|
-| `volume_ids` | List of Volume IDs to delete                          | `list(string)` | B          | Yes      | None            |
-| `snapshot`   | Create snapshots before deletion                      | `bool`         | B          | No       | False           |
-| `region`     | Region for operation. Leave blank for session default | `string`       | B          | No       | Session Default |
-| `debug`      | Increase log verbosity                                | `bool`         | B          | No       | False           |
-| `session`    | Established session                                   | `object`       | P          | No       | None            |                           |
+| Parameter    | Description                                           | Type           | Required | Default Value   |
+|--------------|-------------------------------------------------------|----------------|----------|-----------------|
+| `volume_ids` | List of Volume IDs to delete                          | `list(string)` | Yes      | None            |
+| `snapshot`   | Create snapshots before deletion                      | `bool`         | No       | False           |
+| `region`     | Region for operation. Leave blank for session default | `string`       | No       | Session Default |
+| `debug`      | Increase log verbosity                                | `bool`         | No       | False           |
+| `session`    | Established session                                   | `object`       | No       | None            |                           |
 
 ### Output
 

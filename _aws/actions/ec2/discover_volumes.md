@@ -20,21 +20,15 @@ volumes of specific instances or simply all volumes.
 
 ### Input
 
-Parameters are used for both programmatic input and command-line arguments.<br/>
-
-- The `Applicable` column indicates whether the parameter is accepted in Programmatic (P), Command-Line (C), or Both (
-  B).<br/>
-- For Command-Line execution, type `list` parameters are passed as space-separated strings.
-
-| Parameter      | Description                                           | Type           | Applicable | Required | Default Value   |
-|----------------|-------------------------------------------------------|----------------|------------|----------|-----------------|
-| `instance_ids` | Instance IDs to check                                 | `list(string)` | B          | No       | All Instances   |
-| `unencrypted`  | Get only unencrypted volumes                          | `bool`         | B          | No       | False           |
-| `detached`     | Get only detached volumes                             | `bool`         | B          | No       | False           |
-| `types`        | Get only specific type volumes                        | `list(string)` | B          | No       | None            |
-| `region`       | Region for operation. Leave blank for session default | `string`       | B          | No       | Session Default |
-| `debug`        | Increase log verbosity                                | `bool`         | B          | No       | False           |
-| `session`      | Established session                                   | `object`       | P          | No       | None            |
+| Parameter      | Description                                           | Type           | Required | Default Value   |
+|----------------|-------------------------------------------------------|----------------|----------|-----------------|
+| `instance_ids` | Instance IDs to check                                 | `list(string)` | No       | All Instances   |
+| `unencrypted`  | Get only unencrypted volumes                          | `bool`         | No       | False           |
+| `detached`     | Get only detached volumes                             | `bool`         | No       | False           |
+| `types`        | Get only specific type volumes                        | `list(string)` | No       | None            |
+| `region`       | Region for operation. Leave blank for session default | `string`       | No       | Session Default |
+| `debug`        | Increase log verbosity                                | `bool`         | No       | False           |
+| `session`      | Established session                                   | `object`       | No       | None            |
 
 ### Output
 

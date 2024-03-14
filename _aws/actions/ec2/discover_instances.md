@@ -19,22 +19,16 @@ Discover AWS instances based on specified criteria such as tags or simply all in
 
 ### Input
 
-Parameters are used for both programmatic input and command-line arguments.<br/>
-
-- The `Applicable` column indicates whether the parameter is accepted in Programmatic (P), Command-Line (C), or Both (
-  B).<br/>
-- For Command-Line execution, type `list` parameters are passed as space-separated strings.
-
-| Parameter      | Description                                                                       | Type           | Applicable | Required | Default value                              |
-|----------------|-----------------------------------------------------------------------------------|----------------|------------|----------|--------------------------------------------|
-| `states`       | Instance states                                                                   | `list(string)` | B          | No       | ['running','stopped','pending','stopping'] |
-| `tags`         | Tags (Key=Value)                                                                  | `list(string)` | B          | No       | None                                       |
-| `instance_ids` | Instance IDs to focus on                                                          | `list(string)` | B          | No       | None                                       |
-| `public`       | Get only public instances                                                         | `bool`         | B          | No       | False                                      |
-| `invert`       | If `instance_ids` is supplied, return the ones that didn't conform to the filters | `bool`         | B          | No       | None                                       |
-| `region`       | Region for operation                                                              | `string`       | B          | No       | Session default                            |
-| `debug`        | Log verbosity                                                                     | `bool`         | B          | No       | None                                       |
-| `session`      | Established session                                                               | `object`       | P          | No       | None                                       |
+| Parameter      | Description                                                                       | Type           | Required | Default value                              |
+|----------------|-----------------------------------------------------------------------------------|----------------|----------|--------------------------------------------|
+| `states`       | Instance states                                                                   | `list(string)` | No       | ['running','stopped','pending','stopping'] |
+| `tags`         | Tags (Key=Value)                                                                  | `list(string)` | No       | None                                       |
+| `instance_ids` | Instance IDs to focus on                                                          | `list(string)` | No       | None                                       |
+| `public`       | Get only public instances                                                         | `bool`         | No       | False                                      |
+| `invert`       | If `instance_ids` is supplied, return the ones that didn't conform to the filters | `bool`         | No       | None                                       |
+| `region`       | Region for operation                                                              | `string`       | No       | Session default                            |
+| `debug`        | Log verbosity                                                                     | `bool`         | No       | None                                       |
+| `session`      | Established session                                                               | `object`       | No       | None                                       |
 
 ### Output
 

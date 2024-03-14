@@ -43,20 +43,14 @@ Steps:
 
 ### Input
 
-Parameters are used for both programmatic input and command-line arguments.<br/>
-
-- The `Applicable` column indicates whether the parameter is accepted in Programmatic (P), Command-Line (C), or Both (
-  B).<br/>
-- For Command-Line execution, type `list` parameters are passed as space-separated strings.
-
-| Parameter    | Description                                           | Type     | Applicable | Required | Default Value   |
-|--------------|-------------------------------------------------------|----------|------------|----------|-----------------|
-| `volume_id`  | Volume ID to encrypt                                  | `string` | B          | Yes      | None            |
-| `kms_key_id` | KMS Key ID to use for encryption                      | `string` | B          | Yes      | None            |
-| `re_encrypt` | Re-encrypt already encrypted volume                   | `bool`   | B          | No       | False           |
-| `region`     | Region for operation. Leave blank for session default | `string` | B          | No       | Session Default |
-| `debug`      | Increase log verbosity                                | `bool`   | B          | No       | False           |
-| `session`    | Established session                                   | `object` | P          | No       | None            |                           |
+| Parameter    | Description                                           | Type     | Required | Default Value   |
+|--------------|-------------------------------------------------------|----------|----------|-----------------|
+| `volume_id`  | Volume ID to encrypt                                  | `string` | Yes      | None            |
+| `kms_key_id` | KMS Key ID to use for encryption                      | `string` | Yes      | None            |
+| `re_encrypt` | Re-encrypt already encrypted volume                   | `bool`   | No       | False           |
+| `region`     | Region for operation. Leave blank for session default | `string` | No       | Session Default |
+| `debug`      | Increase log verbosity                                | `bool`   | No       | False           |
+| `session`    | Established session                                   | `object` | No       | None            |                           |
 
 ### Output
 

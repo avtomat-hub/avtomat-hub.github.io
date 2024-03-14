@@ -18,16 +18,10 @@ Quickly figure out your current credentials.<br/>
 
 ### Input
 
-Parameters are used for both programmatic input and command-line arguments.<br/>
-
-- The `Applicable` column indicates whether the parameter is accepted in Programmatic (P), Command-Line (C), or Both (
-  B).<br/>
-- For Command-Line execution, type `list` parameters are passed as space-separated strings.
-
-| Parameter       | Description         | Type     | Applicable | Required | Default value |
-|-----------------|---------------------|----------|------------|----------|---------------|
-| `debug`         | Log verbosity       | `bool`   | B          | No       | None          |
-| `session`       | Established session | `object` | P          | No       | None          |
+| Parameter       | Description         | Type     | Required | Default value |
+|-----------------|---------------------|----------|----------|---------------|
+| `debug`         | Log verbosity       | `bool`   | No       | None          |
+| `session`       | Established session | `object` | No       | None          |
 
 ### Output
 

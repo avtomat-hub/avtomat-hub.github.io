@@ -23,21 +23,15 @@ The user will have the `IAMUserChangePassword` policy attached to allow the pass
 
 ### Input
 
-Parameters are used for both programmatic input and command-line arguments.<br/>
-
-- The `Applicable` column indicates whether the parameter is accepted in Programmatic (P), Command-Line (C), or Both (
-  B).<br/>
-- For Command-Line execution, type `list` parameters are passed as space-separated strings.
-
-| Parameter  | Description                           | Type     | Applicable | Required         | Default value   |
-|------------|---------------------------------------|----------|------------|------------------|-----------------|
-| `user`     | Username to modify console access for | `string` | B          | Yes              | None            |
-| `enable`   | Enable console access                 | `bool`   | B          | If not `disable` | False           |
-| `disable`  | Disable console access                | `bool`   | B          | If not `enable`  | False           |
-| `password` | New password for the user             | `string` | B          | If `enable`      | None            |
-| `region`   | Region for operation                  | `string` | B          | No               | Session default |
-| `debug`    | Log verbosity                         | `bool`   | B          | No               | None            |
-| `session`  | Established session                   | `object` | P          | No               | None            |
+| Parameter  | Description                           | Type     | Required         | Default value   |
+|------------|---------------------------------------|----------|------------------|-----------------|
+| `user`     | Username to modify console access for | `string` | Yes              | None            |
+| `enable`   | Enable console access                 | `bool`   | If not `disable` | False           |
+| `disable`  | Disable console access                | `bool`   | If not `enable`  | False           |
+| `password` | New password for the user             | `string` | If `enable`      | None            |
+| `region`   | Region for operation                  | `string` | No               | Session default |
+| `debug`    | Log verbosity                         | `bool`   | No               | None            |
+| `session`  | Established session                   | `object` | No               | None            |
 
 ### Output
 

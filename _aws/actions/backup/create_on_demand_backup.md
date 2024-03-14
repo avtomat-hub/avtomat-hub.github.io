@@ -19,22 +19,16 @@ Create on-demand backups for specified resources.<br/>
 
 ### Input
 
-Parameters are used for both programmatic input and command-line arguments.<br/>
-
-- The `Applicable` column indicates whether the parameter is accepted in Programmatic (P), Command-Line (C), or Both (
-  B).<br/>
-- For Command-Line execution, type `list` parameters are passed as space-separated strings.
-
-| Parameter           | Description                                           | Type           | Applicable | Required | Default Value               |
-|---------------------|-------------------------------------------------------|----------------|------------|----------|-----------------------------|
-| `resource_ids`      | Resource IDs to create backups for                    | `list(string)` | B          | Yes      | None                        |
-| `service`           | Service to which the resource IDs belong              | `string`       | B          | Yes      | None                        |
-| `backup_vault_name` | Backup vault in which to store the backups            | `string`       | B          | No       | Default                     |
-| `retention_days`    | Number of days to retain the backups                  | `int`          | B          | No       | 14                          |
-| `iam_role`          | Role ARN used to create the backup                    | `string`       | B          | No       | AWSBackupDefaultServiceRole |
-| `region`            | Region for operation. Leave blank for session default | `string`       | B          | No       | Session Default             |
-| `debug`             | Increase log verbosity                                | `bool`         | B          | No       | False                       |
-| `session`           | Established session                                   | `object`       | P          | No       | None                        |                           |
+| Parameter           | Description                                           | Type           | Required | Default Value               |
+|---------------------|-------------------------------------------------------|----------------|----------|-----------------------------|
+| `resource_ids`      | Resource IDs to create backups for                    | `list(string)` | Yes      | None                        |
+| `service`           | Service to which the resource IDs belong              | `string`       | Yes      | None                        |
+| `backup_vault_name` | Backup vault in which to store the backups            | `string`       | No       | Default                     |
+| `retention_days`    | Number of days to retain the backups                  | `int`          | No       | 14                          |
+| `iam_role`          | Role ARN used to create the backup                    | `string`       | No       | AWSBackupDefaultServiceRole |
+| `region`            | Region for operation. Leave blank for session default | `string`       | No       | Session Default             |
+| `debug`             | Increase log verbosity                                | `bool`         | No       | False                       |
+| `session`           | Established session                                   | `object`       | No       | None                        |                           |
 
 ### Output
 

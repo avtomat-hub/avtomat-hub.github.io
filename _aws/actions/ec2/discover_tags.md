@@ -36,22 +36,16 @@ Multiple resource types can be specified, however only one tag key/value is supp
 
 ### Input
 
-Parameters are used for both programmatic input and command-line arguments.<br/>
-
-- The `Applicable` column indicates whether the parameter is accepted in Programmatic (P), Command-Line (C), or Both (
-  B).<br/>
-- For Command-Line execution, type `list` parameters are passed as space-separated strings.
-
-| Parameter        | Description                                           | Type           | Applicable | Required          | Default Value   |
-|------------------|-------------------------------------------------------|----------------|------------|-------------------|-----------------|
-| `resource_types` | EC2 resource types to search through                  | `list(string)` | B          | Yes               | None            |
-| `key`            | Tag key to search for                                 | `string`       | B          | Yes               | None            |
-| `value`          | Tag value to search for                               | `string`       | B          | No                | None            |
-| `existing`       | Search for resources that have the tag                | `bool`         | B          | If not `missing`  | None            |
-| `missing`        | Search for resources that don't have the tag          | `bool`         | B          | If not `existing` | None            |
-| `region`         | Region for operation. Leave blank for session default | `string`       | B          | No                | Session Default |
-| `debug`          | Increase log verbosity                                | `bool`         | B          | No                | False           |
-| `session`        | Established session                                   | `object`       | P          | No                | None            |
+| Parameter        | Description                                           | Type           | Required          | Default Value   |
+|------------------|-------------------------------------------------------|----------------|-------------------|-----------------|
+| `resource_types` | EC2 resource types to search through                  | `list(string)` | Yes               | None            |
+| `key`            | Tag key to search for                                 | `string`       | Yes               | None            |
+| `value`          | Tag value to search for                               | `string`       | No                | None            |
+| `existing`       | Search for resources that have the tag                | `bool`         | If not `missing`  | None            |
+| `missing`        | Search for resources that don't have the tag          | `bool`         | If not `existing` | None            |
+| `region`         | Region for operation. Leave blank for session default | `string`       | No                | Session Default |
+| `debug`          | Increase log verbosity                                | `bool`         | No                | False           |
+| `session`        | Established session                                   | `object`       | No                | None            |
 
 ### Output
 

@@ -29,22 +29,16 @@ If increasing the size of a volume ensure to extend the server file system. <br/
 
 ### Input
 
-Parameters are used for both programmatic input and command-line arguments.<br/>
-
-- The `Applicable` column indicates whether the parameter is accepted in Programmatic (P), Command-Line (C), or Both (
-  B).<br/>
-- For Command-Line execution, type `list` parameters are passed as space-separated strings.
-
-| Parameter    | Description                                           | Type           | Applicable | Required | Default Value   |
-|--------------|-------------------------------------------------------|----------------|------------|----------|-----------------|
-| `volume_ids` | List of Volume IDs to modify                          | `list(string)` | B          | Yes      | None            |
-| `snapshot`   | Create snapshots before modification                  | `bool`         | B          | No       | False           |
-| `size`       | New size (GB) for volumes                             | `int`          | B          | No       | None            |
-| `type`       | New type for volumes                                  | `string`       | B          | No       | None            |
-| `iops`       | New IOPS for volumes                                  | `int`          | B          | No       | None            |
-| `region`     | Region for operation. Leave blank for session default | `string`       | B          | No       | Session Default |
-| `debug`      | Increase log verbosity                                | `bool`         | B          | No       | False           |
-| `session`    | Established session                                   | `object`       | P          | No       | None            |                           |
+| Parameter    | Description                                           | Type           | Required | Default Value   |
+|--------------|-------------------------------------------------------|----------------|----------|-----------------|
+| `volume_ids` | List of Volume IDs to modify                          | `list(string)` | Yes      | None            |
+| `snapshot`   | Create snapshots before modification                  | `bool`         | No       | False           |
+| `size`       | New size (GB) for volumes                             | `int`          | No       | None            |
+| `type`       | New type for volumes                                  | `string`       | No       | None            |
+| `iops`       | New IOPS for volumes                                  | `int`          | No       | None            |
+| `region`     | Region for operation. Leave blank for session default | `string`       | No       | Session Default |
+| `debug`      | Increase log verbosity                                | `bool`         | No       | False           |
+| `session`    | Established session                                   | `object`       | No       | None            |                           |
 
 ### Output
 

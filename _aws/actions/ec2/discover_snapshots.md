@@ -21,22 +21,16 @@ created before/after dates, or simply all snapshots.
 
 ### Input
 
-Parameters are used for both programmatic input and command-line arguments.<br/>
-
-- The `Applicable` column indicates whether the parameter is accepted in Programmatic (P), Command-Line (C), or Both (
-  B).<br/>
-- For Command-Line execution, type `list` parameters are passed as space-separated strings.
-
-| Parameter            | Description                                           | Type           | Applicable | Required | Default Value   |
-|----------------------|-------------------------------------------------------|----------------|------------|----------|-----------------|
-| `volume_ids`         | Get snapshots that originate from specific volumes    | `list(string)` | B          | No       | None            |
-| `unencrypted`        | Get only unencrypted snapshots                        | `bool`         | B          | No       | False           |
-| `exclude_aws_backup` | Exclude snapshots managed by AWS Backup               | `bool`         | B          | No       | False           |
-| `created_before`     | Get snapshots created before date(YYYY/MM//DD)        | `string`       | B          | No       | None            |
-| `created_after`      | Get snapshots created after date(YYYY/MM//DD)         | `string`       | B          | No       | None            |
-| `region`             | Region for operation. Leave blank for session default | `string`       | B          | No       | Session Default |
-| `debug`              | Increase log verbosity                                | `bool`         | B          | No       | False           |
-| `session`            | Established session                                   | `object`       | P          | No       | None            |
+| Parameter            | Description                                           | Type           | Required | Default Value   |
+|----------------------|-------------------------------------------------------|----------------|----------|-----------------|
+| `volume_ids`         | Get snapshots that originate from specific volumes    | `list(string)` | No       | None            |
+| `unencrypted`        | Get only unencrypted snapshots                        | `bool`         | No       | False           |
+| `exclude_aws_backup` | Exclude snapshots managed by AWS Backup               | `bool`         | No       | False           |
+| `created_before`     | Get snapshots created before date(YYYY/MM//DD)        | `string`       | No       | None            |
+| `created_after`      | Get snapshots created after date(YYYY/MM//DD)         | `string`       | No       | None            |
+| `region`             | Region for operation. Leave blank for session default | `string`       | No       | Session Default |
+| `debug`              | Increase log verbosity                                | `bool`         | No       | False           |
+| `session`            | Established session                                   | `object`       | No       | None            |
 
 ### Output
 

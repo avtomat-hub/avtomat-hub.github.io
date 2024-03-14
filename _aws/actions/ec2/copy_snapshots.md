@@ -27,22 +27,16 @@ This default value can be increased through <b>pending_limit</b>.<br/>
 
 ### Input
 
-Parameters are used for both programmatic input and command-line arguments.<br/>
-
-- The `Applicable` column indicates whether the parameter is accepted in Programmatic (P), Command-Line (C), or Both (
-  B).<br/>
-- For Command-Line execution, type `list` parameters are passed as space-separated strings.
-
-| Parameter       | Description                                           | Type           | Applicable | Required     | Default Value   |
-|-----------------|-------------------------------------------------------|----------------|------------|--------------|-----------------|
-| `snapshot_ids`  | List of EC2 snapshots to move                         | `list(string)` | B          | Yes          | None            |
-| `target_region` | Target region for the snapshots                       | `string`       | B          | Yes          | None            |
-| `pending_limit` | Limit for concurrent snapshot copy operations         | `int`          | B          | No           | None            |
-| `encrypt`       | Encrypt the new snapshots                             | `bool`         | B          | No           | False           |
-| `kms_key_id`    | KMS Key ID to use for snapshot encryption             | `string`       | B          | If `encrypt` | None            |
-| `region`        | Region for operation. Leave blank for session default | `string`       | B          | No           | Session Default |
-| `debug`         | Increase log verbosity                                | `bool`         | B          | No           | False           |
-| `session`       | Established session                                   | `object`       | P          | No           | None            |                           |
+| Parameter       | Description                                           | Type           | Required     | Default Value   |
+|-----------------|-------------------------------------------------------|----------------|--------------|-----------------|
+| `snapshot_ids`  | List of EC2 snapshots to move                         | `list(string)` | Yes          | None            |
+| `target_region` | Target region for the snapshots                       | `string`       | Yes          | None            |
+| `pending_limit` | Limit for concurrent snapshot copy operations         | `int`          | No           | None            |
+| `encrypt`       | Encrypt the new snapshots                             | `bool`         | No           | False           |
+| `kms_key_id`    | KMS Key ID to use for snapshot encryption             | `string`       | If `encrypt` | None            |
+| `region`        | Region for operation. Leave blank for session default | `string`       | No           | Session Default |
+| `debug`         | Increase log verbosity                                | `bool`         | No           | False           |
+| `session`       | Established session                                   | `object`       | No           | None            |                           |
 
 ### Output
 

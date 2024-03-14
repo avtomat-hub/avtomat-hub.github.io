@@ -19,21 +19,15 @@ Enable or disable an IAM access key.<br/>
 
 ### Input
 
-Parameters are used for both programmatic input and command-line arguments.<br/>
-
-- The `Applicable` column indicates whether the parameter is accepted in Programmatic (P), Command-Line (C), or Both (
-  B).<br/>
-- For Command-Line execution, type `list` parameters are passed as space-separated strings.
-
-| Parameter       | Description                       | Type     | Applicable | Required         | Default value   |
-|-----------------|-----------------------------------|----------|------------|------------------|-----------------|
-| `access_key_id` | Access Key ID to delete           | `string` | B          | Yes              | None            |
-| `username`      | User that owns the key            | `string` | B          | Yes              | None            |
-| `enable`        | Enable access keys                | `bool`   | B          | If not `disable` | False           |
-| `disable`       | Disable access keys               | `bool`   | B          | If not `enable`  | False           |
-| `region`        | Region for operation              | `string` | B          | No               | Session default |
-| `debug`         | Log verbosity                     | `bool`   | B          | No               | None            |
-| `session`       | Established session               | `object` | P          | No               | None            |
+| Parameter       | Description                       | Type     | Required         | Default value   |
+|-----------------|-----------------------------------|----------|------------------|-----------------|
+| `access_key_id` | Access Key ID to delete           | `string` | Yes              | None            |
+| `username`      | User that owns the key            | `string` | Yes              | None            |
+| `enable`        | Enable access keys                | `bool`   | If not `disable` | False           |
+| `disable`       | Disable access keys               | `bool`   | If not `enable`  | False           |
+| `region`        | Region for operation              | `string` | No               | Session default |
+| `debug`         | Log verbosity                     | `bool`   | No               | None            |
+| `session`       | Established session               | `object` | No               | None            |
 
 ### Output
 

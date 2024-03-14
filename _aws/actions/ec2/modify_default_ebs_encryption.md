@@ -19,21 +19,16 @@ Change the default EBS encryption settings for a region.
 
 ### Input
 
-Parameters are used for both programmatic input and command-line arguments.
-
-- The `Applicable` column indicates whether the parameter is accepted in Programmatic (P), Command-Line (C), or Both (
-  B).
-
-| Parameter        | Description                                              | Type     | Applicable | Required            | Default value   |
-|------------------|----------------------------------------------------------|----------|------------|---------------------|-----------------|
-| `enable`         | Enable default EBS encryption                            | `bool`   | B          | No                  | None            |
-| `disable`        | Disable default EBS encryption                           | `bool`   | B          | No                  | None            |
-| `change_kms_key` | Change the KMS Key used for encryption                   | `bool`   | B          | No                  | None            |
-| `kms_key_id`     | KMS Key ID to use for encryption                         | `string` | B          | If `change_kms_key` | None            |
-| `reset_kms_key`  | Reset the KMS Key used for encryption to AWS EBS default | `bool`   | B          | No                  | None            |
-| `region`         | Region for operation. Leave blank for session default    | `string` | B          | No                  | Session Default |
-| `debug`          | Log verbosity                                            | `bool`   | B          | No                  | None            |
-| `session`        | Established session                                      | `object` | P          | No                  | None            |
+| Parameter        | Description                                              | Type     | Required            | Default value   |
+|------------------|----------------------------------------------------------|----------|---------------------|-----------------|
+| `enable`         | Enable default EBS encryption                            | `bool`   | No                  | None            |
+| `disable`        | Disable default EBS encryption                           | `bool`   | No                  | None            |
+| `change_kms_key` | Change the KMS Key used for encryption                   | `bool`   | No                  | None            |
+| `kms_key_id`     | KMS Key ID to use for encryption                         | `string` | If `change_kms_key` | None            |
+| `reset_kms_key`  | Reset the KMS Key used for encryption to AWS EBS default | `bool`   | No                  | None            |
+| `region`         | Region for operation. Leave blank for session default    | `string` | No                  | Session Default |
+| `debug`          | Log verbosity                                            | `bool`   | No                  | None            |
+| `session`        | Established session                                      | `object` | No                  | None            |
 
 ### Output
 

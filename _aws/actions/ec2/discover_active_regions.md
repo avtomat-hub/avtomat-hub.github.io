@@ -20,14 +20,10 @@ across multiple regions.
 
 ### Input
 
-Parameters are used for both programmatic input and command-line arguments.
-
-- The `Applicable` column indicates whether the parameter is accepted in Programmatic (P), Command-Line (C), or Both (B).
-
-| Parameter  | Description                       | Type     | Applicable | Required | Default value |
-|------------|-----------------------------------|----------|------------|----------|---------------|
-| `debug`    | Log verbosity                     | `bool`   | B          | No       | None          |
-| `session`  | Established session               | `object` | P          | No       | None          |
+| Parameter  | Description                       | Type     | Required | Default value |
+|------------|-----------------------------------|----------|----------|---------------|
+| `debug`    | Log verbosity                     | `bool`   | No       | None          |
+| `session`  | Established session               | `object` | No       | None          |
 
 ### Output
 
