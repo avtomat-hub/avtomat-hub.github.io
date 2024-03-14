@@ -23,7 +23,7 @@ Discover IAM users with passwords older than a certain age.<br/>
 |------------------|----------------------------------------------------------|----------|----------|-----------------|
 | `threshold_days` | Get users with a password older than this number of days | `int`    | Yes      | None            |
 | `region`         | Region for operation                                     | `string` | No       | Session default |
-| `debug`          | Log verbosity                                            | `bool`   | No       | None            |
+| `debug`          | Log verbosity                                            | `bool`   | No       | False           |
 | `session`        | Established session                                      | `object` | No       | None            |
 
 ### Output

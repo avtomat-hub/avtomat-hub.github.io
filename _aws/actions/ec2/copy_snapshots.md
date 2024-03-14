@@ -36,7 +36,7 @@ This default value can be increased through <b>pending_limit</b>.<br/>
 | `kms_key_id`    | KMS Key ID to use for snapshot encryption             | `string`       | If `encrypt` | None            |
 | `region`        | Region for operation. Leave blank for session default | `string`       | No           | Session Default |
 | `debug`         | Increase log verbosity                                | `bool`         | No           | False           |
-| `session`       | Established session                                   | `object`       | No           | None            |                           |
+| `session`       | Established session                                   | `object`       | No           | None            |                           
 
 ### Output
 

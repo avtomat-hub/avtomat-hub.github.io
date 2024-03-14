@@ -38,7 +38,7 @@ If a tag key already exists, the tag value is replaced with the new value.
 | `dynamic_tags` | Dynamically add the resource ID to the tag key or value where `{resource_id}` placeholder is found | `bool`         | No              | False           |
 | `region`       | Region for operation. Leave blank for session default                                              | `string`       | No              | Session Default |
 | `debug`        | Increase log verbosity                                                                             | `bool`         | No              | False           |
-| `session`      | Established session                                                                                | `object`       | No              | None            |                           |
+| `session`      | Established session                                                                                | `object`       | No              | None            |                           
 
 ### Output
 

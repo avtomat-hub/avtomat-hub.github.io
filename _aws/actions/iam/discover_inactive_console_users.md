@@ -29,7 +29,7 @@ This action only checks console activity. If you are looking to check console an
 |------------------|--------------------------------------------------------------|----------|----------|-----------------|
 | `threshold_days` | Get users with last console sign-in over this number of days | `int`    | Yes      | None            |
 | `region`         | Region for operation                                         | `string` | No       | Session default |
-| `debug`          | Log verbosity                                                | `bool`   | No       | None            |
+| `debug`          | Log verbosity                                                | `bool`   | No       | False           |
 | `session`        | Established session                                          | `object` | No       | None            |
 
 ### Output

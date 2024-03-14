@@ -11,7 +11,8 @@ permalink: /aws/actions/iam/modify_user_console_access
 Enable or disable AWS Management Console access for an IAM user.<br/>
 
 {: .note }
-When enabling console access the password provided is temporary. The user will be prompted to change it upon first login.<br/> 
+When enabling console access the password provided is temporary. The user will be prompted to change it upon first
+login.<br/>
 The user will have the `IAMUserChangePassword` policy attached to allow the password change.
 
 <p align="center">
@@ -30,7 +31,7 @@ The user will have the `IAMUserChangePassword` policy attached to allow the pass
 | `disable`  | Disable console access                | `bool`   | If not `enable`  | False           |
 | `password` | New password for the user             | `string` | If `enable`      | None            |
 | `region`   | Region for operation                  | `string` | No               | Session default |
-| `debug`    | Log verbosity                         | `bool`   | No               | None            |
+| `debug`    | Log verbosity                         | `bool`   | No               | False           |
 | `session`  | Established session                   | `object` | No               | None            |
 
 ### Output

@@ -19,15 +19,15 @@ Enable or disable an IAM access key.<br/>
 
 ### Input
 
-| Parameter       | Description                       | Type     | Required         | Default value   |
-|-----------------|-----------------------------------|----------|------------------|-----------------|
-| `access_key_id` | Access Key ID to delete           | `string` | Yes              | None            |
-| `username`      | User that owns the key            | `string` | Yes              | None            |
-| `enable`        | Enable access keys                | `bool`   | If not `disable` | False           |
-| `disable`       | Disable access keys               | `bool`   | If not `enable`  | False           |
-| `region`        | Region for operation              | `string` | No               | Session default |
-| `debug`         | Log verbosity                     | `bool`   | No               | None            |
-| `session`       | Established session               | `object` | No               | None            |
+| Parameter       | Description             | Type     | Required         | Default value   |
+|-----------------|-------------------------|----------|------------------|-----------------|
+| `access_key_id` | Access Key ID to delete | `string` | Yes              | None            |
+| `username`      | User that owns the key  | `string` | Yes              | None            |
+| `enable`        | Enable access keys      | `bool`   | If not `disable` | False           |
+| `disable`       | Disable access keys     | `bool`   | If not `enable`  | False           |
+| `region`        | Region for operation    | `string` | No               | Session default |
+| `debug`         | Log verbosity           | `bool`   | No               | False           |
+| `session`       | Established session     | `object` | No               | None            |
 
 ### Output
 

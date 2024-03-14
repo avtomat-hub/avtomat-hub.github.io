@@ -38,7 +38,7 @@ If increasing the size of a volume ensure to extend the server file system. <br/
 | `iops`       | New IOPS for volumes                                  | `int`          | No       | None            |
 | `region`     | Region for operation. Leave blank for session default | `string`       | No       | Session Default |
 | `debug`      | Increase log verbosity                                | `bool`         | No       | False           |
-| `session`    | Established session                                   | `object`       | No       | None            |                           |
+| `session`    | Established session                                   | `object`       | No       | None            |                           
 
 ### Output
 

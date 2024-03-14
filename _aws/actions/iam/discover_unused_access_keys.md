@@ -23,7 +23,7 @@ Discover IAM access keys not used for over a number of days.<br/>
 |------------------|------------------------------------------------------------|----------|----------|-----------------|
 | `threshold_days` | Get access keys not used for more than this number of days | `int`    | Yes      | None            |
 | `region`         | Region for operation                                       | `string` | No       | Session default |
-| `debug`          | Log verbosity                                              | `bool`   | No       | None            |
+| `debug`          | Log verbosity                                              | `bool`   | No       | False           |
 | `session`        | Established session                                        | `object` | No       | None            |
 
 ### Output
@@ -32,10 +32,10 @@ Returns a `list of dictionaries` containing discovered access keys:
 
 ```python
 [
-  {
-    "UserName": "string",
-    "AccessKeyId": "string"
-  }
+    {
+        "UserName": "string",
+        "AccessKeyId": "string"
+    }
 ]
 ```
 

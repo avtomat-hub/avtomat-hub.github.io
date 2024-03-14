@@ -18,14 +18,15 @@ Quickly figure out your current credentials.<br/>
 
 ### Input
 
-| Parameter       | Description         | Type     | Required | Default value |
-|-----------------|---------------------|----------|----------|---------------|
-| `debug`         | Log verbosity       | `bool`   | No       | None          |
-| `session`       | Established session | `object` | No       | None          |
+| Parameter | Description         | Type     | Required | Default value |
+|-----------|---------------------|----------|----------|---------------|
+| `debug`   | Log verbosity       | `bool`   | No       | False         |
+| `session` | Established session | `object` | No       | None          |
 
 ### Output
 
 Returns a `string` indicating current entity.
+
 ```python
 "arn:aws:iam::123456789012:user/FooBar"
 ```

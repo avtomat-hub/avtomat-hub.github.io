@@ -33,7 +33,7 @@ If sharing encrypted snapshots with another account, ensure the KMS key is share
 | `target_account` | Target account for the snapshots                      | `string`       | Yes      | None            |
 | `region`         | Region for operation. Leave blank for session default | `string`       | No       | Session Default |
 | `debug`          | Increase log verbosity                                | `bool`         | No       | False           |
-| `session`        | Established session                                   | `object`       | No       | None            |                           |
+| `session`        | Established session                                   | `object`       | No       | None            |                           
 
 ### Output
 

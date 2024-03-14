@@ -46,7 +46,7 @@ Steps:
 | `re_encrypt`  | Re-encrypt already encrypted volumes                  | `bool`   | No       | False           |
 | `region`      | Region for operation. Leave blank for session default | `string` | No       | Session Default |
 | `debug`       | Increase log verbosity                                | `bool`   | No       | False           |
-| `session`     | Established session                                   | `object` | No       | None            |                           |
+| `session`     | Established session                                   | `object` | No       | None            |                           
 
 ### Output
 

@@ -28,7 +28,7 @@ Create on-demand backups for specified resources.<br/>
 | `iam_role`          | Role ARN used to create the backup                    | `string`       | No       | AWSBackupDefaultServiceRole |
 | `region`            | Region for operation. Leave blank for session default | `string`       | No       | Session Default             |
 | `debug`             | Increase log verbosity                                | `bool`         | No       | False                       |
-| `session`           | Established session                                   | `object`       | No       | None                        |                           |
+| `session`           | Established session                                   | `object`       | No       | None                        |                           
 
 ### Output
 

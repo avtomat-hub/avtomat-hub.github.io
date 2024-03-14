@@ -12,7 +12,7 @@ Disable console and programmatic access and apply `AWSCompromisedKeyQuarantineV2
 
 {: .danger }
 Current password of the user will be deleted and will not be recoverable.<br/>
-  
+
 {: .note}
 Access keys are deactivated but not deleted.
 
@@ -25,12 +25,12 @@ Access keys are deactivated but not deleted.
 
 ### Input
 
-| Parameter  | Description                       | Type     | Required | Default value   |
-|------------|-----------------------------------|----------|----------|-----------------|
-| `user`     | User to quarantine                | `string` | Yes      | None            |
-| `region`   | Region for operation              | `string` | No       | Session default |
-| `debug`    | Log verbosity                     | `bool`   | No       | None            |
-| `session`  | Established session               | `object` | No       | None            |
+| Parameter | Description          | Type     | Required | Default value   |
+|-----------|----------------------|----------|----------|-----------------|
+| `user`    | User to quarantine   | `string` | Yes      | None            |
+| `region`  | Region for operation | `string` | No       | Session default |
+| `debug`   | Log verbosity        | `bool`   | No       | False           |
+| `session` | Established session  | `object` | No       | None            |
 
 ### Output
 

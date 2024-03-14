@@ -23,7 +23,7 @@ Discover IAM roles not used over a certain amount of days.<br/>
 |------------------|------------------------------------------------------|----------|----------|-----------------|
 | `threshold_days` | Get roles not used for more than this number of days | `int`    | Yes      | None            |
 | `region`         | Region for operation                                 | `string` | No       | Session default |
-| `debug`          | Log verbosity                                        | `bool`   | No       | None            |
+| `debug`          | Log verbosity                                        | `bool`   | No       | False           |
 | `session`        | Established session                                  | `object` | No       | None            |
 
 ### Output
