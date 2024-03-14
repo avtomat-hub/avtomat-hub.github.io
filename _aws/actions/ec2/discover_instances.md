@@ -26,6 +26,7 @@ Discover AWS instances based on specified criteria such as tags or simply all in
 | `instance_ids` | Instance IDs to focus on                                                          | `list(string)` | No       | None                                       |
 | `public`       | Get only public instances                                                         | `bool`         | No       | False                                      |
 | `invert`       | If `instance_ids` is supplied, return the ones that didn't conform to the filters | `bool`         | No       | None                                       |
+| `os`           | Get only Windows or Linux instances                                               | `string`       | No       | None                                       |
 | `region`       | Region for operation                                                              | `string`       | No       | Session default                            |
 | `debug`        | Log verbosity                                                                     | `bool`         | No       | None                                       |
 | `session`      | Established session                                                               | `object`       | No       | None                                       |
@@ -40,10 +41,10 @@ Returns a `list` of discovered instance IDs:
 
 ## Examples
 
-Discover public instances in running or stopped state:
+Discover public windows instances in running or stopped state:
 
 ```bash
-aaws ec2 discover_instances --states running stopped --public
+aaws ec2 discover_instances --states running stopped --public --os windows
 ```
 
 Discover if specific instances are missing specific tags:
