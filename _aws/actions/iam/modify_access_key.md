@@ -37,11 +37,7 @@ Parameters are used for both programmatic input and command-line arguments.<br/>
 
 ### Output
 
-Returns a `bool` indicating success or failure:
-
-```python
-True | False
-```
+This function has no output.
 
 ## Examples
 
