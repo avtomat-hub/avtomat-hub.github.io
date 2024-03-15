@@ -6,7 +6,7 @@ layout: default
 permalink: /aws/actions/ec2/create_backups
 ---
 
-# Create On Demand Backup
+# Create Backups
 
 Start an on-demand backup job for the specified resources.<br/>
 
