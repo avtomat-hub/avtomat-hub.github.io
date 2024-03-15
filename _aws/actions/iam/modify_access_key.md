@@ -21,7 +21,7 @@ Enable or disable an IAM access key.<br/>
 
 | Parameter       | Description             | Type     | Required         | Default value   |
 |-----------------|-------------------------|----------|------------------|-----------------|
-| `access_key_id` | Access Key ID to delete | `string` | Yes              | None            |
+| `access_key_id` | Access Key ID to modify | `string` | Yes              | None            |
 | `username`      | User that owns the key  | `string` | Yes              | None            |
 | `enable`        | Enable access keys      | `bool`   | If not `disable` | False           |
 | `disable`       | Disable access keys     | `bool`   | If not `enable`  | False           |
