@@ -52,6 +52,9 @@ eval $(aaws sts create_session --role_arn arn:aws:iam::123456789012:role/Example
 
 Programmatic usage:
 
+{: .note}
+This will create a Boto3 session object that can be passed to other actions.
+
 ```python
 from avtomat_aws import sts
 

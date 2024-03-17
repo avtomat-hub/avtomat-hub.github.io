@@ -8,7 +8,7 @@ permalink: /aws/get_started
 # Amazon Web Services Collection
 {: .fs-8 }
 
-This collection is built on top of <a href="https://boto3.amazonaws.com/v1/documentation/api/latest/index.html" target="_blank">Boto3</a>.
+This collection runs on top of <a href="https://boto3.amazonaws.com/v1/documentation/api/latest/index.html" target="_blank">Boto3</a>.
 {: .fs-5 .fw-300 }
 
 {: .warning}
@@ -38,18 +38,18 @@ python -m venv avtomat-aws
 source avtomat-aws/bin/activate
 pip install git+ssh://git@github.com/avtomat-hub/avtomat-aws.git
 ```
-Once installed, you can either use actions directly through the command line or import them in your code.
+Once installed you can use actions directly through the command line or import them in your code.
 
 Review the list of [actions](/aws/actions) available and their minimum IAM [permissions](/aws/permissions) required.<br/>
 [Examples](/aws/examples) are a great place to explore programmatic usage and chaining ideas.
 
 
 ## Authentication
-This collection supports the following authentication methods:
-- Profile
-- Credentials
-- Assume role
-- Fallback to Boto3 [authentication flow](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/credentials.html)
+This collection supports the following authentication methods, in order:
+1. Profile
+2. Credentials
+3. Assume role
+4. Fallback to Boto3 [authentication flow](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/credentials.html)
 
 ### Quick start
 - CLI:
@@ -63,47 +63,44 @@ response = sts.whoami()
 print(response)
 ```
 
-### Overview
+### Examples
 
-All actions work in 3 authentication modes:
+#### CLI
 
-- Supplied session (programmatic)
-```python
-from avtomat_aws import sts
-session = sts.create_session(profile="example")
-response = sts.whoami(session)
-print(response)
-```
-- Environment variables (CLI)
-```bash
-eval $(aaws sts create_session --role_arn <ARN_HERE>)
-aaws sts whoami
-```
-- Fallback to Boto3 authentication flow (CLI or Programmatic)
-```bash
-aaws sts whoami
-```
-or
-```python
-response = sts.whoami()
-print(response)
-```
-
-### Scenarios
-
-- CLI: Assume role with MFA
+- Assume role with MFA
 ```bash
 eval $(aaws sts create_session --role_arn <ARN_HERE> --mfa_serial <ARN_HERE> --mfa_token <CODE_HERE>)
 aaws sts whoami
 ```
 
-- CLI: Authenticate credentials
+- Assume role without MFA
+```bash
+eval $(aaws sts create_session --role_arn <ARN_HERE>)
+aaws sts whoami
+```
+
+- Authenticate credentials
 ```bash
 eval $(aaws sts create_session --access_key <KEY> --secret_key <KEY>)
 aaws sts whoami
 ```
 
-- Programmatic: Authenticate credentials
+- Fallback to Boto3 authentication flow
+```bash
+aaws sts whoami
+```
+
+#### Programmatic
+
+- Assume role
+```python
+from avtomat_aws import sts
+session = sts.create_session(role_arn="ARN_HERE")
+response = sts.whoami(session)
+print(response)
+```
+
+- Authenticate credentials
 ```python
 from avtomat_aws import sts
 session = sts.create_session(access_key="KEY", secret_key="KEY")
@@ -111,9 +108,18 @@ response = sts.whoami(session)
 print(response)                      
 ```
 
+- Fallback to Boto3 authentication flow
+```python
+from avtomat_aws import sts
+response = sts.whoami()
+print(response)
+```
+
+For more examples, refer to [Create Session](/aws/actions/sts/create_session).
+
 
 ## Deployment
 
 ### AWS Lambda
-This collection can be used in AWS Lambda functions with a `python3.x` runtime.<br/>
-Refer to [Infrastructure as Code](/aws/iac) for deployment instructions.
+This collection can be used by AWS Lambda functions with `python3.x` runtime.<br/>
+Refer to [Deploy](/aws/deploy) for deployment instructions.

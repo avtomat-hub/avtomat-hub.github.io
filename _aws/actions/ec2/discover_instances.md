@@ -8,7 +8,7 @@ permalink: /aws/actions/ec2/discover_instances
 
 # Discover Instances
 
-Discover AWS instances based on specified criteria such as tags or simply all instances.
+Discover AWS instances based on specified criteria.
 
 <p align="center">
    <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/ec2/discover_instances.py">Source code</a> •

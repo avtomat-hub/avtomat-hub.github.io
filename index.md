@@ -18,12 +18,12 @@ Collections of actions designed to automate various cloud operations. Use indivi
 ## Features
 
 ### Flexible
-- Actions can be used individually (CLI) or chained together to form workflows (programmatic)
+- Actions can be used individually (CLI) or linked together to form workflows (programmatic)
 
 ### Standardised
 - Each action receives input, processes it, and returns an output
 
-### Interlinkable
+### Chainable
 - Output from one action can be used as input to another action
 
 ### Pre-configured

@@ -1,12 +1,16 @@
 ---
 title: Terraform
-parent: Infrastructure as Code
+parent: Deploy
 layout: default
-permalink: /aws/iac/terraform
+permalink: /aws/deploy/terraform
 ---
 
 # Terraform deployment
-You can use this module locally, by cloning `avtomat-hub/avtomat-aws` or remotely, by referencing the module from your own repository, similar to Terraform Registry.
+You can use this module locally, by cloning `avtomat-hub/avtomat-aws`, or remotely, by referencing the module from your own repository, similar to Terraform Registry.
+
+<p align="center">
+   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/iac/terraform">Source code</a>
+</p>
 
 
 ## Remote
