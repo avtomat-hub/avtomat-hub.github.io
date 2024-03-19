@@ -35,7 +35,7 @@ Snapshots can be created before deletion if <b>snapshot</b> is supplied.
 
 ### Output
 
-Returns a `list` of deleted volume IDs:
+Returns a `list` of volume IDs that failed the deletion:
 
 ```python
 ['vol-1234567890abcdef0', 'vol-abcdef1234567890']

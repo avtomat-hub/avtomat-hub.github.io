@@ -28,7 +28,7 @@ Delete EC2 security groups.<br/>
 
 ### Output
 
-Returns a `list` of deleted security group IDs:
+Returns a `list` of security group IDs that failed the deletion:
 
 ```python
 ['sg-1234567890abcdef0', 'sg-abcdef1234567890']

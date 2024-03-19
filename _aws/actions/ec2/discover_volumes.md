@@ -8,8 +8,7 @@ permalink: /aws/actions/ec2/discover_volumes
 
 # Discover Volumes
 
-Discover EBS volumes based on specified criteria such as unencrypted status, volume types,
-volumes of specific instances or simply all volumes.
+Discover EBS volumes based on specified criteria.
 
 <p align="center">
    <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/ec2/discover_volumes.py">Source code</a> •

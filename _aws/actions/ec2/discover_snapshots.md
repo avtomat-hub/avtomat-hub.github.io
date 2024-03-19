@@ -8,14 +8,15 @@ permalink: /aws/actions/ec2/discover_snapshots
 
 # Discover Snapshots
 
-Discover snapshots of EBS volumes based on specified criteria such as unencrypted status, source
-volumes,
-created before/after dates, or simply all snapshots.
+Discover snapshots of EBS volumes based on specified criteria.
 
 <p align="center">
    <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/ec2/discover_snapshots.py">Source code</a> •
    <a href="/aws/permissions/ec2/discover_snapshots">Permissions</a>
 </p>
+
+{: .note}
+Only snapshots owned by the account are returned.
 
 ## Usage
 
@@ -26,8 +27,8 @@ created before/after dates, or simply all snapshots.
 | `volume_ids`         | Get snapshots that originate from specific volumes    | `list(string)` | No       | None            |
 | `unencrypted`        | Get only unencrypted snapshots                        | `bool`         | No       | False           |
 | `exclude_aws_backup` | Exclude snapshots managed by AWS Backup               | `bool`         | No       | False           |
-| `created_before`     | Get snapshots created before date(YYYY/MM//DD)        | `string`       | No       | None            |
-| `created_after`      | Get snapshots created after date(YYYY/MM//DD)         | `string`       | No       | None            |
+| `created_before`     | Get snapshots created before date (YYYY/MM//DD)       | `string`       | No       | None            |
+| `created_after`      | Get snapshots created after date (YYYY/MM//DD)        | `string`       | No       | None            |
 | `region`             | Region for operation. Leave blank for session default | `string`       | No       | Session Default |
 | `debug`              | Increase log verbosity                                | `bool`         | No       | False           |
 | `session`            | Established session                                   | `object`       | No       | None            |

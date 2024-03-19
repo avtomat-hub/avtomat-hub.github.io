@@ -15,6 +15,9 @@ Delete EBS snapshots.<br/>
    <a href="/aws/permissions/ec2/delete_snapshots">Permissions</a>
 </p>
 
+{: .warning}
+Snapshots managed by AWS Backup cannot be deleted using this action. Instead, use [Delete Backups](/aws/actions/backup/delete_backups).
+
 ## Usage
 
 ### Input
@@ -28,7 +31,7 @@ Delete EBS snapshots.<br/>
 
 ### Output
 
-Returns a `list` of deleted snapshot IDs:
+Returns a `list` of snapshot IDs that failed the deletion:
 
 ```python
 ['snap-1234567890abcdef0', 'snap-abcdef1234567890']
@@ -47,6 +50,6 @@ Programmatic usage:
 ```python
 from avtomat_aws import ec2
 
-response = ec2.delete_snapshots(volume_ids=["snap-1234567890abcdef0", "snap-abcdef1234567890"],
+response = ec2.delete_snapshots(snapshot_ids=["snap-1234567890abcdef0", "snap-abcdef1234567890"],
                                 region="eu-west-2")
 ```

@@ -1,9 +1,9 @@
 ---
-title: Create Backups
+title: Delete Backups
 parent: backup
 grand_parent: Permissions
 layout: default
-permalink: /aws/permissions/backup/create_backups
+permalink: /aws/permissions/backup/delete_backups
 ---
 
 ```json
@@ -13,8 +13,7 @@ permalink: /aws/permissions/backup/create_backups
         {
             "Effect": "Allow",
             "Action": [
-                "backup:StartBackupJob",
-                "sts:GetCallerIdentity"
+                "backup:DeleteRecoveryPoint"
             ],
             "Resource": "*"
         }

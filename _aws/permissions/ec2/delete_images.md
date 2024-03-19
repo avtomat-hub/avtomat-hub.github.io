@@ -1,9 +1,9 @@
 ---
-title: Delete Snapshots
+title: Delete Images
 parent: ec2
 grand_parent: Permissions
 layout: default
-permalink: /aws/permissions/ec2/delete_snapshots
+permalink: /aws/permissions/ec2/delete_images
 ---
 
 ```json
@@ -13,6 +13,8 @@ permalink: /aws/permissions/ec2/delete_snapshots
     {
       "Effect": "Allow",
       "Action": [
+        "ec2:DescribeImages",
+        "ec2:DeregisterImage",
         "ec2:DeleteSnapshot"
       ],
       "Resource": "*"

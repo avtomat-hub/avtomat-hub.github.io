@@ -3,7 +3,7 @@ title: Create Backups
 parent: backup
 grand_parent: Actions
 layout: default
-permalink: /aws/actions/ec2/create_backups
+permalink: /aws/actions/backup/create_backups
 ---
 
 # Create Backups

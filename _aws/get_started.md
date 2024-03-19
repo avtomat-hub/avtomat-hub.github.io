@@ -34,8 +34,8 @@ Under active development. Email [dimitar@avtomat.io](mailto:dimitar@avtomat.io) 
 Install `avtomat-aws` in a virtual environment:
 
 ```bash
-python -m venv avtomat-aws
-source avtomat-aws/bin/activate
+python -m venv ~/avtomat-aws
+source ~/avtomat-aws/bin/activate
 pip install git+ssh://git@github.com/avtomat-hub/avtomat-aws.git
 ```
 Once installed you can use actions directly through the command line or import them in your code.
