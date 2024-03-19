@@ -67,21 +67,26 @@ print(response)
 
 #### CLI
 
-- Assume role with MFA
+- Authenticate profile
 ```bash
-eval $(aaws sts create_session --role_arn <ARN_HERE> --mfa_serial <ARN_HERE> --mfa_token <CODE_HERE>)
-aaws sts whoami
-```
-
-- Assume role without MFA
-```bash
-eval $(aaws sts create_session --role_arn <ARN_HERE>)
-aaws sts whoami
+eval $(aaws sts create_session --profile <NAME>)
 ```
 
 - Authenticate credentials
 ```bash
 eval $(aaws sts create_session --access_key <KEY> --secret_key <KEY>)
+aaws sts whoami
+```
+
+- Assume role with MFA
+```bash
+eval $(aaws sts create_session --role_arn <ARN> --mfa_serial <ARN> --mfa_token <CODE>)
+aaws sts whoami
+```
+
+- Assume role without MFA
+```bash
+eval $(aaws sts create_session --role_arn <ARN>)
 aaws sts whoami
 ```
 
@@ -92,20 +97,20 @@ aaws sts whoami
 
 #### Programmatic
 
-- Assume role
-```python
-from avtomat_aws import sts
-session = sts.create_session(role_arn="ARN_HERE")
-response = sts.whoami(session)
-print(response)
-```
-
 - Authenticate credentials
 ```python
 from avtomat_aws import sts
 session = sts.create_session(access_key="KEY", secret_key="KEY")
 response = sts.whoami(session)       
 print(response)                      
+```
+
+- Assume role
+```python
+from avtomat_aws import sts
+session = sts.create_session(role_arn="ARN_HERE")
+response = sts.whoami(session)
+print(response)
 ```
 
 - Fallback to Boto3 authentication flow
