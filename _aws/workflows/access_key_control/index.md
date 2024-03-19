@@ -14,6 +14,8 @@ Detect IAM access keys over a certain age and disable them.<br/>
    <a href="https://github.com/avtomat-hub/aws-workflow-access-key-control">Source code</a>
 </p>
 
+![Access Key Control design](/assets/images/access_key_control.png?raw=true)
+
 ## Overview
 
 This workflow follows a hub-and-spoke model where components are deployed to a service (hub) account and a role is deployed to each serviced (spoke) account.
