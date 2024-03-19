@@ -70,6 +70,7 @@ print(response)
 - Authenticate profile
 ```bash
 eval $(aaws sts create_session --profile <NAME>)
+aaws sts whoami
 ```
 
 - Authenticate credentials
