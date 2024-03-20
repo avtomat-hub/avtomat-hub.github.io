@@ -19,17 +19,17 @@ Discover AWS instances based on specified criteria.
 
 ### Input
 
-| Parameter      | Description                                                                       | Type           | Required | Default value                              |
-|----------------|-----------------------------------------------------------------------------------|----------------|----------|--------------------------------------------|
-| `states`       | Instance states                                                                   | `list(string)` | No       | ['running','stopped','pending','stopping'] |
-| `tags`         | Tags (Key=Value)                                                                  | `list(string)` | No       | None                                       |
-| `instance_ids` | Instance IDs to focus on                                                          | `list(string)` | No       | None                                       |
-| `public`       | Get only public instances                                                         | `bool`         | No       | False                                      |
-| `invert`       | If `instance_ids` is supplied, return the ones that didn't conform to the filters | `bool`         | No       | None                                       |
-| `os`           | Get only Windows or Linux instances                                               | `string`       | No       | None                                       |
-| `region`       | Region for operation                                                              | `string`       | No       | Session default                            |
-| `debug`        | Log verbosity                                                                     | `bool`         | No       | None                                       |
-| `session`      | Established session                                                               | `object`       | No       | None                                       |
+| Parameter      | Description                                                     | Type           | Required | Default value                              |
+|----------------|-----------------------------------------------------------------|----------------|----------|--------------------------------------------|
+| `states`       | Instance states                                                 | `list(string)` | No       | ['running','stopped','pending','stopping'] |
+| `tags`         | Tags (Key=Value)                                                | `list(string)` | No       | None                                       |
+| `instance_ids` | Instance IDs to focus on                                        | `list(string)` | No       | None                                       |
+| `public`       | Get only public instances                                       | `bool`         | No       | False                                      |
+| `invert`       | Return instances that didn't conform to the supplied parameters | `bool`         | No       | None                                       |
+| `os`           | Get only Windows or Linux instances                             | `string`       | No       | None                                       |
+| `region`       | Region for operation                                            | `string`       | No       | Session default                            |
+| `debug`        | Log verbosity                                                   | `bool`         | No       | None                                       |
+| `session`      | Established session                                             | `object`       | No       | None                                       |
 
 ### Output
 

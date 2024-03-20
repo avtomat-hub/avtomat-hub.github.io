@@ -121,7 +121,7 @@ response = sts.whoami()
 print(response)
 ```
 
-For more examples, refer to [Create Session](/aws/actions/sts/create_session).
+For more details, refer to [Create Session](/aws/actions/sts/create_session).
 
 
 ## Deployment
