@@ -22,15 +22,16 @@ Only images owned by the account are returned.
 
 ### Input
 
-| Parameter            | Description                                           | Type     | Required | Default Value   |
-|----------------------|-------------------------------------------------------|----------|----------|-----------------|
-| `public`             | Get only publicly exposed images                      | `bool`   | No       | False           |
-| `exclude_aws_backup` | Exclude snapshots managed by AWS Backup               | `bool`   | No       | False           |
-| `created_before`     | Get snapshots created before date (YYYY/MM//DD)       | `string` | No       | None            |
-| `created_after`      | Get snapshots created after date (YYYY/MM//DD)        | `string` | No       | None            |
-| `region`             | Region for operation. Leave blank for session default | `string` | No       | Session Default |
-| `debug`              | Increase log verbosity                                | `bool`   | No       | False           |
-| `session`            | Established session                                   | `object` | No       | None            |
+| Parameter            | Description                                           | Type           | Required | Default Value   |
+|----------------------|-------------------------------------------------------|----------------|----------|-----------------|
+| `image_ids`          | Image IDs to focus on                                 | `list(string)` | No       | All images      |
+| `public`             | Get only publicly exposed images                      | `bool`         | No       | False           |
+| `exclude_aws_backup` | Exclude snapshots managed by AWS Backup               | `bool`         | No       | False           |
+| `created_before`     | Get snapshots created before date (YYYY/MM//DD)       | `string`       | No       | None            |
+| `created_after`      | Get snapshots created after date (YYYY/MM//DD)        | `string`       | No       | None            |
+| `region`             | Region for operation. Leave blank for session default | `string`       | No       | Session Default |
+| `debug`              | Increase log verbosity                                | `bool`         | No       | False           |
+| `session`            | Established session                                   | `object`       | No       | None            |
 
 ### Output
 

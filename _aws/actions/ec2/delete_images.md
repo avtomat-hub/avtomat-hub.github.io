@@ -15,7 +15,7 @@ Delete EC2 images (AMI).<br/>
    <a href="/aws/permissions/ec2/delete_images">Permissions</a>
 </p>
 
-{: .warning}
+{: .note}
 Images managed by AWS Backup cannot be deleted using this action. Instead,
 use [Delete Backups](/aws/actions/backup/delete_backups).
 

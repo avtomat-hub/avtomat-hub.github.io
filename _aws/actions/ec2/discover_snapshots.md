@@ -24,7 +24,8 @@ Only snapshots owned by the account are returned.
 
 | Parameter            | Description                                           | Type           | Required | Default Value   |
 |----------------------|-------------------------------------------------------|----------------|----------|-----------------|
-| `volume_ids`         | Get snapshots that originate from specific volumes    | `list(string)` | No       | None            |
+| `volume_ids`         | Get snapshots that originate from specific volumes    | `list(string)` | No       | All volumes     |
+| `snapshot_ids`       | Snapshot IDs to focus on                              | `list(string)` | No       | All snapshots   |
 | `unencrypted`        | Get only unencrypted snapshots                        | `bool`         | No       | False           |
 | `exclude_aws_backup` | Exclude snapshots managed by AWS Backup               | `bool`         | No       | False           |
 | `created_before`     | Get snapshots created before date (YYYY/MM//DD)       | `string`       | No       | None            |

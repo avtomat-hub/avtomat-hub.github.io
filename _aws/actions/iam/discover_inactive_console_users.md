@@ -14,7 +14,7 @@ Discover IAM users who haven't used the console over a certain period.<br/>
 Users who have never used the console but have console access enabled are also returned.
 
 {: .note }
-This action only checks console activity. If you are looking to check console and programmatic (access key) activity, use <a href="/actions/iam/discover_inactive_users">discover_inactive_users</a> instead.
+This action only checks console activity. To check console and programmatic (access key) activity, use [Discover Inactive Users](/aws/actions/iam/discover_inactive_users) instead.
 
 <p align="center">
    <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/iam/discover_inactive_console_users.py">Source code</a> •

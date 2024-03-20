@@ -15,7 +15,7 @@ Delete EBS snapshots.<br/>
    <a href="/aws/permissions/ec2/delete_snapshots">Permissions</a>
 </p>
 
-{: .warning}
+{: .note}
 Snapshots managed by AWS Backup cannot be deleted using this action. Instead, use [Delete Backups](/aws/actions/backup/delete_backups).
 
 ## Usage

@@ -21,7 +21,8 @@ Discover EBS volumes based on specified criteria.
 
 | Parameter      | Description                                           | Type           | Required | Default Value   |
 |----------------|-------------------------------------------------------|----------------|----------|-----------------|
-| `instance_ids` | Instance IDs to check                                 | `list(string)` | No       | All Instances   |
+| `instance_ids` | Get volumes attached to specified instances           | `list(string)` | No       | All instances   |
+| `volume_ids`   | Volume IDs to focus on                                | `list(string)` | No       | All volumes     |
 | `unencrypted`  | Get only unencrypted volumes                          | `bool`         | No       | False           |
 | `detached`     | Get only detached volumes                             | `bool`         | No       | False           |
 | `types`        | Get only specific type volumes                        | `list(string)` | No       | None            |
