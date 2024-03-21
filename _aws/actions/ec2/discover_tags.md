@@ -36,7 +36,7 @@ Supported resource types:
 | Parameter        | Description                                           | Type           | Required          | Default Value   |
 |------------------|-------------------------------------------------------|----------------|-------------------|-----------------|
 | `resource_types` | EC2 resource types to search through                  | `list(string)` | Yes               | None            |
-| `tags`           | Tags in 'Key=Value' or 'Key' format to search for     | `list(string)` | Yes               | None            |
+| `tags`           | Tags to search for. Format: `Key=Value` or `Key`      | `list(string)` | Yes               | None            |
 | `existing`       | Search for resources that have the tags               | `bool`         | If not `missing`  | None            |
 | `missing`        | Search for resources that don't have the tags         | `bool`         | If not `existing` | None            |
 | `region`         | Region for operation. Leave blank for session default | `string`       | No                | Session Default |
