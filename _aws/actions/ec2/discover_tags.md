@@ -24,9 +24,6 @@ Supported resource types:
 - Volume
 - VPC
 
-{: .note}
-Multiple resource types can be specified, however only one tag key/value is supported.
-
 <p align="center">
    <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/ec2/discover_tags.py">Source code</a> •
    <a href="/aws/permissions/ec2/discover_tags">Permissions</a>
@@ -39,10 +36,9 @@ Multiple resource types can be specified, however only one tag key/value is supp
 | Parameter        | Description                                           | Type           | Required          | Default Value   |
 |------------------|-------------------------------------------------------|----------------|-------------------|-----------------|
 | `resource_types` | EC2 resource types to search through                  | `list(string)` | Yes               | None            |
-| `key`            | Tag key to search for                                 | `string`       | Yes               | None            |
-| `value`          | Tag value to search for                               | `string`       | No                | None            |
-| `existing`       | Search for resources that have the tag                | `bool`         | If not `missing`  | None            |
-| `missing`        | Search for resources that don't have the tag          | `bool`         | If not `existing` | None            |
+| `tags`           | Tags in 'Key=Value' or 'Key' format to search for     | `list(string)` | Yes               | None            |
+| `existing`       | Search for resources that have the tags               | `bool`         | If not `missing`  | None            |
+| `missing`        | Search for resources that don't have the tags         | `bool`         | If not `existing` | None            |
 | `region`         | Region for operation. Leave blank for session default | `string`       | No                | Session Default |
 | `debug`          | Increase log verbosity                                | `bool`         | No                | False           |
 | `session`        | Established session                                   | `object`       | No                | None            |
@@ -60,13 +56,13 @@ Returns a `list` of EC2 resource IDs:
 Find security groups missing the 'Name' tag:
 
 ```bash
-aaws ec2 discover_tags --resource_types security_group --key Name --missing
+aaws ec2 discover_tags --resource_types security_group --tags Name --missing
 ```
 
-Find instances and volumes with the 'Owner:Acme' tag:
+Find instances and volumes with the 'Owner=Acme' tag:
 
 ```bash
-aaws ec2 discover_tags --resource_types instance volume --key Owner --value Acme --existing
+aaws ec2 discover_tags --resource_types instance volume --tags Owner=Acme --existing
 ```
 
 Programmatic usage:
@@ -75,7 +71,6 @@ Programmatic usage:
 from avtomat_aws import ec2
 
 response = ec2.discover_tags(resource_types=["instance", "volume"],
-                             key="Owner",
-                             value="Acme",
+                             tags=["Owner=Acme"],
                              existing=True)
 ```
