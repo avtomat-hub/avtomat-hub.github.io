@@ -37,11 +37,7 @@ This action only checks console activity. To check console and programmatic (acc
 Returns a `list of dictionaries` of discovered users:
 
 ```python
-[
-    {
-        "UserName": "string"
-    }
-]
+[{"UserName": "string"}]
 ```
 
 ## Examples

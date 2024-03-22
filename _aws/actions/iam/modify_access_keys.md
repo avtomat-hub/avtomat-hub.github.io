@@ -40,10 +40,10 @@ Returns a `list` of access keys that failed the update:
 
 ## Examples
 
-Disable an access key for user:
+Disable access keys for users:
 
 ```bash
-aaws iam modify_access_keys --key AKIA12ZAWVSH44WXASKY acme-user --disable
+aaws iam modify_access_keys --key AKIA12ZAWVSH44WXASKY acme --key AKEA112WWDAH44CXZSRE foo --disable
 ```
 
 </div>
@@ -71,12 +71,13 @@ Returns a `list` of access keys that failed the update:
 
 ## Examples
 
-Disable an access key for user:
+Disable access keys for users:
 
 ```python
 from avtomat_aws import iam
 
-response = iam.modify_access_keys(keys=[{"AccessKeyId": "AKIA12ZAWVSH44WXASKY", "UserName": "acme-user"}],
+response = iam.modify_access_keys(keys=[{"AccessKeyId": "AKIA12ZAWVSH44WXASKY", "UserName": "acme"},
+                                        {"AccessKeyId": "AKEA112WWDAH44CXZSRE", "UserName": "foo"}],
                                   disable=True)
 ```
 

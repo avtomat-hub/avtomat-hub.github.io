@@ -30,11 +30,7 @@ Discover IAM users without MFA enabled.<br/>
 Returns a `list of dictionaries` of discovered users:
 
 ```python
-[
-    {
-        "UserName": "string"
-    }
-]
+[{"UserName": "string"}]
 ```
 
 ## Examples
