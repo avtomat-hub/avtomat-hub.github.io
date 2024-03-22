@@ -34,10 +34,14 @@ This action only checks console activity. To check console and programmatic (acc
 
 ### Output
 
-Returns a `list` of discovered users:
+Returns a `list of dictionaries` of discovered users:
 
 ```python
-['user1', 'user2']
+[
+    {
+        "UserName": "string"
+    }
+]
 ```
 
 ## Examples

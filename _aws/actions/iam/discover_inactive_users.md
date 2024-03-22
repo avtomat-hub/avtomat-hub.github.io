@@ -28,10 +28,14 @@ Discover IAM users who haven't used the console and any access keys over a certa
 
 ### Output
 
-Returns a `list` of discovered users:
+Returns a `list of dictionaries` of discovered users:
 
 ```python
-['user1', 'user2']
+[
+    {
+        "UserName": "string"
+    }
+]
 ```
 
 ## Examples

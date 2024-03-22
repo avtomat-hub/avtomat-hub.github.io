@@ -52,14 +52,14 @@ aaws iam modify_access_keys --key AKIA12ZAWVSH44WXASKY acme-user --disable
 
 ### Input
 
-| Parameter | Description           | Type     | Required         | Default value   |
-|-----------|-----------------------|----------|------------------|-----------------|
-| `keys`    | Access keys to modify | `dict`   | Yes              | None            |
-| `enable`  | Enable access keys    | `bool`   | If not `disable` | False           |
-| `disable` | Disable access keys   | `bool`   | If not `enable`  | False           |
-| `region`  | Region for operation  | `string` | No               | Session default |
-| `debug`   | Log verbosity         | `bool`   | No               | False           |
-| `session` | Established session   | `object` | No               | None            |
+| Parameter | Description           | Type         | Required         | Default value   |
+|-----------|-----------------------|--------------|------------------|-----------------|
+| `keys`    | Access keys to modify | `list(dict)` | Yes              | None            |
+| `enable`  | Enable access keys    | `bool`       | If not `disable` | False           |
+| `disable` | Disable access keys   | `bool`       | If not `enable`  | False           |
+| `region`  | Region for operation  | `string`     | No               | Session default |
+| `debug`   | Log verbosity         | `bool`       | No               | False           |
+| `session` | Established session   | `object`     | No               | None            |
 
 ### Output
 
@@ -69,12 +69,15 @@ Returns a `list` of access keys that failed the update:
 ['AKIA12ZAWVSH44WXASKY']
 ```
 
-### Examples
+## Examples
+
+Disable an access key for user:
 
 ```python
 from avtomat_aws import iam
+
 response = iam.modify_access_keys(keys=[{"AccessKeyId": "AKIA12ZAWVSH44WXASKY", "UserName": "acme-user"}],
-                                 disable=True)
+                                  disable=True)
 ```
 
 </div>

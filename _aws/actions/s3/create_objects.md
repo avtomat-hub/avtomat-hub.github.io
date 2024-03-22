@@ -78,6 +78,7 @@ Create `examples/object1` and `examples/object2` in `example-bucket`:
 
 ```python
 from avtomat_aws import s3
+
 response = s3.create_objects(bucket='example-bucket',
                              objects=[{"Key": "examples/object1", "Body": "/path/to/file"},
                                       {"Key": "examples/object2", "Body": "inline data"}])

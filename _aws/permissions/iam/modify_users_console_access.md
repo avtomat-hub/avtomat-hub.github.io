@@ -1,9 +1,9 @@
 ---
-title: Modify User Console Access
+title: Modify Users Console Access
 parent: iam
 grand_parent: Permissions
 layout: default
-permalink: /aws/permissions/iam/modify_user_console_access
+permalink: /aws/permissions/iam/modify_users_console_access
 ---
 
 ```json
