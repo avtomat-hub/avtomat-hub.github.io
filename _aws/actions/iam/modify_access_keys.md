@@ -3,12 +3,12 @@ title: Modify Access Keys
 parent: iam
 grand_parent: Actions
 layout: default
-permalink: /aws/actions/iam/modify_access_key
+permalink: /aws/actions/iam/modify_access_keys
 ---
 
 # Modify Access Keys
 
-Enable or disable an IAM access key.<br/>
+Enable or disable IAM access keys.<br/>
 
 <p align="center">
    <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/iam/modify_access_keys.py">Source code</a> •

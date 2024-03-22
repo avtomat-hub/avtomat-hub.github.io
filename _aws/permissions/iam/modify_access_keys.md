@@ -1,9 +1,9 @@
 ---
-title: Modify Access Key
+title: Modify Access Keys
 parent: iam
 grand_parent: Permissions
 layout: default
-permalink: /aws/permissions/iam/modify_access_key
+permalink: /aws/permissions/iam/modify_access_keys
 ---
 
 ```json
