@@ -10,6 +10,11 @@ permalink: /aws/actions/ec2/modify_tags
 
 Create or delete tags for EC2 resources.<br/>
 
+<p align="center">
+   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/ec2/modify_tags.py">Source code</a> •
+   <a href="/aws/permissions/ec2/modify_tags">Permissions</a>
+</p>
+
 {: .note}
 <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources" target="_blank">Supported
 EC2 resources</a>
@@ -18,14 +23,9 @@ EC2 resources</a>
 If a tag key already exists, the tag value is replaced with the new value.
 
 {: .warning}
-**dynamic_tags** mode will make an API call per resource. Not suitable for operations of scale.
+**dynamic_tags** mode will make an API call per resource.
 
-<p align="center">
-   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/ec2/modify_tags.py">Source code</a> •
-   <a href="/aws/permissions/ec2/modify_tags">Permissions</a>
-</p>
-
-## Usage
+## Usage <button id="toggleButton" class="btn fs-3" onclick="toggleTables()">CLI</button>
 
 ### Input
 
@@ -48,6 +48,8 @@ Returns a `list` of resources that failed the modification:
 ['vol-1234567890abcdef0', 'i-abcdef1234567890']
 ```
 
+<div markdown="1" id="cli" style="display: block;">
+
 ## Examples
 
 Create tags for resources:
@@ -68,7 +70,33 @@ Create dynamic tags for resources:
 aaws ec2 modify_tags --resource_ids vol-1234567890abcdef0 i-abcdef1234567890 --tags Foo={resource_id} "Bar={resource_id}-foo" --create --dynamic_tags
 ```
 
-Programmatic usage:
+</div>
+
+<div markdown="1" id="prog" style="display: none;">
+
+## Examples
+
+Create tags for resources:
+
+```python
+from avtomat_aws import ec2
+
+response = ec2.modify_tags(resource_ids=["vol-1234567890abcdef0", "i-abcdef1234567890"],
+                           tags=["Name=example", "Owner=Foo + Bar"],
+                           create=True)
+```
+
+Delete tags for resources:
+
+```python
+from avtomat_aws import ec2
+
+response = ec2.modify_tags(resource_ids=["vol-1234567890abcdef0", "i-abcdef1234567890"],
+                           tags=["Name", "Owner"],
+                           delete=True)
+```
+
+Create dynamic tags for resources:
 
 ```python
 from avtomat_aws import ec2
@@ -78,3 +106,22 @@ response = ec2.modify_tags(resource_ids=["vol-1234567890abcdef0", "i-abcdef12345
                            create=True,
                            dynamic_tags=True)
 ```
+
+</div>
+
+<script>
+  function toggleTables() {
+    var cli = document.getElementById("cli");
+    var prog = document.getElementById("prog");
+    var toggleButton = document.getElementById("toggleButton");
+    if (cli.style.display === "none") {
+      cli.style.display = "block";
+      prog.style.display = "none";
+      toggleButton.innerHTML = "CLI";
+    } else {
+      cli.style.display = "none";
+      prog.style.display = "block";
+      toggleButton.innerHTML = "Programmatic";
+    } 
+  }
+</script>

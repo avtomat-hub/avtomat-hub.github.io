@@ -15,7 +15,7 @@ Discover IAM roles not used over a certain amount of days.<br/>
    <a href="/aws/permissions/iam/discover_unused_roles">Permissions</a>
 </p>
 
-## Usage
+## Usage <button id="toggleButton" class="btn fs-3" onclick="toggleTables()">CLI</button>
 
 ### Input
 
@@ -34,6 +34,8 @@ Returns a `list` of discovered roles:
 ['role1', 'role2']
 ```
 
+<div markdown="1" id="cli" style="display: block;">
+
 ## Examples
 
 Discover roles not used for more than 100 days:
@@ -42,10 +44,35 @@ Discover roles not used for more than 100 days:
 aaws iam discover_unused_roles --threshold_days 100
 ```
 
-Programmatic usage:
+</div>
+
+<div markdown="1" id="prog" style="display: none;">
+
+## Examples
+
+Discover roles not used for more than 100 days:
 
 ```python
 from avtomat_aws import iam
 
 response = iam.discover_unused_roles(threshold_days=100)
 ```
+
+</div>
+
+<script>
+  function toggleTables() {
+    var cli = document.getElementById("cli");
+    var prog = document.getElementById("prog");
+    var toggleButton = document.getElementById("toggleButton");
+    if (cli.style.display === "none") {
+      cli.style.display = "block";
+      prog.style.display = "none";
+      toggleButton.innerHTML = "CLI";
+    } else {
+      cli.style.display = "none";
+      prog.style.display = "block";
+      toggleButton.innerHTML = "Programmatic";
+    } 
+  }
+</script>

@@ -10,18 +10,18 @@ permalink: /aws/actions/iam/quarantine_user
 
 Disable console and programmatic access and apply `AWSCompromisedKeyQuarantineV2` policy to an IAM user.<br/>
 
+<p align="center">
+   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/iam/quarantine_user.py">Source code</a> •
+   <a href="/aws/permissions/iam/quarantine_user">Permissions</a>
+</p>
+
 {: .danger }
 Current password of the user will be deleted and will not be recoverable.<br/>
 
 {: .note}
 Access keys are deactivated but not deleted.
 
-<p align="center">
-   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/iam/quarantine_user.py">Source code</a> •
-   <a href="/aws/permissions/iam/quarantine_user">Permissions</a>
-</p>
-
-## Usage
+## Usage <button id="toggleButton" class="btn fs-3" onclick="toggleTables()">CLI</button>
 
 ### Input
 
@@ -36,6 +36,8 @@ Access keys are deactivated but not deleted.
 
 This function has no output.
 
+<div markdown="1" id="cli" style="display: block;">
+
 ## Examples
 
 Quarantine a user:
@@ -44,10 +46,35 @@ Quarantine a user:
 aaws iam quarantine_user --user acme-user
 ```
 
-Programmatic usage:
+</div>
+
+<div markdown="1" id="prog" style="display: none;">
+
+## Examples
+
+Quarantine a user:
 
 ```python
 from avtomat_aws import iam
 
 response = iam.quarantine_user(user='acme-user')
 ```
+
+</div>
+
+<script>
+  function toggleTables() {
+    var cli = document.getElementById("cli");
+    var prog = document.getElementById("prog");
+    var toggleButton = document.getElementById("toggleButton");
+    if (cli.style.display === "none") {
+      cli.style.display = "block";
+      prog.style.display = "none";
+      toggleButton.innerHTML = "CLI";
+    } else {
+      cli.style.display = "none";
+      prog.style.display = "block";
+      toggleButton.innerHTML = "Programmatic";
+    } 
+  }
+</script>

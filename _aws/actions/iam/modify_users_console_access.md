@@ -10,19 +10,19 @@ permalink: /aws/actions/iam/modify_users_console_access
 
 Enable or disable AWS Management Console access for IAM users.<br/>
 
-{: .note }
-When enabling console access the passwords provided are temporary. Users will be prompted to change them upon first
-login.<br/>
-Users will have the `IAMUserChangePassword` policy attached to allow the password change.
-
 <p align="center">
    <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/iam/modify_users_console_access.py">Source code</a> •
    <a href="/aws/permissions/iam/modify_users_console_access">Permissions</a>
 </p>
 
-## Usage <button id="cliButton" class="btn fs-3" onclick="toggleTables()" style="display: inline;">CLI</button> <button id="progButton" class="btn fs-3" onclick="toggleTables()" style="display: none;">Programmatic</button>
+{: .note }
+When enabling console access the passwords provided are temporary. Users will be prompted to change them upon first
+login.<br/>
+Users will have the `IAMUserChangePassword` policy attached to allow the password change.
 
-<div markdown="1" id="cliTable" style="display: block;">
+## Usage <button id="toggleButton" class="btn fs-3" onclick="toggleTables()">CLI</button>
+
+<div markdown="1" id="cli" style="display: block;">
 
 ### Input
 
@@ -59,7 +59,7 @@ aaws iam modify_users_console_access --user acme --user foo --disable
 
 </div>
 
-<div markdown="1" id="progTable" style="display: none;">
+<div markdown="1" id="prog" style="display: none;">
 
 ### Input
 
@@ -106,23 +106,17 @@ response = iam.modify_console_access(users=[{"UserName": "acme"},
 
 <script>
   function toggleTables() {
-    var cliTable = document.getElementById("cliTable");
-    var progTable = document.getElementById("progTable");
-    var cliButton = document.getElementById("cliButton");
-    var progButton = document.getElementById("progButton");
-    if (cliTable.style.display === "none") {
-      cliTable.style.display = "block";
-      progTable.style.display = "none";
+    var cli = document.getElementById("cli");
+    var prog = document.getElementById("prog");
+    var toggleButton = document.getElementById("toggleButton");
+    if (cli.style.display === "none") {
+      cli.style.display = "block";
+      prog.style.display = "none";
+      toggleButton.innerHTML = "CLI";
     } else {
-      cliTable.style.display = "none";
-      progTable.style.display = "block";
-    }
-    if (cliButton.style.display === "none") {
-      cliButton.style.display = "inline";
-      progButton.style.display = "none";
-    } else {
-      cliButton.style.display = "none";
-      progButton.style.display = "inline";
+      cli.style.display = "none";
+      prog.style.display = "block";
+      toggleButton.innerHTML = "Programmatic";
     } 
   }
 </script>

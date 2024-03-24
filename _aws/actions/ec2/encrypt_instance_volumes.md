@@ -10,12 +10,6 @@ permalink: /aws/actions/ec2/encrypt_instance_volumes
 
 Encrypt or re-encrypt all EBS volumes attached to an instance with a KMS key.<br/>
 
-{: .note}
-For running instances downtime is minimized by stopping the instance only when volumes are ready to swap. (~2 min)
-
-{: .warning}
-If <b>re_encrypt</b> is supplied, already encrypted volumes will be re-encrypted.
-
 Steps:
 
 1. Create snapshots of all volumes
@@ -35,7 +29,13 @@ Steps:
    <a href="/aws/permissions/ec2/encrypt_instance_volumes">Permissions</a>
 </p>
 
-## Usage
+{: .note}
+For running instances downtime is minimized by stopping the instance only when volumes are ready to swap. (~2 min)
+
+{: .warning}
+If <b>re_encrypt</b> is supplied, already encrypted volumes will be re-encrypted.
+
+## Usage <button id="toggleButton" class="btn fs-3" onclick="toggleTables()">CLI</button>
 
 ### Input
 
@@ -56,6 +56,8 @@ Returns a `string` of the encrypted instance ID:
 "i-1234567890abcdef0"
 ```
 
+<div markdown="1" id="cli" style="display: block;">
+
 ## Examples
 
 Encrypt all instance volumes with a KMS key (already encrypted volumes are skipped):
@@ -70,7 +72,13 @@ Encrypt all instance volumes with a KMS key (already encrypted volumes are re-en
 aaws ec2 encrypt_instance_volumes --re_encrypt --instance_id i-1234567890abcdef0 --kms_key_id abcd1234-a123-456a-a12b-a123b4cd56ef
 ```
 
-Programmatic usage:
+</div>
+
+<div markdown="1" id="prog" style="display: none;">
+
+## Examples
+
+Encrypt all instance volumes with a KMS key (already encrypted volumes are skipped):
 
 ```python
 from avtomat_aws import ec2
@@ -78,3 +86,32 @@ from avtomat_aws import ec2
 response = ec2.encrypt_instance_volumes(instance_id="i-1234567890abcdef0",
                                         kms_key_id="abcd1234-a123-456a-a12b-a123b4cd56ef")
 ```
+
+Encrypt all instance volumes with a KMS key (already encrypted volumes are re-encrypted):
+
+```python
+from avtomat_aws import ec2
+
+response = ec2.encrypt_instance_volumes(re_encrypt=True,
+                                        instance_id="i-1234567890abcdef0",
+                                        kms_key_id="abcd1234-a123-456a-a12b-a123b4cd56ef")
+```
+
+</div>
+
+<script>
+  function toggleTables() {
+    var cli = document.getElementById("cli");
+    var prog = document.getElementById("prog");
+    var toggleButton = document.getElementById("toggleButton");
+    if (cli.style.display === "none") {
+      cli.style.display = "block";
+      prog.style.display = "none";
+      toggleButton.innerHTML = "CLI";
+    } else {
+      cli.style.display = "none";
+      prog.style.display = "block";
+      toggleButton.innerHTML = "Programmatic";
+    } 
+  }
+</script>

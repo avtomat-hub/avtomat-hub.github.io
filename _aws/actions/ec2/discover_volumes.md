@@ -15,7 +15,7 @@ Discover EBS volumes based on specified criteria.
    <a href="/aws/permissions/ec2/discover_volumes">Permissions</a>
 </p>
 
-## Usage
+## Usage <button id="toggleButton" class="btn fs-3" onclick="toggleTables()">CLI</button>
 
 ### Input
 
@@ -38,6 +38,8 @@ Returns a `list` of discovered volume IDs:
 ['vol-1234567890abcdef0', 'vol-abcdef1234567890']
 ```
 
+<div markdown="1" id="cli" style="display: block;">
+
 ## Examples
 
 Fetch all volumes for specified instances:
@@ -52,7 +54,21 @@ Fetch all detached and unencrypted volumes of type gp2 or gp3:
 aaws ec2 discover_volumes --unencrypted --detached --types gp2 gp3
 ```
 
-Programmatic usage:
+</div>
+
+<div markdown="1" id="prog" style="display: none;">
+
+## Examples
+
+Fetch all volumes for specified instances:
+
+```python
+from avtomat_aws import ec2
+
+response = ec2.discover_volumes(instance_ids=["i-1234567890abcdef0", "i-0987654321fedcba0"])
+```
+
+Fetch all detached and unencrypted volumes of type gp2 or gp3:
 
 ```python
 from avtomat_aws import ec2
@@ -61,3 +77,22 @@ response = ec2.discover_volumes(unencrypted=True,
                                 detached=True,
                                 types=['gp2', 'gp3'])
 ```
+
+</div>
+
+<script>
+  function toggleTables() {
+    var cli = document.getElementById("cli");
+    var prog = document.getElementById("prog");
+    var toggleButton = document.getElementById("toggleButton");
+    if (cli.style.display === "none") {
+      cli.style.display = "block";
+      prog.style.display = "none";
+      toggleButton.innerHTML = "CLI";
+    } else {
+      cli.style.display = "none";
+      prog.style.display = "block";
+      toggleButton.innerHTML = "Programmatic";
+    } 
+  }
+</script>

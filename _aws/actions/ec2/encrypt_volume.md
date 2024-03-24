@@ -10,15 +10,6 @@ permalink: /aws/actions/ec2/encrypt_volume
 
 Encrypt or re-encrypt an EBS volume with a KMS key.<br/>
 
-{: .note}
-If you are looking to encrypt all volumes of an instance, use <a href="encrypt_instance_volumes.md">encrypt_instance_volumes</a> instead.
-
-{: .note}
-For volumes attached to running instances downtime is minimized by stopping the instance only when volumes are ready to swap. (~2 min)
-
-{: .warning}
-If <b>re_encrypt</b> is supplied and the volume is already encrypted, it will be re-encrypted.
-
 Steps:
 
 1. Create snapshot of the volume
@@ -39,7 +30,16 @@ Steps:
    <a href="/aws/permissions/ec2/encrypt_volume">Permissions</a>
 </p>
 
-## Usage
+{: .note}
+If you are looking to encrypt all volumes of an instance, use [Encrypt Instance Volumes](/aws/actions/ec2/encrypt_instance_volumes) instead.
+
+{: .note}
+For volumes attached to running instances downtime is minimized by stopping the instance only when volumes are ready to swap. (~2 min)
+
+{: .warning}
+If <b>re_encrypt</b> is supplied and the volume is already encrypted, it will be re-encrypted.
+
+## Usage <button id="toggleButton" class="btn fs-3" onclick="toggleTables()">CLI</button>
 
 ### Input
 
@@ -60,25 +60,63 @@ Returns a `string` of the new, encrypted volume ID:
 "vol-1234567890abcdef0"
 ```
 
+<div markdown="1" id="cli" style="display: block;">
+
 ## Examples
 
-Encrypt a volume with a KMS key: (skipped if already encrypted)
+Encrypt a volume with a KMS key: (skipped if already encrypted):
 
 ```bash
 aaws ec2 encrypt_volume --volume_id vol-1234567890abcdef0 --kms_key_id abcd1234-a123-456a-a12b-a123b4cd56ef
 ```
 
-Encrypt a volume with a KMS key: (re-encrypted if already encrypted)
+Encrypt a volume with a KMS key: (re-encrypted if already encrypted):
 
 ```bash
 aaws ec2 encrypt_volume --re_encrypt --volume_id vol-1234567890abcdef0 --kms_key_id abcd1234-a123-456a-a12b-a123b4cd56ef
 ```
 
-Programmatic usage:
+</div>
+
+<div markdown="1" id="prog" style="display: none;">
+
+## Examples
+
+Encrypt a volume with a KMS key: (skipped if already encrypted):
 
 ```python
 from avtomat_aws import ec2
 
 response = ec2.encrypt_volume(volume_id="vol-1234567890abcdef0",
                               kms_key_id="abcd1234-a123-456a-a12b-a123b4cd56ef")
+
 ```
+
+Encrypt a volume with a KMS key: (re-encrypted if already encrypted):
+
+```python
+from avtomat_aws import ec2
+
+response = ec2.encrypt_volume(re_encrypt=True,
+                              volume_id="vol-1234567890abcdef0",
+                              kms_key_id="abcd1234-a123-456a-a12b-a123b4cd56ef")
+```
+
+</div>
+
+<script>
+  function toggleTables() {
+    var cli = document.getElementById("cli");
+    var prog = document.getElementById("prog");
+    var toggleButton = document.getElementById("toggleButton");
+    if (cli.style.display === "none") {
+      cli.style.display = "block";
+      prog.style.display = "none";
+      toggleButton.innerHTML = "CLI";
+    } else {
+      cli.style.display = "none";
+      prog.style.display = "block";
+      toggleButton.innerHTML = "Programmatic";
+    } 
+  }
+</script>

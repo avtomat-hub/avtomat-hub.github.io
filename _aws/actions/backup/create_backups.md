@@ -15,7 +15,7 @@ Start an on-demand backup job for the specified resources.<br/>
    <a href="/aws/permissions/backup/create_backups">Permissions</a>
 </p>
 
-## Usage
+## Usage <button id="toggleButton" class="btn fs-3" onclick="toggleTables()">CLI</button>
 
 ### Input
 
@@ -29,7 +29,7 @@ Start an on-demand backup job for the specified resources.<br/>
 | `wait`              | Wait for backups to complete before proceeding        | `bool`         | No       | False                       |
 | `region`            | Region for operation. Leave blank for session default | `string`       | No       | Session Default             |
 | `debug`             | Increase log verbosity                                | `bool`         | No       | False                       |
-| `session`           | Established session                                   | `object`       | No       | None                        |                           
+| `session`           | Established session                                   | `object`       | No       | None                        |
 
 ### Output
 
@@ -39,6 +39,8 @@ Returns a `list` of resources that failed the backups:
 ['i-1234567890abcdef0', 'i-abcdef1234567890']
 ```
 
+<div markdown="1" id="cli" style="display: block;">
+
 ## Examples
 
 Create backups for EC2 instances and wait for completion:
@@ -47,7 +49,13 @@ Create backups for EC2 instances and wait for completion:
 aaws backup create_backups --service ec2 --resource_ids i-1234567890abcdef0 i-abcdef1234567890 --wait
 ```
 
-Programmatic usage:
+</div>
+
+<div markdown="1" id="prog" style="display: none;">
+
+## Examples
+
+Create backups for EC2 instances and wait for completion:
 
 ```python
 from avtomat_aws import backup
@@ -56,3 +64,22 @@ response = backup.create_backups(service="ec2",
                                  resource_ids=["i-1234567890abcdef0", "i-abcdef1234567890"],
                                  wait=True)
 ```
+
+</div>
+
+<script>
+  function toggleTables() {
+    var cli = document.getElementById("cli");
+    var prog = document.getElementById("prog");
+    var toggleButton = document.getElementById("toggleButton");
+    if (cli.style.display === "none") {
+      cli.style.display = "block";
+      prog.style.display = "none";
+      toggleButton.innerHTML = "CLI";
+    } else {
+      cli.style.display = "none";
+      prog.style.display = "block";
+      toggleButton.innerHTML = "Programmatic";
+    } 
+  }
+</script>

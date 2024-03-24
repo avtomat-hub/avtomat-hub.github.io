@@ -18,10 +18,11 @@ Supported methods:
   Boto3 [authentication flow](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/credentials.html)
 
 <p align="center">
-   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/sts/create_session.py">Source code</a>
+   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/sts/create_session.py">Source code</a> •
+   <a href="/aws/permissions/sts/create_session">Permissions</a>
 </p>
 
-## Usage
+## Usage <button id="toggleButton" class="btn fs-3" onclick="toggleTables()">CLI</button>
 
 ### Input
 
@@ -39,6 +40,8 @@ Supported methods:
 
 Returns a Boto3 Session `object`.
 
+<div markdown="1" id="cli" style="display: block;">
+
 ## Examples
 
 Assume a role with MFA:<br/>
@@ -50,10 +53,16 @@ This will export temporary credentials to the environment: `AWS_ACCESS_KEY_ID`, 
 eval $(aaws sts create_session --role_arn arn:aws:iam::123456789012:role/ExampleRole --mfa_serial arn:aws:iam::111111111111:mfa/Example --mfa_token 123456)
 ```
 
-Programmatic usage:
+</div>
+
+<div markdown="1" id="prog" style="display: none;">
+
+## Examples
+
+Assume a role with MFA:<br/>
 
 {: .note}
-This will create a Boto3 session object that can be passed to other actions.
+This will return a Boto3 session object that can be passed to other actions.
 
 ```python
 from avtomat_aws import sts
@@ -62,3 +71,22 @@ session = sts.create_session(role_arn="arn:aws:iam::123456789012:role/ExampleRol
                              mfa_serial="arn:aws:iam::111111111111:mfa/Example",
                              mfa_token="123456")
 ```
+
+</div>
+
+<script>
+  function toggleTables() {
+    var cli = document.getElementById("cli");
+    var prog = document.getElementById("prog");
+    var toggleButton = document.getElementById("toggleButton");
+    if (cli.style.display === "none") {
+      cli.style.display = "block";
+      prog.style.display = "none";
+      toggleButton.innerHTML = "CLI";
+    } else {
+      cli.style.display = "none";
+      prog.style.display = "block";
+      toggleButton.innerHTML = "Programmatic";
+    } 
+  }
+</script>

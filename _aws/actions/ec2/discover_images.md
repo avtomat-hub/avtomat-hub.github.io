@@ -18,7 +18,7 @@ Discover EC2 images (AMI) based on specified criteria.
 {: .note}
 Only images owned by the account are returned.
 
-## Usage
+## Usage <button id="toggleButton" class="btn fs-3" onclick="toggleTables()">CLI</button>
 
 ### Input
 
@@ -41,6 +41,8 @@ Returns a `list` of discovered image IDs:
 ['ami-1234567890abcdef0', 'ami-abcdef1234567890']
 ```
 
+<div markdown="1" id="cli" style="display: block;">
+
 ## Examples
 
 Fetch all images in eu-west-2:
@@ -55,7 +57,21 @@ Fetch images created before 2024/01/01 and not managed by AWS Backup:
 aaws ec2 discover_images --exclude__aws_backup --created_before 2024/01/01
 ```
 
-Programmatic usage:
+</div>
+
+<div markdown="1" id="prog" style="display: none;">
+
+## Examples
+
+Fetch all images in eu-west-2:
+
+```python
+from avtomat_aws import ec2
+
+response = ec2.discover_images(region="eu-west-2")
+```
+
+Fetch images created before 2024/01/01 and not managed by AWS Backup:
 
 ```python
 from avtomat_aws import ec2
@@ -63,3 +79,22 @@ from avtomat_aws import ec2
 response = ec2.discover_images(exclude_aws_backup=True,
                                created_before="2024/01/01")
 ```
+
+</div>
+
+<script>
+  function toggleTables() {
+    var cli = document.getElementById("cli");
+    var prog = document.getElementById("prog");
+    var toggleButton = document.getElementById("toggleButton");
+    if (cli.style.display === "none") {
+      cli.style.display = "block";
+      prog.style.display = "none";
+      toggleButton.innerHTML = "CLI";
+    } else {
+      cli.style.display = "none";
+      prog.style.display = "block";
+      toggleButton.innerHTML = "Programmatic";
+    } 
+  }
+</script>

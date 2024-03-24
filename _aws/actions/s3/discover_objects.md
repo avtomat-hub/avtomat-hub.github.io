@@ -15,7 +15,7 @@ Discover objects in an S3 bucket.
    <a href="/aws/permissions/s3/discover_objects">Permissions</a>
 </p>
 
-## Usage
+## Usage <button id="toggleButton" class="btn fs-3" onclick="toggleTables()">CLI</button>
 
 ### Input
 
@@ -38,6 +38,8 @@ Returns a `list` of discovered objects:
 ['object1', 'object2']
 ```
 
+<div markdown="1" id="cli" style="display: block;">
+
 ## Examples
 
 Discover objects in `example-bucket`:
@@ -46,10 +48,35 @@ Discover objects in `example-bucket`:
 aaws s3 discover_objects --bucket example-bucket
 ```
 
-Programmatic usage:
+</div>
+
+<div markdown="1" id="prog" style="display: none;">
+
+## Examples
+
+Discover objects in `example-bucket`:
 
 ```python
 from avtomat_aws import s3
 
 response = s3.discover_objects(bucket='example-bucket')
 ```
+
+</div>
+
+<script>
+  function toggleTables() {
+    var cli = document.getElementById("cli");
+    var prog = document.getElementById("prog");
+    var toggleButton = document.getElementById("toggleButton");
+    if (cli.style.display === "none") {
+      cli.style.display = "block";
+      prog.style.display = "none";
+      toggleButton.innerHTML = "CLI";
+    } else {
+      cli.style.display = "none";
+      prog.style.display = "block";
+      toggleButton.innerHTML = "Programmatic";
+    } 
+  }
+</script>

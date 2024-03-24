@@ -10,6 +10,11 @@ permalink: /aws/actions/ec2/modify_volumes
 
 Change the Size, Type or IOPS of EBS volumes.<br/>
 
+<p align="center">
+   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/ec2/modify_volumes.py">Source code</a> •
+   <a href="/aws/permissions/ec2/modify_volumes">Permissions</a>
+</p>
+
 {: .note}
 You must wait 6 hours after modifying a volume before you can modify it again.
 
@@ -20,12 +25,7 @@ Snapshots can be created before modification if <b>snapshot</b> is supplied.
 If increasing the size of a volume ensure to extend the server file system. <br/>
   <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recognize-expanded-volume-linux.html" target="_blank">Linux</a> | <a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/recognize-expanded-volume-windows.html" target="_blank">Windows</a>
 
-<p align="center">
-   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/ec2/modify_volumes.py">Source code</a> •
-   <a href="/aws/permissions/ec2/modify_volumes">Permissions</a>
-</p>
-
-## Usage
+## Usage <button id="toggleButton" class="btn fs-3" onclick="toggleTables()">CLI</button>
 
 ### Input
 
@@ -48,6 +48,8 @@ Returns a `list` of modified volume IDs:
 ['vol-1234567890abcdef0', 'vol-abcdef1234567890']
 ```
 
+<div markdown="1" id="cli" style="display: block;">
+
 ## Examples
 
 Change the size, type and iops of volumes with pre-modification snapshots:
@@ -56,7 +58,13 @@ Change the size, type and iops of volumes with pre-modification snapshots:
 aaws ec2 modify_volumes --volume_ids vol-1234567890abcdef0 vol-abcdef1234567890 --size 100 --type gp3 --iops 3000
 ```
 
-Programmatic usage:
+</div>
+
+<div markdown="1" id="prog" style="display: none;">
+
+## Examples
+
+Change the size, type and iops of volumes with pre-modification snapshots:
 
 ```python
 from avtomat_aws import ec2
@@ -67,3 +75,22 @@ response = ec2.modify_volumes(volume_ids=["vol-1234567890abcdef0", "vol-abcdef12
                               iops=3000,
                               snapshot=True)
 ```
+
+</div>
+
+<script>
+  function toggleTables() {
+    var cli = document.getElementById("cli");
+    var prog = document.getElementById("prog");
+    var toggleButton = document.getElementById("toggleButton");
+    if (cli.style.display === "none") {
+      cli.style.display = "block";
+      prog.style.display = "none";
+      toggleButton.innerHTML = "CLI";
+    } else {
+      cli.style.display = "none";
+      prog.style.display = "block";
+      toggleButton.innerHTML = "Programmatic";
+    } 
+  }
+</script>

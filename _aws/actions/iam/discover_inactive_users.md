@@ -15,7 +15,7 @@ Discover IAM users who haven't used the console and any access keys over a certa
    <a href="/aws/permissions/iam/discover_inactive_users">Permissions</a>
 </p>
 
-## Usage
+## Usage <button id="toggleButton" class="btn fs-3" onclick="toggleTables()">CLI</button>
 
 ### Input
 
@@ -34,6 +34,8 @@ Returns a `list of dictionaries` of discovered users:
 [{"UserName": "string"}]
 ```
 
+<div markdown="1" id="cli" style="display: block;">
+
 ## Examples
 
 Discover users with no activity over 30 days:
@@ -42,10 +44,35 @@ Discover users with no activity over 30 days:
 aaws iam discover_inactive_users --threshold_days 30
 ```
 
-Programmatic usage:
+</div>
+
+<div markdown="1" id="prog" style="display: none;">
+
+## Examples
+
+Discover users with no activity over 30 days:
 
 ```python
 from avtomat_aws import iam
 
 response = iam.discover_inactive_users(threshold_days=30)
 ```
+
+</div>
+
+<script>
+  function toggleTables() {
+    var cli = document.getElementById("cli");
+    var prog = document.getElementById("prog");
+    var toggleButton = document.getElementById("toggleButton");
+    if (cli.style.display === "none") {
+      cli.style.display = "block";
+      prog.style.display = "none";
+      toggleButton.innerHTML = "CLI";
+    } else {
+      cli.style.display = "none";
+      prog.style.display = "block";
+      toggleButton.innerHTML = "Programmatic";
+    } 
+  }
+</script>

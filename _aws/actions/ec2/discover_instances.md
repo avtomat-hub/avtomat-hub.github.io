@@ -15,7 +15,7 @@ Discover AWS instances based on specified criteria.
    <a href="/aws/permissions/ec2/discover_instances">Permissions</a>
 </p>
 
-## Usage
+## Usage <button id="toggleButton" class="btn fs-3" onclick="toggleTables()">CLI</button>
 
 ### Input
 
@@ -39,6 +39,8 @@ Returns a `list` of discovered instance IDs:
 ['i-1234567890abcdef0', 'i-abcdef1234567890']
 ```
 
+<div markdown="1" id="cli" style="display: block;">
+
 ## Examples
 
 Discover public windows instances in running or stopped state:
@@ -53,7 +55,23 @@ Discover if specific instances are missing specific tags:
 aaws ec2 discover_instances --tags Owner Name=example --instance_ids i-1234567890abcdef0 i-abcdef1234567890 --invert
 ```
 
-Programmatic usage:
+</div>
+
+<div markdown="1" id="prog" style="display: none;">
+
+## Examples
+
+Discover public windows instances in running or stopped state:
+
+```python
+from avtomat_aws import ec2
+
+response = ec2.discover_instances(states=["running", "stopped"],
+                                  public=True,
+                                  os="windows")
+```
+
+Discover if specific instances are missing specific tags:
 
 ```python
 from avtomat_aws import ec2
@@ -62,3 +80,22 @@ response = ec2.discover_instances(tags=["Owner", "Name=example"],
                                   instance_ids=["i-1234567890abcdef0", "i-abcdef1234567890"],
                                   invert=True)
 ```
+
+</div>
+
+<script>
+  function toggleTables() {
+    var cli = document.getElementById("cli");
+    var prog = document.getElementById("prog");
+    var toggleButton = document.getElementById("toggleButton");
+    if (cli.style.display === "none") {
+      cli.style.display = "block";
+      prog.style.display = "none";
+      toggleButton.innerHTML = "CLI";
+    } else {
+      cli.style.display = "none";
+      prog.style.display = "block";
+      toggleButton.innerHTML = "Programmatic";
+    } 
+  }
+</script>

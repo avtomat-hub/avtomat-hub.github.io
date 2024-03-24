@@ -19,7 +19,7 @@ Delete EC2 images (AMI).<br/>
 Images managed by AWS Backup cannot be deleted using this action. Instead,
 use [Delete Backups](/aws/actions/backup/delete_backups).
 
-## Usage
+## Usage <button id="toggleButton" class="btn fs-3" onclick="toggleTables()">CLI</button>
 
 ### Input
 
@@ -39,6 +39,8 @@ Returns a `list` of image IDs that failed the deletion:
 ['ami-1234567890abcdef0', 'ami-abcdef1234567890']
 ```
 
+<div markdown="1" id="cli" style="display: block;">
+
 ## Examples
 
 Delete images but leave snapshots:
@@ -53,7 +55,21 @@ Delete images and associated snapshots:
 aaws ec2 delete_images --image_ids ami-1234567890abcdef0 ami-abcdef1234567890 --include_snapshots
 ```
 
-Programmatic usage:
+</div>
+
+<div markdown="1" id="prog" style="display: none;">
+
+## Examples
+
+Delete images but leave snapshots:
+
+```python
+from avtomat_aws import ec2
+
+response = ec2.delete_images(image_ids=["ami-1234567890abcdef0", "ami-abcdef1234567890"])
+```
+
+Delete images and associated snapshots:
 
 ```python
 from avtomat_aws import ec2
@@ -61,3 +77,22 @@ from avtomat_aws import ec2
 response = ec2.delete_images(image_ids=["ami-1234567890abcdef0", "ami-abcdef1234567890"],
                              include_snapshots=True)
 ```
+
+</div>
+
+<script>
+  function toggleTables() {
+    var cli = document.getElementById("cli");
+    var prog = document.getElementById("prog");
+    var toggleButton = document.getElementById("toggleButton");
+    if (cli.style.display === "none") {
+      cli.style.display = "block";
+      prog.style.display = "none";
+      toggleButton.innerHTML = "CLI";
+    } else {
+      cli.style.display = "none";
+      prog.style.display = "block";
+      toggleButton.innerHTML = "Programmatic";
+    } 
+  }
+</script>
