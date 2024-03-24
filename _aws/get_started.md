@@ -12,7 +12,7 @@ This collection runs on top of <a href="https://boto3.amazonaws.com/v1/documenta
 {: .fs-5 .fw-300 }
 
 {: .warning}
-Under active development. Email [dimitar@avtomat.io](mailto:dimitar@avtomat.io) if you encounter any issues.
+Early development. Email [dimitar@avtomat.io](mailto:dimitar@avtomat.io) if you encounter any issues.
 
 <p>
    <a href="#requirements">Requirements</a> •
