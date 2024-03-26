@@ -1,19 +1,19 @@
 ---
-title: CloudTrail Event Names
+title: Event Names
 parent: cloudtrail
 grand_parent: Actions
 layout: default
-permalink: /aws/actions/cloudtrail/cloudtrail_event_names
+permalink: /aws/actions/cloudtrail/event_names
 search_exclude: true
 ---
 
-# CloudTrail Event Names
+# Event Names
 
 A list of CloudTrail event names that you can use for filtering.<br/>
 
 {: .note}
 This list is not exhaustive and may not include all event names.<br/>
-For missing information refer to the **API Reference** under the [documentation](https://docs.aws.amazon.com/) for a service.
+For missing information refer to **API Reference** under the [documentation](https://docs.aws.amazon.com/) for a service.
 
 ## Services
 

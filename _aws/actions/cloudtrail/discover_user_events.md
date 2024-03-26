@@ -22,6 +22,9 @@ If **created_before** and **created_after** are not supplied, events are fetched
 This action will fetch all events for the user in the specified time period and then filter for supplied events.<br/>
 If you are looking to find a specific event, use [Discover Events](/aws/actions/cloudtrail/discover_events) instead.
 
+{: .note}
+For a list of event names, see [Event Names](/aws/actions/cloudtrail/event_names).
+
 ## Usage <button id="toggleButton" class="btn fs-3" onclick="toggleTables()">CLI</button>
 
 ### Input
