@@ -1,25 +1,26 @@
 ---
-title: Discover User Events
+title: Discover Resource Events
 parent: cloudtrail
 grand_parent: Actions
 layout: default
-permalink: /aws/actions/cloudtrail/discover_user_events
+permalink: /aws/actions/cloudtrail/discover_resource_events
 ---
 
-# Discover User Events
+# Discover Resource Events
 
-Discover events created by specific user.
+Discover events for a specific resource.
 
 <p align="center">
-   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/cloudtrail/discover_user_events.py">Source code</a> •
-   <a href="/aws/permissions/cloudtrail/discover_user_events">Permissions</a>
+   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/cloudtrail/discover_resource_events.py">Source code</a> •
+   <a href="/aws/permissions/cloudtrail/discover_resource_events">Permissions</a>
 </p>
 
 {: .note}
 If **created_before** and **created_after** are not supplied, events are fetched for the last 24 hours.
 
 {: .warning}
-This action will fetch all events for the user in the specified time period and then filter for supplied events.<br/>
+This action will fetch all events against a resource in the specified time period and then filter for supplied
+events.<br/>
 If you are looking to find a specific event, use [Discover Events](/aws/actions/cloudtrail/discover_events) instead.
 
 {: .note}
@@ -31,7 +32,7 @@ For a list of event names, see [Event Names](/aws/actions/cloudtrail/event_names
 
 | Parameter        | Description                                              | Type           | Required | Default Value   |
 |------------------|----------------------------------------------------------|----------------|----------|-----------------|
-| `user`           | Search events originating from this user                 | `string`       | Yes      | None            |
+| `resource_id`    | Search events affecting this resource                    | `string`       | Yes      | None            |
 | `events`         | Search for specific events                               | `list(string)` | No       | None            |
 | `created_after`  | Search for events created after this time. (YYYY/MM/DD)  | `string`       | No       | None            |
 | `created_before` | Search for events created before this time. (YYYY/MM/DD) | `string`       | No       | False           |
@@ -58,16 +59,16 @@ Returns a `list of objects` containing discovered events:
 
 ## Examples
 
-Discover any events created in the last 24 hours by user 'foo' in eu-west-2:
+Discover any events against 'vol-1234567890abcdef0' created in the last 24 hours in eu-west-2:
 
 ```bash
-aaws cloudtrail discover_user_events --user foo --region eu-west-2
+aaws cloudtrail discover_resource_events --resource_id vol-1234567890abcdef0 --region eu-west-2
 ```
 
-Discover if user 'foo' has terminated any instances in eu-west-2 between Jan 5, 2024 and Jan 10, 2024:
+Discover any 'DetachVolume' events against 'vol-1234567890abcdef0' in eu-west-2 between Jan 5, 2024 and Jan 10, 2024:
 
 ```bash
-aaws cloudtrail discover_user_events --user foo --events TerminateInstances --created_before 2024/01/10 --created_after 2024/01/05 --region eu-west-2
+aaws cloudtrail discover_resource_events --resource_id vol-1234567890abcdef0 --events DetachVolume --created_before 2024/01/10 --created_after 2024/01/05 --region eu-west-2
 ```
 
 </div>
@@ -76,24 +77,24 @@ aaws cloudtrail discover_user_events --user foo --events TerminateInstances --cr
 
 ## Examples
 
-Discover any events created in the last 24 hours by user 'foo' in eu-west-2:
+Discover any events against 'vol-1234567890abcdef0' created in the last 24 hours in eu-west-2:
 
 ```python
 from avtomat_aws import cloudtrail
 
-response = cloudtrail.discover_user_events(user="foo", region="eu-west-2")
+response = cloudtrail.discover_resource_events(resource_id="vol-1234567890abcdef0", region="eu-west-2")
 ```
 
-Discover if user 'foo' has terminated any instances in eu-west-2 between Jan 5, 2024 and Jan 10, 2024:
+Discover any 'DetachVolume' events against 'vol-1234567890abcdef0' in eu-west-2 between Jan 5, 2024 and Jan 10, 2024:
 
 ```python
 from avtomat_aws import cloudtrail
 
-response = cloudtrail.discover_user_events(user="foo",
-                                           events=["TerminateInstances"],
-                                           created_before="2024/01/10",
-                                           created_after="2024/01/05",
-                                           region="eu-west-2")
+response = cloudtrail.discover_resource_events(resource_id="vol-1234567890abcdef0",
+                                               events=["DetachVolume"],
+                                               created_before="2024/01/10",
+                                               created_after="2024/01/05",
+                                               region="eu-west-2")
 ```
 
 </div>
