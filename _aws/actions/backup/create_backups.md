@@ -29,6 +29,7 @@ Start an on-demand backup job for the specified resources.<br/>
 | `wait`              | Wait for backups to complete before proceeding        | `bool`         | No       | False                       |
 | `region`            | Region for operation. Leave blank for session default | `string`       | No       | Session Default             |
 | `debug`             | Increase log verbosity                                | `bool`         | No       | False                       |
+| `silent`            | Decrease log verbosity                                | `bool`         | No       | False                       |
 | `session`           | Established session                                   | `object`       | No       | None                        |
 
 ### Output

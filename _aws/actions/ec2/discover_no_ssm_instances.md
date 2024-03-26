@@ -23,7 +23,8 @@ Discover EC2 instances without SSM enabled.
 |----------------|--------------------------|----------------|----------|-----------------|
 | `instance_ids` | Instance IDs to focus on | `list(string)` | No       | None            |
 | `region`       | Region for operation     | `string`       | No       | Session default |
-| `debug`        | Log verbosity            | `bool`         | No       | None            |
+| `debug`        | Increase log verbosity   | `bool`         | No       | False           |
+| `silent`       | Decrease log verbosity   | `bool`         | No       | False           |
 | `session`      | Established session      | `object`       | No       | None            |
 
 ### Output
@@ -45,6 +46,7 @@ aaws ec2 discover_no_ssm_instances --region eu-west-2
 ```
 
 Discover if specific instances don't have SSM enabled:
+
 ```bash
 aaws ec2 discover_no_ssm_instances --instance_ids i-1234567890abcdef0 i-abcdef1234567890
 ```

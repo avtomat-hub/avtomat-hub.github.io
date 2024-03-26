@@ -18,11 +18,12 @@ Return a date string in `YYYY/MM/DD` format.<br/>
 
 ### Input
 
-| Parameter       | Description                                           | Type     | Required     | Default Value   |
-|-----------------|-------------------------------------------------------|----------|--------------|-----------------|
-| `after`         | Return a date number of days in the future            | `int`    | No           | None            |
-| `before`        | Return a date number of days in the past              | `int`    | No           | None            |
-| `debug`         | Increase log verbosity                                | `bool`   | No           | False           |
+| Parameter | Description                                | Type   | Required | Default Value |
+|-----------|--------------------------------------------|--------|----------|---------------|
+| `after`   | Return a date number of days in the future | `int`  | No       | None          |
+| `before`  | Return a date number of days in the past   | `int`  | No       | None          |
+| `debug`   | Increase log verbosity                     | `bool` | No       | False         |
+| `silent`  | Decrease log verbosity                     | `bool` | No       | False         |
 
 ### Output
 

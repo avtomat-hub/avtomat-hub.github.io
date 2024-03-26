@@ -19,7 +19,8 @@ Discover IAM users who haven't used the console over a certain period.<br/>
 Users who have never used the console but have console access enabled are also returned.
 
 {: .note }
-This action only checks console activity. To check console and programmatic (access key) activity, use [Discover Inactive Users](/aws/actions/iam/discover_inactive_users) instead.
+This action only checks console activity. To check console and programmatic (access key) activity,
+use [Discover Inactive Users](/aws/actions/iam/discover_inactive_users) instead.
 
 ## Usage <button id="toggleButton" class="btn fs-3" onclick="toggleTables()">CLI</button>
 
@@ -29,7 +30,8 @@ This action only checks console activity. To check console and programmatic (acc
 |------------------|--------------------------------------------------------------|----------|----------|-----------------|
 | `threshold_days` | Get users with last console sign-in over this number of days | `int`    | Yes      | None            |
 | `region`         | Region for operation                                         | `string` | No       | Session default |
-| `debug`          | Log verbosity                                                | `bool`   | No       | False           |
+| `debug`          | Increase log verbosity                                       | `bool`   | No       | False           |
+| `silent`         | Decrease log verbosity                                       | `bool`   | No       | False           |
 | `session`        | Established session                                          | `object` | No       | None            |
 
 ### Output

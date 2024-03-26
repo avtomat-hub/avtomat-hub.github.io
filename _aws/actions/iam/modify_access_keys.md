@@ -27,7 +27,8 @@ Enable or disable IAM access keys.<br/>
 | `enable`  | Enable access keys                                                                   | `bool`   | If not `disable` | False           |
 | `disable` | Disable access keys                                                                  | `bool`   | If not `enable`  | False           |
 | `region`  | Region for operation                                                                 | `string` | No               | Session default |
-| `debug`   | Log verbosity                                                                        | `bool`   | No               | False           |
+| `debug`   | Increase log verbosity                                                               | `bool`   | No               | False           |
+| `silent`  | Decrease log verbosity                                                               | `bool`   | No               | False           |
 | `session` | Established session                                                                  | `object` | No               | None            |
 
 ### Output

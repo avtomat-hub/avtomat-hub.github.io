@@ -27,7 +27,8 @@ Discover objects in an S3 bucket.
 | `modified_after`  | Get objects last modified after date (YYYY/MM//DD)  | `string` | No       | None            |
 | `name_only`       | Return only the object name, not the entire path    | `bool`   | No       | False           |
 | `region`          | Region for operation                                | `string` | No       | Session default |
-| `debug`           | Log verbosity                                       | `bool`   | No       | False           |
+| `debug`           | Increase log verbosity                              | `bool`   | No       | False           |
+| `silent`          | Decrease log verbosity                              | `bool`   | No       | False           |
 | `session`         | Established session                                 | `object` | No       | None            |
 
 ### Output

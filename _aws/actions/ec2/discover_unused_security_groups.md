@@ -10,6 +10,7 @@ permalink: /aws/actions/ec2/discover_unused_security_groups
 
 Discover unused security groups.<br/>
 Resources checked:
+
 - ENI
 - EC2
 - RDS
@@ -33,11 +34,12 @@ Resources checked:
 
 ### Input
 
-| Parameter      | Description                       | Type           | Required             | Default value                              |
-|----------------|-----------------------------------|----------------|----------------------|--------------------------------------------|
-| `region`       | Region for operation              | `string`       | No                   | Session default                            |
-| `debug`        | Log verbosity                     | `bool`         | No                   | None                                       |
-| `session`      | Established session               | `object`       | No                   | None                                       |
+| Parameter | Description            | Type     | Required | Default value   |
+|-----------|------------------------|----------|----------|-----------------|
+| `region`  | Region for operation   | `string` | No       | Session default |
+| `debug`   | Increase log verbosity | `bool`   | No       | False           |
+| `silent`  | Decrease log verbosity | `bool`   | No       | False           |
+| `session` | Established session    | `object` | No       | None            |
 
 ### Output
 

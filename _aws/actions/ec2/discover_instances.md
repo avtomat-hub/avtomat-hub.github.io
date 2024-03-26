@@ -28,7 +28,8 @@ Discover AWS instances based on specified criteria.
 | `invert`       | Return instances that didn't conform to the supplied parameters | `bool`         | No       | None                                       |
 | `os`           | Get only Windows or Linux instances                             | `string`       | No       | None                                       |
 | `region`       | Region for operation                                            | `string`       | No       | Session default                            |
-| `debug`        | Log verbosity                                                   | `bool`         | No       | None                                       |
+| `debug`        | Increase log verbosity                                          | `bool`         | No       | False                                      |
+| `silent`       | Decrease log verbosity                                          | `bool`         | No       | False                                      |
 | `session`      | Established session                                             | `object`       | No       | None                                       |
 
 ### Output

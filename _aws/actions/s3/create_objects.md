@@ -30,7 +30,8 @@ The body of an object can be a file path or inline data.
 | `object`  | Object to create. Repeat for multiple objects. Format: `key body` | `string` | Yes      | None            |
 | `prefix`  | Prefix to filter objects by                                       | `string` | No       | None            |
 | `region`  | Region for operation                                              | `string` | No       | Session default |
-| `debug`   | Log verbosity                                                     | `bool`   | No       | False           |
+| `debug`   | Increase log verbosity                                            | `bool`   | No       | False           |
+| `silent`  | Decrease log verbosity                                            | `bool`   | No       | False           |
 | `session` | Established session                                               | `object` | No       | None            |
 
 ### Output

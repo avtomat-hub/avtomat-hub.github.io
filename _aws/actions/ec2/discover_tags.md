@@ -41,6 +41,7 @@ Supported resource types:
 | `missing`        | Search for resources that don't have the tags         | `bool`         | If not `existing` | None            |
 | `region`         | Region for operation. Leave blank for session default | `string`       | No                | Session Default |
 | `debug`          | Increase log verbosity                                | `bool`         | No                | False           |
+| `silent`         | Decrease log verbosity                                | `bool`         | No                | False           |
 | `session`        | Established session                                   | `object`       | No                | None            |
 
 ### Output

@@ -21,7 +21,8 @@ If <b>encrypt</b> is set without <b>kms_key_id</b>, the default AWS managed key 
 {: .note}
 Snapshots are copied in batches of 20.<br/>
 This default value can be increased through <b>pending_limit</b>.<br/>
-<a href="https://aws.amazon.com/about-aws/whats-new/2020/04/amazon-ebs-increases-concurrent-snapshot-copy-limits-to-20-snapshots-per-destination-region/" target="_blank">Concurrent snapshot copy limits</a>
+<a href="https://aws.amazon.com/about-aws/whats-new/2020/04/amazon-ebs-increases-concurrent-snapshot-copy-limits-to-20-snapshots-per-destination-region/" target="_blank">
+Concurrent snapshot copy limits</a>
 
 ## Usage <button id="toggleButton" class="btn fs-3" onclick="toggleTables()">CLI</button>
 
@@ -36,6 +37,7 @@ This default value can be increased through <b>pending_limit</b>.<br/>
 | `kms_key_id`    | KMS Key ID to use for snapshot encryption             | `string`       | If `encrypt` | None            |
 | `region`        | Region for operation. Leave blank for session default | `string`       | No           | Session Default |
 | `debug`         | Increase log verbosity                                | `bool`         | No           | False           |
+| `silent`        | Decrease log verbosity                                | `bool`         | No           | False           |
 | `session`       | Established session                                   | `object`       | No           | None            |                           
 
 ### Output

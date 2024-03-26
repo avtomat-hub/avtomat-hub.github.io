@@ -24,6 +24,7 @@ Delete EC2 security groups.<br/>
 | `security_group_ids` | List of Security Group IDs to delete                  | `list(string)` | Yes      | None            |
 | `region`             | Region for operation. Leave blank for session default | `string`       | No       | Session Default |
 | `debug`              | Increase log verbosity                                | `bool`         | No       | False           |
+| `silent`             | Decrease log verbosity                                | `bool`         | No       | False           |
 | `session`            | Established session                                   | `object`       | No       | None            |                           
 
 ### Output

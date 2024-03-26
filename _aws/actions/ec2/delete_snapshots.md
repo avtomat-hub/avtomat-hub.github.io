@@ -16,7 +16,8 @@ Delete EBS snapshots.<br/>
 </p>
 
 {: .note}
-Snapshots managed by AWS Backup cannot be deleted using this action. Instead, use [Delete Backups](/aws/actions/backup/delete_backups).
+Snapshots managed by AWS Backup cannot be deleted using this action. Instead,
+use [Delete Backups](/aws/actions/backup/delete_backups).
 
 ## Usage <button id="toggleButton" class="btn fs-3" onclick="toggleTables()">CLI</button>
 
@@ -27,6 +28,7 @@ Snapshots managed by AWS Backup cannot be deleted using this action. Instead, us
 | `snapshot_ids` | List of Snapshot IDs to delete                        | `list(string)` | Yes      | None            |
 | `region`       | Region for operation. Leave blank for session default | `string`       | No       | Session Default |
 | `debug`        | Increase log verbosity                                | `bool`         | No       | False           |
+| `silent`       | Decrease log verbosity                                | `bool`         | No       | False           |
 | `session`      | Established session                                   | `object`       | No       | None            |                           
 
 ### Output

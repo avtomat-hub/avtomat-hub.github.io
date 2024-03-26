@@ -31,6 +31,7 @@ Only images owned by the account are returned.
 | `created_after`      | Get images created after date (YYYY/MM//DD)           | `string`       | No       | None            |
 | `region`             | Region for operation. Leave blank for session default | `string`       | No       | Session Default |
 | `debug`              | Increase log verbosity                                | `bool`         | No       | False           |
+| `silent`             | Decrease log verbosity                                | `bool`         | No       | False           |
 | `session`            | Established session                                   | `object`       | No       | None            |
 
 ### Output

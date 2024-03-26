@@ -31,10 +31,12 @@ Steps:
 </p>
 
 {: .note}
-If you are looking to encrypt all volumes of an instance, use [Encrypt Instance Volumes](/aws/actions/ec2/encrypt_instance_volumes) instead.
+If you are looking to encrypt all volumes of an instance,
+use [Encrypt Instance Volumes](/aws/actions/ec2/encrypt_instance_volumes) instead.
 
 {: .note}
-For volumes attached to running instances downtime is minimized by stopping the instance only when volumes are ready to swap. (~2 min)
+For volumes attached to running instances downtime is minimized by stopping the instance only when volumes are ready to
+swap. (~2 min)
 
 {: .warning}
 If <b>re_encrypt</b> is supplied and the volume is already encrypted, it will be re-encrypted.
@@ -50,6 +52,7 @@ If <b>re_encrypt</b> is supplied and the volume is already encrypted, it will be
 | `re_encrypt` | Re-encrypt already encrypted volume                   | `bool`   | No       | False           |
 | `region`     | Region for operation. Leave blank for session default | `string` | No       | Session Default |
 | `debug`      | Increase log verbosity                                | `bool`   | No       | False           |
+| `silent`     | Decrease log verbosity                                | `bool`   | No       | False           |
 | `session`    | Established session                                   | `object` | No       | None            |                           
 
 ### Output

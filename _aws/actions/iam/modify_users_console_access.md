@@ -26,14 +26,15 @@ Users will have the `IAMUserChangePassword` policy attached to allow the passwor
 
 ### Input
 
-| Parameter  | Description                                                                                          | Type     | Required         | Default value   |
-|------------|------------------------------------------------------------------------------------------------------|----------|------------------|-----------------|
-| `user`     | User with Username and Password(optional). Repeatable for multiple keys. Format: `username password` | `string` | Yes              | None            |
-| `enable`   | Enable console access                                                                                | `bool`   | If not `disable` | False           |
-| `disable`  | Disable console access                                                                               | `bool`   | If not `enable`  | False           |
-| `region`   | Region for operation                                                                                 | `string` | No               | Session default |
-| `debug`    | Log verbosity                                                                                        | `bool`   | No               | False           |
-| `session`  | Established session                                                                                  | `object` | No               | None            |
+| Parameter | Description                                                                                          | Type     | Required         | Default value   |
+|-----------|------------------------------------------------------------------------------------------------------|----------|------------------|-----------------|
+| `user`    | User with Username and Password(optional). Repeatable for multiple keys. Format: `username password` | `string` | Yes              | None            |
+| `enable`  | Enable console access                                                                                | `bool`   | If not `disable` | False           |
+| `disable` | Disable console access                                                                               | `bool`   | If not `enable`  | False           |
+| `region`  | Region for operation                                                                                 | `string` | No               | Session default |
+| `debug`   | Increase log verbosity                                                                               | `bool`   | No               | False           |
+| `silent`  | Decrease log verbosity                                                                               | `bool`   | No               | False           |
+| `session` | Established session                                                                                  | `object` | No               | None            |
 
 ### Output
 

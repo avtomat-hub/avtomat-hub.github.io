@@ -20,10 +20,11 @@ across multiple regions.
 
 ### Input
 
-| Parameter  | Description                       | Type     | Required | Default value |
-|------------|-----------------------------------|----------|----------|---------------|
-| `debug`    | Log verbosity                     | `bool`   | No       | None          |
-| `session`  | Established session               | `object` | No       | None          |
+| Parameter | Description            | Type     | Required | Default value |
+|-----------|------------------------|----------|----------|---------------|
+| `debug`   | Increase log verbosity | `bool`   | No       | False         |
+| `silent`  | Decrease log verbosity | `bool`   | No       | False         |
+| `session` | Established session    | `object` | No       | None          |
 
 ### Output
 

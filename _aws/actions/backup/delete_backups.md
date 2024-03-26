@@ -28,6 +28,7 @@ Deleting a recovery point deletes the underlying backup data (e.g. AMIs, Snapsho
 | `recovery_point_arns` | Recovery point ARNs to delete                         | `list(string)` | Yes      | None            |
 | `region`              | Region for operation. Leave blank for session default | `string`       | No       | Session Default |
 | `debug`               | Increase log verbosity                                | `bool`         | No       | False           |
+| `silent`              | Decrease log verbosity                                | `bool`         | No       | False           |
 | `session`             | Established session                                   | `object`       | No       | None            |                           
 
 ### Output
@@ -59,7 +60,7 @@ Delete backups from Default backup vault:
 ```python
 from avtomat_aws import backup
 
-response = backup.delete_backups(recovery_point_arns=["arn:aws:ec2:us-east-1::image/ami-1234567890abcdef0", 
+response = backup.delete_backups(recovery_point_arns=["arn:aws:ec2:us-east-1::image/ami-1234567890abcdef0",
                                                       "arn:aws:ec2:us-east-1::image/ami-abcdef1234567890"])
 ```
 

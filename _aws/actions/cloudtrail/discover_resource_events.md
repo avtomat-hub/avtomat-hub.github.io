@@ -38,6 +38,7 @@ For a list of event names, see [Event Names](/aws/actions/cloudtrail/event_names
 | `created_before` | Search for events created before this time. (YYYY/MM/DD) | `string`       | No       | False           |
 | `region`         | Region for operation. Leave blank for session default    | `string`       | No       | Session Default |
 | `debug`          | Increase log verbosity                                   | `bool`         | No       | False           |
+| `silent`         | Decrease log verbosity                                   | `bool`         | No       | False           |
 | `session`        | Established session                                      | `object`       | No       | None            |                           
 
 ### Output

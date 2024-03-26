@@ -46,6 +46,7 @@ If <b>re_encrypt</b> is supplied, already encrypted volumes will be re-encrypted
 | `re_encrypt`  | Re-encrypt already encrypted volumes                  | `bool`   | No       | False           |
 | `region`      | Region for operation. Leave blank for session default | `string` | No       | Session Default |
 | `debug`       | Increase log verbosity                                | `bool`   | No       | False           |
+| `silent`      | Decrease log verbosity                                | `bool`   | No       | False           |
 | `session`     | Established session                                   | `object` | No       | None            |                           
 
 ### Output

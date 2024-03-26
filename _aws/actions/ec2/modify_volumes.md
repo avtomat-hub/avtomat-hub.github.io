@@ -23,7 +23,9 @@ Snapshots can be created before modification if <b>snapshot</b> is supplied.
 
 {: .warning}
 If increasing the size of a volume ensure to extend the server file system. <br/>
-  <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recognize-expanded-volume-linux.html" target="_blank">Linux</a> | <a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/recognize-expanded-volume-windows.html" target="_blank">Windows</a>
+<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recognize-expanded-volume-linux.html" target="_blank">
+Linux</a> | <a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/recognize-expanded-volume-windows.html" target="_blank">
+Windows</a>
 
 ## Usage <button id="toggleButton" class="btn fs-3" onclick="toggleTables()">CLI</button>
 
@@ -38,6 +40,7 @@ If increasing the size of a volume ensure to extend the server file system. <br/
 | `iops`       | New IOPS for volumes                                  | `int`          | No       | None            |
 | `region`     | Region for operation. Leave blank for session default | `string`       | No       | Session Default |
 | `debug`      | Increase log verbosity                                | `bool`         | No       | False           |
+| `silent`     | Decrease log verbosity                                | `bool`         | No       | False           |
 | `session`    | Established session                                   | `object`       | No       | None            |                           
 
 ### Output

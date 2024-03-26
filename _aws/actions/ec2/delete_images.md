@@ -29,6 +29,7 @@ use [Delete Backups](/aws/actions/backup/delete_backups).
 | `include_snapshots` | Delete snapshots associated with this image           | `bool`         | No       | False           |
 | `region`            | Region for operation. Leave blank for session default | `string`       | No       | Session Default |
 | `debug`             | Increase log verbosity                                | `bool`         | No       | False           |
+| `silent`            | Decrease log verbosity                                | `bool`         | No       | False           |
 | `session`           | Established session                                   | `object`       | No       | None            |                           
 
 ### Output

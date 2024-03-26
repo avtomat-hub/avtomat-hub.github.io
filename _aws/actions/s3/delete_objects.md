@@ -25,7 +25,8 @@ Delete objects from an S3 bucket.
 | `objects` | Objects to delete                            | `list(string)` | Yes      | None            |
 | `prefix`  | Prefix to filter objects by                  | `string`       | No       | None            |
 | `region`  | Region for operation                         | `string`       | No       | Session default |
-| `debug`   | Log verbosity                                | `bool`         | No       | False           |
+| `debug`   | Increase log verbosity                       | `bool`         | No       | False           |
+| `silent`  | Decrease log verbosity                       | `bool`         | No       | False           |
 | `session` | Established session                          | `object`       | No       | None            |
 
 ### Output
@@ -64,7 +65,7 @@ Delete `examples/object1` and `examples/object2` from `example-bucket`:
 from avtomat_aws import s3
 
 response = s3.delete_objects(bucket='example-bucket',
-                              objects=['examples/object1', 'examples/object2'])
+                             objects=['examples/object1', 'examples/object2'])
 ```
 
 Delete `object1` and `object2` using prefix `examples` from `example-bucket`:

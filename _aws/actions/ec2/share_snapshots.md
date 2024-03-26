@@ -17,11 +17,12 @@ Share EC2 snapshots with other accounts.<br/>
 
 {: .warning}
 If sharing encrypted snapshots with another account, ensure the KMS key is shared with the target account.<br/>
-    <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying-external-accounts.html#cross-account-console" target="_blank">Share a custom key with another account</a>
+<a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying-external-accounts.html#cross-account-console" target="_blank">
+Share a custom key with another account</a>
 
 {: .warning}
- If snapshots are encrypted with AWS managed key, create copies with a custom key and share the copies.<br/>
- <a href="copy_snapshots.md">Copy Snapshots</a>
+If snapshots are encrypted with AWS managed key, create copies with a custom key and share the copies.<br/>
+<a href="copy_snapshots.md">Copy Snapshots</a>
 
 ## Usage <button id="toggleButton" class="btn fs-3" onclick="toggleTables()">CLI</button>
 
@@ -33,6 +34,7 @@ If sharing encrypted snapshots with another account, ensure the KMS key is share
 | `target_account` | Target account for the snapshots                      | `string`       | Yes      | None            |
 | `region`         | Region for operation. Leave blank for session default | `string`       | No       | Session Default |
 | `debug`          | Increase log verbosity                                | `bool`         | No       | False           |
+| `silent`         | Decrease log verbosity                                | `bool`         | No       | False           |
 | `session`        | Established session                                   | `object`       | No       | None            |                           
 
 ### Output

@@ -19,11 +19,12 @@ Discover the default EBS encryption settings for a region.
 
 ### Input
 
-| Parameter  | Description                                           | Type     | Required | Default value   |
-|------------|-------------------------------------------------------|----------|----------|-----------------|
-| `region`   | Region for operation. Leave blank for session default | `string` | No       | Session Default |
-| `debug`    | Log verbosity                                         | `bool`   | No       | None            |
-| `session`  | Established session                                   | `object` | No       | None            |
+| Parameter | Description                                           | Type     | Required | Default value   |
+|-----------|-------------------------------------------------------|----------|----------|-----------------|
+| `region`  | Region for operation. Leave blank for session default | `string` | No       | Session Default |
+| `debug`   | Increase log verbosity                                | `bool`   | No       | False           |
+| `silent`  | Decrease log verbosity                                | `bool`   | No       | False           |
+| `session` | Established session                                   | `object` | No       | None            |
 
 ### Output
 
@@ -31,7 +32,7 @@ Returns a `dictionary` with keys:
 
 ```python
 {
-    "enabled": True|False,
+    "enabled": True | False,
     "kms_key_id": "arn:aws:kms:us-west-2:123456789012:key/1234abcd-12ab-34cd-56ef-1234567890ab"
 }
 ```

@@ -27,7 +27,8 @@ Change the default EBS encryption settings for a region.
 | `kms_key_id`     | KMS Key ID to use for encryption                         | `string` | If `change_kms_key` | None            |
 | `reset_kms_key`  | Reset the KMS Key used for encryption to AWS EBS default | `bool`   | No                  | None            |
 | `region`         | Region for operation. Leave blank for session default    | `string` | No                  | Session Default |
-| `debug`          | Log verbosity                                            | `bool`   | No                  | None            |
+| `debug`          | Increase log verbosity                                   | `bool`   | No                  | False           |
+| `silent`         | Decrease log verbosity                                   | `bool`   | No                  | False           |
 | `session`        | Established session                                      | `object` | No                  | None            |
 
 ### Output

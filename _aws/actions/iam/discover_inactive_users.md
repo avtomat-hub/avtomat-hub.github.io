@@ -23,7 +23,8 @@ Discover IAM users who haven't used the console and any access keys over a certa
 |------------------|-----------------------------------------------------|----------|----------|-----------------|
 | `threshold_days` | Get users with no activity over this number of days | `int`    | Yes      | None            |
 | `region`         | Region for operation                                | `string` | No       | Session default |
-| `debug`          | Log verbosity                                       | `bool`   | No       | False           |
+| `debug`          | Increase log verbosity                              | `bool`   | No       | False           |
+| `silent`         | Decrease log verbosity                              | `bool`   | No       | False           |
 | `session`        | Established session                                 | `object` | No       | None            |
 
 ### Output

@@ -28,6 +28,7 @@ Discover EBS volumes based on specified criteria.
 | `types`        | Get only specific type volumes                        | `list(string)` | No       | None            |
 | `region`       | Region for operation. Leave blank for session default | `string`       | No       | Session Default |
 | `debug`        | Increase log verbosity                                | `bool`         | No       | False           |
+| `silent`       | Decrease log verbosity                                | `bool`         | No       | False           |
 | `session`      | Established session                                   | `object`       | No       | None            |
 
 ### Output
