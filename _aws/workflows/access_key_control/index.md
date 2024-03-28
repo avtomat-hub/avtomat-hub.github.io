@@ -14,14 +14,14 @@ Detect IAM access keys over a certain age and disable them.<br/>
    <a href="https://github.com/avtomat-hub/aws-workflow-access-key-control">Source code</a>
 </p>
 
-![Access Key Control design](/assets/images/access_key_control.png?raw=true)
+<img src="/assets/images/access_key_control.png?raw=true" style="width: 80rem; display: block; margin: auto;">
 
 ## Overview
 
 This workflow follows a hub-and-spoke model where components are deployed to a service (hub) account and a role is deployed to each serviced (spoke) account.
 
 ### Operation
-The workflow will assume the role in each serviced account and perform the following actions:
+The workflow will assume a role in each serviced account and perform the following actions:
 1. Discover IAM access keys over a certain age
 2. Disable the discovered access keys
 
@@ -50,4 +50,4 @@ You can request this by emailing [dimitar@avtomat.io](mailto:dimitar@avtomat.io)
 ## Deployment
 
 This workflow can be deployed through Terraform.<br/>
-Read [Terraform](/aws/workflows/access_key_control/terraform) to get started.
+Read [Deploy](/aws/workflows/access_key_control/deploy) to get started.
