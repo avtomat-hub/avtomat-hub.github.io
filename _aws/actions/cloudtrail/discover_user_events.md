@@ -34,7 +34,7 @@ For a list of event names, see [Event Names](/aws/actions/cloudtrail/event_names
 | `user`           | Search events originating from this user                 | `string`       | Yes      | None            |
 | `events`         | Search for specific events                               | `list(string)` | No       | None            |
 | `created_after`  | Search for events created after this time. (YYYY/MM/DD)  | `string`       | No       | None            |
-| `created_before` | Search for events created before this time. (YYYY/MM/DD) | `string`       | No       | False           |
+| `created_before` | Search for events created before this time. (YYYY/MM/DD) | `string`       | No       | None            |
 | `region`         | Region for operation. Leave blank for session default    | `string`       | No       | Session Default |
 | `debug`          | Increase log verbosity                                   | `bool`         | No       | False           |
 | `silent`         | Decrease log verbosity                                   | `bool`         | No       | False           |
