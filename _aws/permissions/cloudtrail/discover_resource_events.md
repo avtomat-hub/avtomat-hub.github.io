@@ -1,9 +1,9 @@
 ---
-title: Discover User Events
+title: Discover Resource Events
 parent: cloudtrail
 grand_parent: Permissions
 layout: default
-permalink: /aws/permissions/cloudtrail/discover_user_events
+permalink: /aws/permissions/cloudtrail/discover_resource_events
 ---
 
 ```json
