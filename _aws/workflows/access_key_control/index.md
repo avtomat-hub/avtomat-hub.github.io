@@ -10,10 +10,6 @@ permalink: /aws/workflows/access_key_control
 
 Detect IAM access keys over a certain age and disable them.<br/>
 
-<p align="center">
-   <a href="https://github.com/avtomat-hub/aws-workflow-access-key-control">Source code</a>
-</p>
-
 <img src="/assets/images/access_key_control.png?raw=true" style="width: 80rem; display: block; margin: auto;">
 
 ## Overview
@@ -25,18 +21,13 @@ The workflow will assume a role in each serviced account and perform the followi
 1. Discover IAM access keys over a certain age
 2. Disable the discovered access keys
 
-The workflow is scheduled to run once a day through a CloudWatch Event Rule.<br/> Adjustable by passing a custom `schedule` to the [core](terraform/modules/core) module.<br/>
+The workflow is scheduled to run once a day through an EventBridge Rule.<br/> 
+Adjustable by passing a custom `schedule` to the [core](https://github.com/avtomat-hub/terraform-aws-workflow-access-key-control/tree/main/modules/core) module.<br/>
 
 Workflow logs can be found in CloudWatch Logs.
 
 At the moment there isn't any support for producing a notification in the event of a key being disabled.
 You can request this by emailing [dimitar@avtomat.io](mailto:dimitar@avtomat.io).
-
-### Structure
-
-- [terraform](https://github.com/avtomat-hub/aws-workflow-access-key-control/tree/main/terraform) - Terraform code to deploy the solution
-  - [modules](https://github.com/avtomat-hub/aws-workflow-access-key-control/tree/main/terraform/modules) - Terraform modules comprising the solution
-  - [examples](https://github.com/avtomat-hub/aws-workflow-access-key-control/tree/main/terraform/examples) - Working examples of how to use the modules
 
 
 ## Requirements

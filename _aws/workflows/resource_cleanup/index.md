@@ -10,10 +10,6 @@ permalink: /aws/workflows/resource_cleanup
 
 Detect and delete orphaned resources above a certain age.<br/>
 
-<p align="center">
-   <a href="https://github.com/avtomat-hub/aws-workflow-resource-cleanup">Source code</a>
-</p>
-
 <img src="/assets/images/resource_cleanup.png?raw=true" style="width: 80rem; display: block; margin: auto;">
 
 ## Overview
@@ -30,8 +26,8 @@ The workflow will assume a role in each serviced account and perform the followi
 6. Delete resources that are discovered in current run and ready for deletion
 7. Schedule newly detected resources for deletion by uploading to S3
 
-The workflow is scheduled to run once a day through a CloudWatch Event Rule.<br/> 
-Adjustable by passing a custom `schedule` to the [schedule](https://github.com/avtomat-hub/aws-workflow-resource-cleanup/tree/main/terraform/modules/schedule) module.<br/>
+The workflow is scheduled to run once a day through an EventBridge Rule.<br/> 
+Adjustable by passing a custom `schedule` to the [schedule](https://github.com/avtomat-hub/terraform-aws-workflow-resource-cleanup/tree/main/modules/schedule) module.<br/>
 
 Workflow logs can be found in CloudWatch Logs.
 
@@ -58,7 +54,7 @@ You can request this by emailing [dimitar@avtomat.io](mailto:dimitar@avtomat.io)
 </ul>
 </details>
 <details>
-<summary><u>EC2 Volumes</u> - COMING SOON</summary>
+<summary><u>EC2 Volumes</u></summary>
 <ul>
 <li>Delete volumes in detached state for a period longer than threshold</li>
 <li>Create a snapshot before deleting the volume</li>
@@ -90,11 +86,11 @@ This workflow is configured through `config.json`. Each supported resource type 
   - `exclude_tags` - Tags that exclude resources from being scanned
   - `threshold_days` - Age threshold for resources to be scheduled for deletion
   - `wait_before_delete_days` - Grace period before resources that are scheduled for deletion are actually deleted
-  - `cutoff_date` - Date before which resources are not scanned
+  - `cutoff_date` - Date before which resources are not scanned (Only applies to `ec2-images` and `ec2-snapshots`)
   - `bucket_name` - S3 bucket name for storing resources that are scheduled for deletion
 
 {: .note}
-To exclude a resource type pass an empty `accounts`.
+To exclude a resource type from being scanned, pass an empty `accounts`.
 ```json
 {
   "ec2-images": {
@@ -102,13 +98,6 @@ To exclude a resource type pass an empty `accounts`.
   }
 }
 ```
-
-
-### Structure
-
-- [terraform](https://github.com/avtomat-hub/aws-workflow-resource-cleanup/tree/main/terraform) - Terraform code to deploy the solution
-  - [modules](https://github.com/avtomat-hub/aws-workflow-resource-cleanup/tree/main/terraform/modules) - Terraform modules comprising the solution
-  - [examples](https://github.com/avtomat-hub/aws-workflow-resource-cleanup/tree/main/terraform/examples) - Working examples of how to use the modules
 
 
 ## Requirements

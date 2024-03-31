@@ -7,10 +7,10 @@ permalink: /aws/workflows/resource_cleanup/deploy
 ---
 
 # Terraform deployment
-You can use this module locally, by copying the workflow repository, or remotely, by referencing the modules from your own repository, similar to Terraform Registry.
+You can use these modules locally, by copying the workflow repository, or remotely, by referencing the modules from your own repository, similar to Terraform Registry.
 
 <p align="center">
-   <a href="https://github.com/avtomat-hub/aws-workflow-resource-cleanup/tree/main/terraform">Source code</a>
+   <a href="https://github.com/avtomat-hub/terraform-aws-workflow-resource-cleanup">Source code</a>
 </p>
 
 ## Remote
@@ -36,7 +36,7 @@ Run `terraform init` and `terraform apply`.
 ### Initial setup
 
 1. Copy this repository to your version control system
-2. Copy one of the `examples` to the root of the `terraform` directory or to a new repository
+2. Copy one of the `examples` to the root of the repository or to a separate repository
 3. Point module sources to local paths or version control system URLs, depending on the approach in step 2
 4. Review `variables.tf` and export environment variables
    - The hub account will be the account for which environment variables are exported 
