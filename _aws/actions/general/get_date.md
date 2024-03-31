@@ -8,7 +8,7 @@ permalink: /aws/actions/general/get_date
 
 # Get Date
 
-Return a date string in `YYYY/MM/DD` format.<br/>
+Return a date in the requested format.<br/>
 
 <p align="center">
    <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/general/get_date.py">Source code</a>
@@ -18,35 +18,36 @@ Return a date string in `YYYY/MM/DD` format.<br/>
 
 ### Input
 
-| Parameter | Description                                | Type   | Required | Default Value |
-|-----------|--------------------------------------------|--------|----------|---------------|
-| `after`   | Return a date number of days in the future | `int`  | No       | None          |
-| `before`  | Return a date number of days in the past   | `int`  | No       | None          |
-| `debug`   | Increase log verbosity                     | `bool` | No       | False         |
-| `silent`  | Decrease log verbosity                     | `bool` | No       | False         |
+| Parameter | Description                                                                | Type     | Required | Default Value |
+|-----------|----------------------------------------------------------------------------|----------|----------|---------------|
+| `after`   | Return a date number of days in the future                                 | `int`    | No       | None          |
+| `before`  | Return a date number of days in the past                                   | `int`    | No       | None          |
+| `format`  | Specify the format of the returned date. <br/> `string`, `iso`, `datetime` | `string` | No       | `datetime`    |
+| `debug`   | Increase log verbosity                                                     | `bool`   | No       | False         |
+| `silent`  | Decrease log verbosity                                                     | `bool`   | No       | False         |
 
 ### Output
 
-Returns a `string` of the date generated:
+Returns the generated date in the requested format:
 
 ```python
-'2021/01/01'
+'2021/01/01' | '2021-01-01T00:00:00Z' | '2021-01-01 00:00:00'
 ```
 
 <div markdown="1" id="cli" style="display: block;">
 
 ## Examples
 
-Get the date 10 days in the future:
+Get the date 10 days in the future in `iso` format:
 
 ```bash
-aaws general get_date --after 10
+aaws general get_date --after 10 --format iso
 ```
 
-Get the date 15 days in the past:
+Get the date 15 days in the past in `string` format:
 
 ```bash
-aaws general get_date --before 15
+aaws general get_date --before 15 --format string
 ```
 
 </div>
@@ -55,20 +56,20 @@ aaws general get_date --before 15
 
 ## Examples
 
-Get the date 10 days in the future:
+Get the date 10 days in the future in `iso` format:
 
 ```python
 from avtomat_aws import general
 
-response = general.get_date(after=10)
+response = general.get_date(after=10, format='iso')
 ```
 
-Get the date 15 days in the past:
+Get the date 15 days in the past in `string` format:
 
 ```python
 from avtomat_aws import general
 
-response = general.get_date(before=15)
+response = general.get_date(before=15, format='string')
 ```
 
 </div>

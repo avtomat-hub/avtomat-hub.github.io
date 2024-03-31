@@ -31,17 +31,17 @@ Windows</a>
 
 ### Input
 
-| Parameter    | Description                                           | Type           | Required | Default Value   |
-|--------------|-------------------------------------------------------|----------------|----------|-----------------|
-| `volume_ids` | List of Volume IDs to modify                          | `list(string)` | Yes      | None            |
-| `snapshot`   | Create snapshots before modification                  | `bool`         | No       | False           |
-| `size`       | New size (GB) for volumes                             | `int`          | No       | None            |
-| `type`       | New type for volumes                                  | `string`       | No       | None            |
-| `iops`       | New IOPS for volumes                                  | `int`          | No       | None            |
-| `region`     | Region for operation. Leave blank for session default | `string`       | No       | Session Default |
-| `debug`      | Increase log verbosity                                | `bool`         | No       | False           |
-| `silent`     | Decrease log verbosity                                | `bool`         | No       | False           |
-| `session`    | Established session                                   | `object`       | No       | None            |                           
+| Parameter    | Description                                                                     | Type           | Required | Default Value   |
+|--------------|---------------------------------------------------------------------------------|----------------|----------|-----------------|
+| `volume_ids` | List of Volume IDs to modify                                                    | `list(string)` | Yes      | None            |
+| `snapshot`   | Create snapshots before modification                                            | `bool`         | No       | False           |
+| `size`       | New size (GB) for volumes                                                       | `int`          | No       | None            |
+| `type`       | New type for volumes <br/> `gp2`, `gp3`, `io1`, `io2`, `st1`, `sc1`, `standard` | `string`       | No       | None            |
+| `iops`       | New IOPS for volumes                                                            | `int`          | No       | None            |
+| `region`     | Region for operation. Leave blank for session default                           | `string`       | No       | Session Default |
+| `debug`      | Increase log verbosity                                                          | `bool`         | No       | False           |
+| `silent`     | Decrease log verbosity                                                          | `bool`         | No       | False           |
+| `session`    | Established session                                                             | `object`       | No       | None            |                           
 
 ### Output
 
