@@ -16,7 +16,7 @@ Discover events by name.
 </p>
 
 {: .note}
-If **created_before** and **created_after** are not supplied, events are fetched for the last 24 hours.
+If **created_before** and **created_after** are not supplied, events are fetched for the last 90 days.
 
 {: .note}
 For a list of event names, see [Event Names](/aws/actions/cloudtrail/event_names).
