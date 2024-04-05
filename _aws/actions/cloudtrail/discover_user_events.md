@@ -59,7 +59,7 @@ Returns a `list of objects` containing discovered events:
 
 ## Examples
 
-Discover any events created in the last 24 hours by user 'foo' in eu-west-2:
+Discover any events created in the last 90 days by user 'foo' in eu-west-2:
 
 ```bash
 aaws cloudtrail discover_user_events --user foo --region eu-west-2
@@ -77,7 +77,7 @@ aaws cloudtrail discover_user_events --user foo --events TerminateInstances --cr
 
 ## Examples
 
-Discover any events created in the last 24 hours by user 'foo' in eu-west-2:
+Discover any events created in the last 90 days by user 'foo' in eu-west-2:
 
 ```python
 from avtomat_aws import cloudtrail

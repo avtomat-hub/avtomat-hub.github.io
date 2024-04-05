@@ -54,7 +54,7 @@ Returns a `list of objects` containing discovered events:
 
 ## Examples
 
-Discover 'TerminateInstances' events created in the last 24 hours in eu-west-2:
+Discover 'TerminateInstances' events created in the last 90 days in eu-west-2:
 
 ```bash
 aaws cloudtrail discover_events --event TerminateInstances --region eu-west-2
@@ -72,7 +72,7 @@ aaws cloudtrail discover_events --event DetachVolume --created_before 2024/01/10
 
 ## Examples
 
-Discover 'TerminateInstances' events created in the last 24 hours in eu-west-2:
+Discover 'TerminateInstances' events created in the last 90 days in eu-west-2:
 
 ```python
 from avtomat_aws import cloudtrail

@@ -60,7 +60,7 @@ Returns a `list of objects` containing discovered events:
 
 ## Examples
 
-Discover any events against 'vol-1234567890abcdef0' created in the last 24 hours in eu-west-2:
+Discover any events against 'vol-1234567890abcdef0' created in the last 90 days in eu-west-2:
 
 ```bash
 aaws cloudtrail discover_resource_events --resource_id vol-1234567890abcdef0 --region eu-west-2
@@ -78,7 +78,7 @@ aaws cloudtrail discover_resource_events --resource_id vol-1234567890abcdef0 --e
 
 ## Examples
 
-Discover any events against 'vol-1234567890abcdef0' created in the last 24 hours in eu-west-2:
+Discover any events against 'vol-1234567890abcdef0' created in the last 90 days in eu-west-2:
 
 ```python
 from avtomat_aws import cloudtrail

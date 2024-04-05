@@ -12,7 +12,7 @@ This collection runs on top of <a href="https://boto3.amazonaws.com/v1/documenta
 {: .fs-5 .fw-300 }
 
 {: .warning}
-Early development. Email [dimitar@avtomat.io](mailto:dimitar@avtomat.io) if you encounter any issues.
+Early development. Raise an [issue](https://github.com/avtomat-hub/avtomat-aws/issues) if you encounter any bugs.
 
 <p>
    <a href="#requirements">Requirements</a> •
@@ -31,13 +31,21 @@ Early development. Email [dimitar@avtomat.io](mailto:dimitar@avtomat.io) if you 
 
 ## Installation
 
-Install `avtomat-aws` in a virtual environment:
+### Virtual environment (pip)
 
 ```bash
-python -m venv ~/avtomat-aws
-source ~/avtomat-aws/bin/activate
-pip install git+ssh://git@github.com/avtomat-hub/avtomat-aws.git
+python3 -m venv venv
+source venv/bin/activate
+pip install avtomat-aws
+aaws --help
 ```
+
+### Global (recommended: pipx)
+```bash
+pipx install avtomat-aws
+aaws --help
+```
+
 Once installed you can use actions directly through the command line or import them in your code.
 
 Review the list of [actions](/aws/actions) available and their minimum IAM [permissions](/aws/permissions) required.<br/>
