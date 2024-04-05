@@ -15,6 +15,7 @@ This collection runs on top of <a href="https://boto3.amazonaws.com/v1/documenta
 Early development. Raise an [issue](https://github.com/avtomat-hub/avtomat-aws/issues) if you encounter any bugs.
 
 <p>
+   <a href="https://github.com/avtomat-hub/avtomat-aws" target="_blank">Source code</a> •
    <a href="#requirements">Requirements</a> •
    <a href="#installation">Installation</a> •
    <a href="#authentication">Authentication</a> •

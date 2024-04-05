@@ -10,7 +10,7 @@ nav_order: 1
 Collections of actions designed to automate various cloud operations. Use individually or combine to create complex workflows.
 {: .fs-5 .fw-300 }
 
-[Request access](https://avtomat.io){: .btn .btn-primary .fs-4 .mb-4 .mb-md-0 .mr-2 }
+[Website](https://avtomat.io){: .btn .btn-primary .fs-4 .mb-4 .mb-md-0 .mr-2 }
 [Get started](/aws/get_started){: .btn .fs-4 .mb-4 .mb-md-0 }
 
 ---
