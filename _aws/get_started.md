@@ -26,6 +26,7 @@ Early development. Raise an [issue](https://github.com/avtomat-hub/avtomat-aws/i
 ## Requirements
 
 - <a href="https://www.python.org/downloads/" target="_blank">Python 3.x</a>
+- <a href="https://boto3.amazonaws.com/v1/documentation/api/latest/index.html" target="_blank">Boto3</a>
 - AWS configuration files 
   - `~/.aws/credentials` and `~/.aws/config`
   - This is optional but highly recommended for falling back to Boto3 authentication flow
