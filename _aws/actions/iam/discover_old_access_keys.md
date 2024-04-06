@@ -11,7 +11,7 @@ permalink: /aws/actions/iam/discover_old_access_keys
 Discover IAM access keys above a certain age.<br/>
 
 <p align="center">
-   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/iam/discover_old_access_keys.py">Source code</a> •
+   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/services/iam/discover_old_access_keys.py">Source code</a> •
    <a href="/aws/permissions/iam/discover_old_access_keys">Permissions</a>
 </p>
 

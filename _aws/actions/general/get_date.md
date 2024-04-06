@@ -11,7 +11,7 @@ permalink: /aws/actions/general/get_date
 Return a date in the requested format.<br/>
 
 <p align="center">
-   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/general/get_date.py">Source code</a>
+   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/services/general/get_date.py">Source code</a>
 </p>
 
 ## Usage <button id="toggleButton" class="btn fs-3" onclick="toggleTables()">CLI</button>

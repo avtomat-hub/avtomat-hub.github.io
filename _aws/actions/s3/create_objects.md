@@ -11,7 +11,7 @@ permalink: /aws/actions/s3/create_objects
 Create objects in an S3 bucket.
 
 <p align="center">
-   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/s3/create_objects.py">Source code</a> •
+   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/services/s3/create_objects.py">Source code</a> •
    <a href="/aws/permissions/s3/create_objects">Permissions</a>
 </p>
 

@@ -11,7 +11,7 @@ permalink: /aws/actions/ec2/delete_snapshots
 Delete EBS snapshots.<br/>
 
 <p align="center">
-   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/ec2/delete_snapshots.py">Source code</a> •
+   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/services/ec2/delete_snapshots.py">Source code</a> •
    <a href="/aws/permissions/ec2/delete_snapshots">Permissions</a>
 </p>
 

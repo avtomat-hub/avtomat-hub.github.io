@@ -11,7 +11,7 @@ permalink: /aws/actions/backup/create_backups
 Start an on-demand backup job for the specified resources.<br/>
 
 <p align="center">
-   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/backup/create_backups.py">Source code</a> •
+   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/services/backup/create_backups.py">Source code</a> •
    <a href="/aws/permissions/backup/create_backups">Permissions</a>
 </p>
 

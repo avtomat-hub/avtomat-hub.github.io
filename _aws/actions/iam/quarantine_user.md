@@ -11,7 +11,7 @@ permalink: /aws/actions/iam/quarantine_user
 Disable console and programmatic access and apply `AWSCompromisedKeyQuarantineV2` policy to an IAM user.<br/>
 
 <p align="center">
-   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/iam/quarantine_user.py">Source code</a> •
+   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/services/iam/quarantine_user.py">Source code</a> •
    <a href="/aws/permissions/iam/quarantine_user">Permissions</a>
 </p>
 

@@ -11,7 +11,7 @@ permalink: /aws/actions/cloudtrail/discover_events
 Discover events by name.
 
 <p align="center">
-   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/cloudtrail/discover_events.py">Source code</a> •
+   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/services/cloudtrail/discover_events.py">Source code</a> •
    <a href="/aws/permissions/cloudtrail/discover_events">Permissions</a>
 </p>
 

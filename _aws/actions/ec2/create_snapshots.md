@@ -1,25 +1,19 @@
 ---
-title: Delete Volumes
+title: Create Snapshots
 parent: ec2
 grand_parent: Actions
 layout: default
-permalink: /aws/actions/ec2/delete_volumes
+permalink: /aws/actions/ec2/create_snapshots
 ---
 
-# Delete Volumes
+# Create Snapshots
 
-Delete EBS volumes with optional pre-deletion snapshots.<br/>
+Create snapshots of EBS volumes. </br>
 
 <p align="center">
-   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/services/ec2/delete_volumes.py">Source code</a> •
-   <a href="/aws/permissions/ec2/delete_volumes">Permissions</a>
+   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/services/ec2/create_snapshots.py">Source code</a> •
+   <a href="/aws/permissions/ec2/create_snapshots">Permissions</a>
 </p>
-
-{: .note}
-Volumes must be in <b>available</b> state to be deleted.
-
-{: .note}
-Snapshots can be created before deletion if <b>snapshot</b> is supplied.
 
 ## Usage <button id="toggleButton" class="btn fs-3" onclick="toggleTables()">CLI</button>
 
@@ -27,29 +21,28 @@ Snapshots can be created before deletion if <b>snapshot</b> is supplied.
 
 | Parameter    | Description                                           | Type           | Required | Default Value   |
 |--------------|-------------------------------------------------------|----------------|----------|-----------------|
-| `volume_ids` | List of Volume IDs to delete                          | `list(string)` | Yes      | None            |
-| `snapshot`   | Create snapshots before deletion                      | `bool`         | No       | False           |
+| `volume_ids` | Volume IDs to create snapshots for                    | `list(string)` | Yes      | None            |
 | `region`     | Region for operation. Leave blank for session default | `string`       | No       | Session Default |
 | `debug`      | Increase log verbosity                                | `bool`         | No       | False           |
 | `silent`     | Decrease log verbosity                                | `bool`         | No       | False           |
-| `session`    | Established session                                   | `object`       | No       | None            |                           
+| `session`    | Established session                                   | `object`       | No       | None            |
 
 ### Output
 
-Returns a `list` of volume IDs that failed the deletion:
+Returns a `list` of snapshot IDs that were created:
 
 ```python
-['vol-1234567890abcdef0', 'vol-abcdef1234567890']
+['snap-1234567890abcdef0', 'snap-abcdef1234567890']
 ```
 
 <div markdown="1" id="cli" style="display: block;">
 
 ## Examples
 
-Delete volumes with pre-deletion snapshots:
+Create snapshots of volumes:
 
 ```bash
-aaws ec2 delete_volumes --volume_ids vol-1234567890abcdef0 vol-abcdef1234567890 --snapshot
+aaws ec2 create_snapshots --volume_ids vol-1234567890abcdef0 vol-abcdef1234567890
 ```
 
 </div>
@@ -58,13 +51,12 @@ aaws ec2 delete_volumes --volume_ids vol-1234567890abcdef0 vol-abcdef1234567890 
 
 ## Examples
 
-Delete volumes with pre-deletion snapshots:
+Create snapshots of volumes:
 
 ```python
 from avtomat_aws import ec2
 
-response = ec2.delete_volumes(volume_ids=["vol-1234567890abcdef0", "vol-abcdef1234567890"],
-                              snapshot=True)
+response = ec2.create_snapshots(volume_ids=["vol-1234567890abcdef0", "vol-abcdef1234567890"])
 ```
 
 </div>

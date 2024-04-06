@@ -12,7 +12,7 @@ Discover all active AWS regions for an account. Useful for dynamically targeting
 across multiple regions.
 
 <p align="center">
-   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/ec2/discover_active_regions.py">Source code</a> •
+   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/services/ec2/discover_active_regions.py">Source code</a> •
    <a href="/aws/permissions/ec2/discover_active_regions">Permissions</a>
 </p>
 

@@ -11,7 +11,7 @@ permalink: /aws/actions/iam/discover_unused_roles
 Discover IAM roles not used over a certain amount of days.<br/>
 
 <p align="center">
-   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/iam/discover_unused_roles.py">Source code</a> •
+   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/services/iam/discover_unused_roles.py">Source code</a> •
    <a href="/aws/permissions/iam/discover_unused_roles">Permissions</a>
 </p>
 

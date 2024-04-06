@@ -11,7 +11,7 @@ permalink: /aws/actions/ec2/modify_volumes
 Change the Size, Type or IOPS of EBS volumes.<br/>
 
 <p align="center">
-   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/ec2/modify_volumes.py">Source code</a> •
+   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/services/ec2/modify_volumes.py">Source code</a> •
    <a href="/aws/permissions/ec2/modify_volumes">Permissions</a>
 </p>
 

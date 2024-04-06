@@ -11,7 +11,7 @@ permalink: /aws/actions/cloudtrail/discover_user_events
 Discover events created by specific user.
 
 <p align="center">
-   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/cloudtrail/discover_user_events.py">Source code</a> •
+   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/services/cloudtrail/discover_user_events.py">Source code</a> •
    <a href="/aws/permissions/cloudtrail/discover_user_events">Permissions</a>
 </p>
 

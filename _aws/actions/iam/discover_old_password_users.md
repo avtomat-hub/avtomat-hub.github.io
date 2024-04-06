@@ -11,7 +11,7 @@ permalink: /aws/actions/iam/discover_old_password_users
 Discover IAM users with passwords older than a certain age.<br/>
 
 <p align="center">
-   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/iam/discover_old_password_users.py">Source code</a> •
+   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/services/iam/discover_old_password_users.py">Source code</a> •
    <a href="/aws/permissions/iam/discover_old_password_users">Permissions</a>
 </p>
 

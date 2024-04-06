@@ -11,7 +11,7 @@ permalink: /aws/actions/iam/discover_no_mfa_users
 Discover IAM users without MFA enabled.<br/>
 
 <p align="center">
-   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/iam/discover_no_mfa_users.py">Source code</a> •
+   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/services/iam/discover_no_mfa_users.py">Source code</a> •
    <a href="/aws/permissions/iam/discover_no_mfa_users">Permissions</a>
 </p>
 

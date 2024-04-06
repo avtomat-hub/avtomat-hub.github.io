@@ -11,7 +11,7 @@ permalink: /aws/actions/backup/delete_backups
 Delete backup recovery points from a vault.<br/>
 
 <p align="center">
-   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/backup/delete_backups.py">Source code</a> •
+   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/services/backup/delete_backups.py">Source code</a> •
    <a href="/aws/permissions/backup/delete_backups">Permissions</a>
 </p>
 
