@@ -11,7 +11,7 @@ permalink: /aws/actions/ec2/discover_volumes
 Discover EBS volumes based on specified criteria.
 
 <p align="center">
-   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/ec2/discover_volumes.py">Source code</a> •
+   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/services/ec2/discover_volumes.py">Source code</a> •
    <a href="/aws/permissions/ec2/discover_volumes">Permissions</a>
 </p>
 

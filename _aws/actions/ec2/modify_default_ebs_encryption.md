@@ -11,7 +11,7 @@ permalink: /aws/actions/ec2/modify_default_ebs_encryption
 Change the default EBS encryption settings for a region.
 
 <p align="center">
-   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/ec2/modify_default_ebs_encryption.py">Source code</a> •
+   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/services/ec2/modify_default_ebs_encryption.py">Source code</a> •
    <a href="/aws/permissions/ec2/modify_default_ebs_encryption">Permissions</a>
 </p>
 

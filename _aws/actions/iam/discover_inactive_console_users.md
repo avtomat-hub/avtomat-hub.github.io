@@ -11,7 +11,7 @@ permalink: /aws/actions/iam/discover_inactive_console_users
 Discover IAM users who haven't used the console over a certain period.<br/>
 
 <p align="center">
-   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/iam/discover_inactive_console_users.py">Source code</a> •
+   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/services/iam/discover_inactive_console_users.py">Source code</a> •
    <a href="/aws/permissions/iam/discover_inactive_console_users">Permissions</a>
 </p>
 

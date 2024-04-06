@@ -11,7 +11,7 @@ permalink: /aws/actions/iam/modify_users_console_access
 Enable or disable AWS Management Console access for IAM users.<br/>
 
 <p align="center">
-   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/iam/modify_users_console_access.py">Source code</a> •
+   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/services/iam/modify_users_console_access.py">Source code</a> •
    <a href="/aws/permissions/iam/modify_users_console_access">Permissions</a>
 </p>
 

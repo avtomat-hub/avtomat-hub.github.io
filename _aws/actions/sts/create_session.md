@@ -18,7 +18,7 @@ Supported methods:
   Boto3 [authentication flow](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/credentials.html)
 
 <p align="center">
-   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/sts/create_session.py">Source code</a> •
+   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/services/sts/create_session.py">Source code</a> •
    <a href="/aws/permissions/sts/create_session">Permissions</a>
 </p>
 

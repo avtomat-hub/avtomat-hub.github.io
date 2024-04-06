@@ -25,7 +25,7 @@ Steps:
 9. Original volumes remain for rollback purposes
 
 <p align="center">
-   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/ec2/encrypt_instance_volumes.py">Source code</a> •
+   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/services/ec2/encrypt_instance_volumes.py">Source code</a> •
    <a href="/aws/permissions/ec2/encrypt_instance_volumes">Permissions</a>
 </p>
 

@@ -11,7 +11,7 @@ permalink: /aws/actions/ec2/copy_snapshots
 Create copies of EC2 snapshots in a target region.<br/>
 
 <p align="center">
-   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/ec2/copy_snapshots.py">Source code</a> •
+   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/services/ec2/copy_snapshots.py">Source code</a> •
    <a href="/aws/permissions/ec2/copy_snapshots">Permissions</a>
 </p>
 
@@ -32,7 +32,7 @@ Concurrent snapshot copy limits</a>
 |-----------------|-------------------------------------------------------|----------------|--------------|-----------------|
 | `snapshot_ids`  | List of EC2 snapshots to move                         | `list(string)` | Yes          | None            |
 | `target_region` | Target region for the snapshots                       | `string`       | Yes          | None            |
-| `pending_limit` | Limit for concurrent snapshot copy operations         | `int`          | No           | None            |
+| `pending_limit` | Limit for concurrent snapshot copy operations         | `int`          | No           | 20              |
 | `encrypt`       | Encrypt the new snapshots                             | `bool`         | No           | False           |
 | `kms_key_id`    | KMS Key ID to use for snapshot encryption             | `string`       | If `encrypt` | None            |
 | `region`        | Region for operation. Leave blank for session default | `string`       | No           | Session Default |

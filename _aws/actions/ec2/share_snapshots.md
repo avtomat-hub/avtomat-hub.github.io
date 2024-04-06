@@ -11,7 +11,7 @@ permalink: /aws/actions/ec2/share_snapshots
 Share EC2 snapshots with other accounts.<br/>
 
 <p align="center">
-   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/ec2/share_snapshots.py">Source code</a> •
+   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/services/ec2/share_snapshots.py">Source code</a> •
    <a href="/aws/permissions/ec2/share_snapshots">Permissions</a>
 </p>
 

@@ -11,7 +11,7 @@ permalink: /aws/actions/sts/whoami
 Quickly figure out your current credentials.<br/>
 
 <p align="center">
-   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/sts/whoami.py">Source code</a> •
+   <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/services/sts/whoami.py">Source code</a> •
    <a href="/aws/permissions/sts/whoami">Permissions</a>
 </p>
 
