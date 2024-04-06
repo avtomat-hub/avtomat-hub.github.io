@@ -26,6 +26,7 @@ Discover EBS volumes based on specified criteria.
 | `unencrypted`  | Get only unencrypted volumes                                                              | `bool`         | No       | False           |
 | `detached`     | Get only detached volumes                                                                 | `bool`         | No       | False           |
 | `types`        | Get only specific type volumes <br/> `gp2`, `gp3`, `io1`, `io2`, `st1`, `sc1`, `standard` | `list(string)` | No       | None            |
+| `root`         | Get only root volumes                                                                     | `bool`         | No       | False           |
 | `region`       | Region for operation. Leave blank for session default                                     | `string`       | No       | Session Default |
 | `debug`        | Increase log verbosity                                                                    | `bool`         | No       | False           |
 | `silent`       | Decrease log verbosity                                                                    | `bool`         | No       | False           |
