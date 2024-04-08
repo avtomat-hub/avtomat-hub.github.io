@@ -32,7 +32,7 @@ If a tag key already exists, the tag value is replaced with the new value.
 | Parameter      | Description                                                                                        | Type           | Required        | Default Value   |
 |----------------|----------------------------------------------------------------------------------------------------|----------------|-----------------|-----------------|
 | `resource_ids` | List of EC2 resource IDs to apply tags to                                                          | `list(string)` | Yes             | None            |
-| `tags`         | Tags to create or delete (Key=Value)                                                               | `list(string)` | Yes             | None            |
+| `tags`         | Tags to create or delete <br> `Key=Value` or `Key`                                                 | `list(string)` | Yes             | None            |
 | `create`       | Create tags                                                                                        | `bool`         | If not `delete` | False           |
 | `delete`       | Delete tags                                                                                        | `bool`         | If not `create` | False           |
 | `dynamic_tags` | Dynamically add the resource ID to the tag key or value where `{resource_id}` placeholder is found | `bool`         | No              | False           |

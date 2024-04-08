@@ -19,19 +19,19 @@ Discover AWS instances based on specified criteria.
 
 ### Input
 
-| Parameter      | Description                                                                                      | Type           | Required | Default value                              |
-|----------------|--------------------------------------------------------------------------------------------------|----------------|----------|--------------------------------------------|
-| `instance_ids` | Instance IDs to focus on                                                                         | `list(string)` | No       | All instances                              |
-| `states`       | Instance states <br/> `pending`, `running`, `shutting-down`, `terminated`, `stopping`, `stopped` | `list(string)` | No       | ['running','stopped','pending','stopping'] |
-| `tags`         | Tags (Key=Value)                                                                                 | `list(string)` | No       | None                                       |
-| `public`       | Get only public instances                                                                        | `bool`         | No       | False                                      |
-| `invert`       | Return instances that didn't conform to the supplied parameters                                  | `bool`         | No       | None                                       |
-| `os`           | Get only Windows or Linux instances <br/> `linux`, `windows`                                     | `string`       | No       | None                                       |
-| `region`       | Region for operation                                                                             | `string`       | No       | Session default                            |
-| `debug`        | Increase log verbosity                                                                           | `bool`         | No       | False                                      |
-| `silent`       | Decrease log verbosity                                                                           | `bool`         | No       | False                                      |
-| `output`       | Output format <br/> `table`                                                                      | `string`       | No       | None                                       |
-| `session`      | Established session                                                                              | `object`       | No       | None                                       |
+| Parameter      | Description                                                                                                | Type           | Required | Default value                            |
+|----------------|------------------------------------------------------------------------------------------------------------|----------------|----------|------------------------------------------|
+| `instance_ids` | Instance IDs to focus on                                                                                   | `list(string)` | No       | All instances                            |
+| `states`       | Filter instances by states <br> `pending`, `running`, `shutting-down`, `terminated`, `stopping`, `stopped` | `list(string)` | No       | `running`,`stopped`,`pending`,`stopping` |
+| `tags`         | Filter instances by tags <br> `Key=Value` or `Key`                                                         | `list(string)` | No       | None                                     |
+| `public`       | Filter instances by public ip                                                                              | `bool`         | No       | False                                    |
+| `os`           | Filter instances by Windows or Linux operating system <br/> `linux`, `windows`                             | `string`       | No       | None                                     |
+| `invert`       | Return instances that didn't conform to the supplied parameters                                            | `bool`         | No       | None                                     |
+| `region`       | Region for operation                                                                                       | `string`       | No       | Session default                          |
+| `debug`        | Increase log verbosity                                                                                     | `bool`         | No       | False                                    |
+| `silent`       | Decrease log verbosity                                                                                     | `bool`         | No       | False                                    |
+| `output`       | Output format <br/> `table`                                                                                | `string`       | No       | None                                     |
+| `session`      | Established session                                                                                        | `object`       | No       | None                                     |
 
 ### Output
 
