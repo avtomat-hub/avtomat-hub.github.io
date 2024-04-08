@@ -25,6 +25,7 @@ Create snapshots of EBS volumes. </br>
 | `region`     | Region for operation. Leave blank for session default | `string`       | No       | Session Default |
 | `debug`      | Increase log verbosity                                | `bool`         | No       | False           |
 | `silent`     | Decrease log verbosity                                | `bool`         | No       | False           |
+| `output`     | Output format <br/> `table`                           | `string`       | No       | None            |
 | `session`    | Established session                                   | `object`       | No       | None            |
 
 ### Output

@@ -19,13 +19,14 @@ Discover EC2 instances without SSM enabled.
 
 ### Input
 
-| Parameter      | Description              | Type           | Required | Default value   |
-|----------------|--------------------------|----------------|----------|-----------------|
-| `instance_ids` | Instance IDs to focus on | `list(string)` | No       | None            |
-| `region`       | Region for operation     | `string`       | No       | Session default |
-| `debug`        | Increase log verbosity   | `bool`         | No       | False           |
-| `silent`       | Decrease log verbosity   | `bool`         | No       | False           |
-| `session`      | Established session      | `object`       | No       | None            |
+| Parameter      | Description                 | Type           | Required | Default value   |
+|----------------|-----------------------------|----------------|----------|-----------------|
+| `instance_ids` | Instance IDs to focus on    | `list(string)` | No       | None            |
+| `region`       | Region for operation        | `string`       | No       | Session default |
+| `debug`        | Increase log verbosity      | `bool`         | No       | False           |
+| `silent`       | Decrease log verbosity      | `bool`         | No       | False           |
+| `output`       | Output format <br/> `table` | `string`       | No       | None            |
+| `session`      | Established session         | `object`       | No       | None            |
 
 ### Output
 

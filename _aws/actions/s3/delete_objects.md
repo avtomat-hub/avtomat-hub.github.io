@@ -27,6 +27,7 @@ Delete objects from an S3 bucket.
 | `region`  | Region for operation                         | `string`       | No       | Session default |
 | `debug`   | Increase log verbosity                       | `bool`         | No       | False           |
 | `silent`  | Decrease log verbosity                       | `bool`         | No       | False           |
+| `output`  | Output format <br/> `table`                  | `string`       | No       | None            |
 | `session` | Established session                          | `object`       | No       | None            |
 
 ### Output

@@ -25,6 +25,7 @@ Return a date in the requested format.<br/>
 | `format`  | Specify the format of the returned date. <br/> `string`, `iso`, `datetime` | `string` | No       | `datetime`    |
 | `debug`   | Increase log verbosity                                                     | `bool`   | No       | False         |
 | `silent`  | Decrease log verbosity                                                     | `bool`   | No       | False         |
+| `output`  | Output format <br/> `table`                                                | `string` | No       | None          |
 
 ### Output
 

@@ -19,12 +19,13 @@ Discover IAM users without MFA enabled.<br/>
 
 ### Input
 
-| Parameter | Description            | Type     | Required | Default value   |
-|-----------|------------------------|----------|----------|-----------------|
-| `region`  | Region for operation   | `string` | No       | Session default |
-| `debug`   | Increase log verbosity | `bool`   | No       | False           |
-| `silent`  | Decrease log verbosity | `bool`   | No       | False           |
-| `session` | Established session    | `object` | No       | None            |
+| Parameter | Description                 | Type     | Required | Default value   |
+|-----------|-----------------------------|----------|----------|-----------------|
+| `region`  | Region for operation        | `string` | No       | Session default |
+| `debug`   | Increase log verbosity      | `bool`   | No       | False           |
+| `silent`  | Decrease log verbosity      | `bool`   | No       | False           |
+| `output`  | Output format <br/> `table` | `string` | No       | None            |
+| `session` | Established session         | `object` | No       | None            |
 
 ### Output
 

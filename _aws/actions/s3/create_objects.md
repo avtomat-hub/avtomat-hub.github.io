@@ -32,6 +32,7 @@ The body of an object can be a file path or inline data.
 | `region`  | Region for operation                                              | `string` | No       | Session default |
 | `debug`   | Increase log verbosity                                            | `bool`   | No       | False           |
 | `silent`  | Decrease log verbosity                                            | `bool`   | No       | False           |
+| `output`  | Output format <br/> `table`                                       | `string` | No       | None            |
 | `session` | Established session                                               | `object` | No       | None            |
 
 ### Output

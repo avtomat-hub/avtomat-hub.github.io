@@ -25,6 +25,7 @@ Discover IAM users who haven't used the console and any access keys over a certa
 | `region`         | Region for operation                                | `string` | No       | Session default |
 | `debug`          | Increase log verbosity                              | `bool`   | No       | False           |
 | `silent`         | Decrease log verbosity                              | `bool`   | No       | False           |
+| `output`         | Output format <br/> `table`                         | `string` | No       | None            |
 | `session`        | Established session                                 | `object` | No       | None            |
 
 ### Output
