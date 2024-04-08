@@ -8,7 +8,7 @@ permalink: /aws/actions/ec2/create_snapshots
 
 # Create Snapshots
 
-Create snapshots of EBS volumes. </br>
+Create snapshots of EBS volumes.
 
 <p align="center">
    <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/services/ec2/create_snapshots.py">Source code</a> •
