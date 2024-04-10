@@ -13,10 +13,11 @@ Delete EC2 instances and, optionally, any associated resource types.
 Steps:
 
 1. Discover associated resources for each instance (images, volumes, snapshots)
-2. If any of the instances are running, stop them
-3. If specified, create an image (AMI) before proceeding with deletion
-4. Delete the instances
-5. If specified, delete associated resources
+2. If specified, disable termination and stop API protections
+3. If any of the instances are running, stop them
+4. If specified, create an image (AMI) before proceeding with deletion
+5. Delete the instances
+6. If specified, delete associated resources
 
 <p align="center">
    <a href="https://github.com/avtomat-hub/avtomat-aws/tree/main/avtomat_aws/services/ec2/delete_instances.py">Source code</a> •
