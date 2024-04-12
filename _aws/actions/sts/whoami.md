@@ -28,10 +28,10 @@ Quickly figure out your current credentials.<br/>
 
 ### Output
 
-Returns a `string` indicating current entity.
+Returns a `dictionary` indicating current entity.
 
 ```python
-"arn:aws:iam::123456789012:user/FooBar"
+{'Arn': 'arn:aws:iam::123456789012:user/FooBar', 'Region': 'us-east-1'}
 ```
 
 <div markdown="1" id="cli" style="display: block;">
