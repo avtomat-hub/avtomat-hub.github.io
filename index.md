@@ -19,7 +19,7 @@ You are at the mercy of the provider.
 * Increased pricing? Pay up or start from scratch.
 * Feature request? It will be discussed internally.
 * What about the code? It's a black box.
-* Your privacy? You've got 5 independent vendors lurking in your environment, what privacy?
+* Privacy? Five independent vendors operate in your environment, what privacy?
 
 This has to change.
 
