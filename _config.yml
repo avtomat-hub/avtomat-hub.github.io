@@ -1,0 +1,13 @@
+# Dependencies
+markdown:         kramdown
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            avtomat
+tagline:          'Pay once, own forever.'
+description:      'We build solutions which you purchase once and own forever.'
+url:              https://avtomat.io
+baseurl:          /
